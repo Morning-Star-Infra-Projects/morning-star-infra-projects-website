@@ -68,11 +68,14 @@
 }
 </script>
 </script>
-<style>
 @media (max-width:768px){
   html,body{overflow-x:hidden;-webkit-overflow-scrolling:touch}
 
   .div-tabs.divisions-grid{display:grid!important;grid-template-columns:repeat(2,1fr);grid-auto-rows:1fr;gap:10px;align-items:center;justify-items:center;width:100%;max-width:520px;margin:12px auto 0;padding:0 12px;box-sizing:border-box;overflow:hidden;touch-action:pan-y}
+</style>
+<body class="home">
+<!-- Top contact strip removed per request -->
+<!-- HEADER -->
 
   .div-tabs.divisions-grid .div-tab{position:relative;display:block;width:100%;aspect-ratio:9/16;border-radius:12px;overflow:hidden;box-shadow:0 8px 20px rgba(10,31,68,0.08);transition:transform .28s cubic-bezier(.2,.8,.2,1),box-shadow .28s;text-decoration:none;background:var(--white);box-sizing:border-box;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
 
@@ -105,6 +108,45 @@
   #site-header .logo-text{text-align:left;line-height:1}
   #site-header .logo-icon img{height:56px;max-height:64px;width:auto;display:block}
   @media (max-width:720px){#site-header .logo-icon img{height:44px}}
+  /* Footer: left-align brand logo and description */
+  :root{--footer-brand-w:420px}
+  #site-footer .footer-brand{display:block;text-align:left;max-width:var(--footer-brand-w)}
+  #site-footer .footer-brand .logo-link{display:flex;align-items:center;gap:6px;text-decoration:none}
+  /* slightly reduce footer logo size to balance with text */
+  #site-footer .footer-brand .logo-icon img{height:52px;max-height:56px;width:auto;display:block}
+  #site-footer .footer-brand .logo-text{line-height:1;text-align:left}
+  /* match paragraph width to the brand block and justify both sides */
+  #site-footer .footer-brand p{margin-top:12px;text-align:justify;color:var(--white);max-width:100%;font-size:15px;line-height:1.5}
+  @media (max-width:720px){#site-footer .footer-brand .logo-icon img{height:44px}}
+  </style>
+
+  <style>
+  /* Footer grid: make columns evenly spaced and responsive */
+  #site-footer .container{padding-top:42px;padding-bottom:42px}
+  #site-footer .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:36px;align-items:start}
+  /* give each column a small horizontal padding so gaps appear uniform */
+  #site-footer .footer-grid > div{padding:0 8px;min-width:0}
+  /* normalize heading and list spacing across columns */
+  #site-footer .footer-head{margin:0 0 12px 0;font-weight:700}
+  #site-footer .footer-links{margin:0;padding:0;list-style:none}
+  /* match list spacing to Contact Us item spacing */
+  #site-footer .footer-links li{margin:6px 0}
+    /* tighter spacing for home page footer lists */
+    body.home #site-footer .footer-links li{margin:4px 0}
+  /* Contact items: match vertical spacing and alignment used by lists */
+  #site-footer .contact-item{display:flex;align-items:center;gap:10px;margin:6px 0;color:var(--white)}
+  #site-footer .contact-item .contact-icon{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px}
+  /* ensure brand column spacing is visually balanced with others */
+  #site-footer .footer-brand{padding-right:6px}
+  /* make the first footer-bottom copy occupy same width as brand block */
+  #site-footer .footer-bottom{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:18px}
+  #site-footer .footer-bottom .footer-copy:first-child{max-width:var(--footer-brand-w);flex:0 0 auto}
+  #site-footer .footer-bottom .footer-copy:last-child{flex:1 1 auto;text-align:right}
+  @media (min-width:1100px){#site-footer .footer-grid{gap:44px}}
+  @media (max-width:720px){
+    :root{--footer-brand-w:100%}
+    #site-footer .footer-bottom .footer-copy:last-child{width:100%;text-align:left;margin-top:8px}
+  }
   </style>
 
 </head>
@@ -137,6 +179,16 @@
 
       <a class="nav-link" href="/pages/our-team.html" data-page="team">Our Team</a>
 
+      <div class="nav-dropdown">
+        <span class="nav-link nav-drop-trigger">Divisions ▾</span>
+        <div class="nav-drop-menu">
+          <a class="drop-link" href="pages/home-construction.html">Home Construction</a>
+          <a class="drop-link" href="pages/commercial-and-industrial.html">Commercial &amp; Industrial</a>
+          <a class="drop-link" href="pages/interior-fitouts.html">Interior Fitouts</a>
+          <a class="drop-link" href="pages/structural-repair.html">Structural Repair</a>
+        </div>
+      </div>
+
       <a class="nav-link" href="/pages/certifications.html" data-page="certifications">Certifications</a>
 
       <a class="nav-link" href="/pages/blog.html" data-page="blog">Blog</a>
@@ -162,6 +214,12 @@
     <a class="mob-link" href="/pages/our-story.html" data-page="story">Our Story</a>
 
     <a class="mob-link" href="/pages/our-team.html" data-page="team">Our Team</a>
+
+    <div class="mob-divider" style="padding:8px 16px 4px;color:var(--text);font-weight:700">Divisions</div>
+    <a class="mob-link" href="pages/home-construction.html">Home Construction</a>
+    <a class="mob-link" href="pages/commercial-and-industrial.html">Commercial &amp; Industrial</a>
+    <a class="mob-link" href="pages/interior-fitouts.html">Interior Fitouts</a>
+    <a class="mob-link" href="pages/structural-repair.html">Structural Repair</a>
 
     <a class="mob-link" href="/pages/certifications.html" data-page="certifications">Certifications</a>
 
@@ -337,8 +395,7 @@ INFRA PROJECTS
 </div>
 
 <p>
-Our capabilities span the full spectrum of civil engineering,
-combining structural science with precision.
+Our capabilities span the full spectrum of civil engineering—a perfect blend of structural science and aesthetic precision. Whether we are diagnosing the health of aging buildings with advanced NDT equipment, erecting rapid commercial infrastructure, or executing bespoke turnkey interiors, our projects are guided by post-graduate engineering expertise.
 </p>
 
 </div>
@@ -446,16 +503,22 @@ Contact Us
 
 </div>
 
-<div style="margin-top:16px;display:flex;gap:12px">
-
-<a href="https://wa.me/918098889984">
-WhatsApp
-</a>
-
-<a href="tel:+918098889984">
-Call Now
-</a>
-
+<div class="footer-social" style="margin-top:16px;">
+  <a aria-label="Instagram" href="https://www.instagram.com/morningstarinfra/" rel="noopener noreferrer" target="_blank">
+    <svg aria-hidden="true" class="lucide" fill="none" focusable="false" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+      <rect height="20" rx="5" width="20" x="2" y="2"></rect>
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+    </svg>
+  </a>
+  <a aria-label="LinkedIn" href="https://www.linkedin.com/company/morningstarinfra/" rel="noopener noreferrer" target="_blank">
+    <svg aria-hidden="true" class="lucide" fill="none" focusable="false" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+      <rect height="20" rx="2" width="20" x="2" y="2"></rect>
+      <circle cx="8" cy="8" r="1"></circle>
+      <line x1="8" x2="8" y1="11" y2="17"></line>
+      <rect height="6" width="4" x="12" y="11"></rect>
+    </svg>
+  </a>
 </div>
 
 </div>
