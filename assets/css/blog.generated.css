@@ -1,0 +1,98 @@
+
+/* blog.generated.css - minimal styles for cards and article layout */
+.blog-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:56px; }
+@media(max-width:1100px){ .blog-grid{ grid-template-columns:repeat(2,1fr); gap:40px } }
+@media(max-width:900px){ .blog-grid{grid-template-columns:1fr; gap:28px} }
+.blog-card{ background:#fff;border-radius:12px;box-shadow:0 8px 20px rgba(10,31,68,.06); overflow:hidden; display:flex; flex-direction:column; }
+.blog-card img{ display:none }
+.blog-card{ background:#fff;border-radius:12px;box-shadow:0 8px 20px rgba(10,31,68,.06); overflow:hidden; display:flex; flex-direction:column; border-left:4px solid var(--gold); }
+.blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:56px; }
+.blog-card{ background:#fff;border-radius:12px;box-shadow:0 8px 20px rgba(10,31,68,.06); overflow:hidden; display:flex; flex-direction:column; height:100%; }
+.blog-card-body{ padding:24px; display:flex; flex-direction:column; gap:8px }
+.blog-card-title{ font-size:1.18rem; margin:0 0 6px; font-weight:800 }
+.blog-card-title a{ color:var(--primary); text-decoration:none }
+.blog-tag{ font-weight:900; color:var(--gold); font-size:.85rem; display:block }
+.blog-meta{ display:flex; gap:12px; align-items:center; margin-top:12px }
+.article-hero{ width:100%; height:360px; object-fit:cover; border-radius:8px; }
+.article-hero{ display:none !important }
+/* article-content: no extra top padding needed — breadcrumb now sits below the fixed header */
+.article-content{ max-width:1400px; margin:0 auto; padding:24px 24px 0 }
+
+/* Hide any hero/picture inside article headers to remove images site-wide for blog pages */
+.article-content header picture,
+.article-content header img.article-hero,
+.article-content header img { display: none !important }
+/* Ensure container matches homepage dimensions on blog pages */
+.container{ max-width:1400px; margin:0 auto; padding:0 24px; box-sizing:border-box }
+main.container{ padding-top:calc(var(--hdr-h) + 16px) }
+
+@media (max-width: 768px) {
+	/* mobile: smaller header height and less top padding */
+	.article-content{ padding-top:28px }
+	main.container{ padding-top:calc(var(--hdr-h) + 8px) }
+}
+
+/* Blog index heading spacing */
+main.container > h1 {
+	margin-top: 24px;
+	margin-bottom: 22px;
+	line-height: 1.15;
+	font-size: clamp(1.4rem, 2.5vw, 2rem);
+}
+
+/* Improve article typography and footer sizing on desktop */
+#article-content, .article-content { font-size: 1rem; line-height: 1.85; }
+.article-content p { font-size: 1rem }
+#site-footer { font-size: 1rem }
+.article-hero { max-height: 480px; height: auto; width:100%; }
+
+/* Ensure blog pages use the same container alignment as the home page */
+#blog-index, .article-content, #site-footer > .container {
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 0 24px;
+	box-sizing: border-box;
+}
+
+/* Make blog grid match site grid spacing and align to container */
+.blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap:56px; max-width:1400px; margin:0 auto; padding:0 24px; padding-bottom:64px }
+@media (max-width: 1100px) { .blog-grid{ grid-template-columns:repeat(2,1fr); gap:40px } }
+@media (max-width: 680px) { .blog-grid{ grid-template-columns:1fr; padding:0 18px; gap:28px; padding-bottom:48px } }
+
+/* Ensure the blog index container has extra space before the footer on very short pages */
+#blog-index { padding-bottom: 24px }
+
+/* Hide date and "Read →" on blog index cards */
+#blog-index .blog-meta span,
+#blog-index .blog-read-more { display: none !important; }
+/* breadcrumb styles are defined in pages.css — no override needed here */
+.related-posts{ display:flex; gap:12px; flex-wrap:wrap }
+.related-posts a{ display:block; padding:10px 12px; background:var(--white); border-radius:8px; box-shadow:0 6px 18px rgba(10,31,68,.04) }
+.faq-item{ margin-bottom:12px }
+
+/* Ensure all direct children inside article-content align exactly with site container */
+.article-content > * {
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 0 24px;
+	box-sizing: border-box;
+}
+
+/* Make sure article headers (title + hero) align with container columns */
+.article-content header { padding-top: 0; padding-bottom: 18px }
+.article-content header h1 { margin: 0 0 12px }
+
+/* Ensure blog header/footer match global site layout (prevent page-specific overrides) */
+#site-header,
+#site-footer{
+
+width:100% !important;
+}
+
+#site-footer>.container,
+.article-content,
+#blog-index{
+
+max-width:1400px !important;
+margin:auto !important;
+}

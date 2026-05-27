@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+<!-- Homepage -->
+
+<url>
+<loc>https://www.morningstarinfra.com/</loc>
+<lastmod>2026-05-16</lastmod>
+<changefreq>weekly</changefreq>
+<priority>1.0</priority>
+
+<image:image>
+<image:loc>https://www.morningstarinfra.com/images/hero_brand.webp</image:loc>
+<image:title>Morning Star Infra Projects Chennai Construction Company</image:title>
+<image:caption>Engineering-led home construction, interiors and infrastructure services in Chennai</image:caption>
+</image:image>
+
+</url>
+
+
+<!-- Residential -->
+
+<url>
+<loc>https://www.morningstarinfra.com/residential/</loc>
+<lastmod>2026-05-16</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.95</priority>
+
+<image:image>
+<image:loc>https://www.morningstarinfra.com/images/home-construction-page.webp</image:loc>
+<image:title>Home Construction Chennai | Morning Star Infra Projects</image:title>
+<image:caption>Transparent residential construction with engineering-led execution</image:caption>
+</image:image>
+
+<image:image>
+<image:loc>https://www.morningstarinfra.com/images/home-construction-card.webp</image:loc>
+<image:title>Residential Construction Packages Chennai</image:title>
+<image:caption>Customized construction packages with quality assurance</image:caption>
+</image:image>
+
+</url>
+
+
+<!-- Interiors -->
+
+<url>
+<loc>https://www.morningstarinfra.com/interiors/</loc>
+<lastmod>2026-05-16</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.92</priority>
+
+<image:image>
+<image:loc>https://www.morningstarinfra.com/images/hero_interiors.webp</image:loc>
+<image:title>Interior Fitouts Chennai | Morning Star Infra</image:title>
+<image:caption>Bespoke interior fitouts and modular design services</image:caption>
+</image:image>
+
+</url>
+
+
+<!-- Structural -->
+
+<url>
+<loc>https://www.morningstarinfra.com/structural/</loc>
+<lastmod>2026-05-16</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.88</priority>
+
+<image:image>
+<image:loc>https://www.morningstarinfra.com/images/structural-repair-retrofitting.webp</image:loc>
+<image:title>Structural Repair and Retrofitting Chennai</image:title>
+<image:caption>NDT diagnostics and structural rehabilitation services</image:caption>
+</image:image>
+
+</url>
+
+
+<!-- Industrial -->
+
+<url>
+<loc>https://www.morningstarinfra.com/industrial/</loc>
+<lastmod>2026-05-16</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.85</priority>
+
+<image:image>
+<image:loc>https://www.morningstarinfra.com/images/commercial-industrial.webp</image:loc>
+<image:title>Commercial and Industrial Construction Chennai</image:title>
+<image:caption>Fast-track PEB and industrial construction services</image:caption>
+</image:image>
+
+</url>
+
+</urlset>

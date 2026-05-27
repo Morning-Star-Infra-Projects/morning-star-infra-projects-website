@@ -1,0 +1,2209 @@
+/* === header.css === */
+/* =============================================================
+   header.css — Header & Navigation Styles
+   Morning Star Infra Projects
+   ============================================================= */
+
+/* === Responsive baseline (global fixes) ===
+  - box-sizing, overflow prevention, responsive images, touch targets
+  - mobile-first defaults to reduce layout breakage across pages
+*/
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+}
+*, *::before, *::after { box-sizing: border-box; }
+img, picture, video, iframe { max-width: 100%; height: auto; display: block; }
+.container { max-width: 1400px; width: 100%; margin: 0 auto; padding: 0 24px; box-sizing: border-box; }
+main, header, footer { width: 100%; }
+button, .btn-primary, .btn-secondary, .hamburger, .mob-link { min-height: 44px; min-width: 44px; }
+a, button { -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+
+
+/* HEADER STRUCTURE */
+.hdr-left { display: flex; align-items: center; flex-shrink: 0; }
+.hdr-city { font-family: var(--font-mono); font-size: 9px; letter-spacing: .15em; color: var(--primary); opacity: .6; font-weight: 700; }
+.hdr-center { display: flex; flex-direction: column; align-items: center; justify-content: center; flex: 1; align-self: center; margin-top: 0; order: 0; text-align: center; gap: 8px; min-width: 0; overflow: visible; }
+
+/* LOGO */
+.logo-link { display: flex; align-items: center; text-decoration: none; }
+.logo-icon { display: flex; align-items: center; justify-content: center; }
+.logo-text { display: flex; flex-direction: column; line-height: 1; align-items: center; justify-content: center; text-align: center; align-self: center; margin: 0 auto; overflow: hidden; max-width: 100%; }
+.logo-text span { color: var(--primary); }
+.logo-sub { font-family: var(--font-mono); font-size: 18px; font-weight: 700; letter-spacing: .2em; opacity: .8; margin-top: 4px; }
+
+/* Make header fixed and let its height be dynamic (JS will set --hdr-h) */
+#site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1200;
+  background: rgba(246,245,244,0.98);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(10,31,68,.06);
+}
+
+/* Ensure the main content sits under the fixed header using the CSS variable */
+main, .page { padding-top: var(--hdr-h, 76px); }
+
+/* logo sizing is now centralized in final header alignment block at the end of this file */
+
+/* DESKTOP NAV */
+.hdr-nav { display: flex; align-items: center; justify-content: center; gap: 4px; min-width: 140px; flex: 0 0 auto; order: 0; flex-wrap: wrap; }
+.nav-link { font-size: 13px; font-weight: 500; color: var(--text); padding: 8px 12px; border-radius: 8px; cursor: pointer; transition: var(--trans); white-space: nowrap; pointer-events: auto; }
+.nav-link:hover, .nav-link.active { color: var(--primary); background: rgba(10,31,68,.06); }
+.nav-cta { background: var(--primary); color: var(--white) !important; padding: 9px 18px; border-radius: 8px; font-size: 13px; font-weight: 600; transition: var(--trans); display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
+.nav-cta:hover { background: var(--primary-d); transform: translateY(-1px); }
+
+/* DROPDOWN */
+.nav-drop-trigger { display: inline-flex; align-items: center; justify-content: flex-start; text-align: left; padding: 8px 12px; }
+.nav-dropdown { position: relative; z-index: 1001; }
+.nav-dropdown::after { content: ''; position: absolute; left: 0; right: 0; top: 100%; height: 12px; }
+.nav-drop-menu { display: none; position: absolute; top: 100%; right: 0; background: var(--white); border: 1px solid rgba(10,31,68,.1); border-radius: var(--radius); padding: 8px; min-width: 220px; box-shadow: var(--shadow); z-index: 1001; pointer-events: auto; align-items: flex-start; }
+.nav-dropdown:hover .nav-drop-menu,
+.nav-dropdown:focus-within .nav-drop-menu { display: flex; flex-direction: column; animation: fadeIn .2s ease; align-items: flex-start; }
+.drop-link { display: block; width: 100%; padding: 10px 14px; font-size: 13px; color: var(--text); border-radius: 8px; transition: var(--trans); pointer-events: auto; cursor: pointer; text-align: left; }
+.drop-link:hover { background: rgba(10,31,68,.06); color: var(--primary); }
+
+/* HAMBURGER — always pinned to the right edge of .hdr-inner */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  position: relative; /* ensure stacking context for z-index */
+  z-index: 1202;      /* keep the hamburger above other header elements */
+  cursor: pointer;
+  padding: 10px;
+  margin-left: auto;    /* push it to the far-right of .hdr-inner */
+  flex-shrink: 0;
+  order: 99;            /* always last child visually */
+  border-radius: 8px;
+  transition: background var(--trans);
+  -webkit-tap-highlight-color: transparent;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+}
+.hamburger:hover { background: rgba(10,31,68,.06); }
+.hamburger span { display: block; width: 24px; height: 2px; background: var(--primary); border-radius: 2px; transition: var(--trans); }
+
+/* Animated open/close (X) state */
+.hamburger.is-active span { background: var(--primary); }
+.hamburger.is-active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.is-active span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.hamburger.is-active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* MOBILE MENU — smooth slide-down via max-height transition */
+.mobile-menu {
+  display: block;        /* always in DOM flow for animation */
+  flex-direction: column;
+  padding: 0 16px;
+  gap: 2px;
+  background: var(--bg);
+  border-top: 1px solid rgba(10,31,68,.1);
+  align-items: stretch;
+  box-shadow: 0 8px 30px rgba(0,0,0,.08);
+  /* Slide-down animation: collapsed by default */
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.25s ease,
+              padding 0.3s ease;
+  pointer-events: none;
+}
+.mobile-menu.open {
+  display: block;
+  max-height: 600px;    /* large enough for all items */
+  opacity: 1;
+  padding: 12px 16px 20px;
+  pointer-events: auto;
+}
+
+/* Mobile menu inner layout */
+.mobile-menu-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.mob-link, .mob-cta {
+  width: 100%;
+  padding: 13px 16px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--trans);
+  text-align: left;
+  display: block;
+  min-height: 48px;      /* touch-friendly target size */
+  line-height: 1.4;
+  box-sizing: border-box;
+}
+.mob-link:hover, .mob-link:focus-visible { background: rgba(10,31,68,.06); color: var(--primary); }
+.mob-link.active { background: rgba(10,31,68,.08); color: var(--primary); font-weight: 600; }
+
+/* Divisions group label in mobile menu */
+.mob-section-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .15em;
+  color: var(--text-light);
+  text-transform: uppercase;
+  padding: 10px 16px 4px;
+  display: block;
+  pointer-events: none;
+}
+
+.mob-divider {
+  height: 1px;
+  background: rgba(10,31,68,.08);
+  margin: 6px 0;
+  border: none;
+}
+
+.mob-cta {
+  background: var(--primary);
+  color: var(--white);
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 10px;
+  min-height: 50px;
+  padding: 14px 16px;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: .02em;
+}
+.mob-cta:hover { background: var(--primary-d); }
+
+/* FLOATING CALL TAB */
+.call-tab { position: fixed; left: 50%; bottom: 12px; transform: translateX(-50%); background: linear-gradient(135deg,#fff5b1 0%,#ffd400 50%,#ffb400 100%); color: var(--primary); padding: 12px 20px; border-radius: 14px; border: 2px solid rgba(255,215,64,0.95); box-shadow: 0 30px 60px rgba(255,193,7,0.28),0 6px 24px rgba(255,215,64,0.12); z-index: 950; display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center; cursor: pointer; text-decoration: none; min-width: 220px; max-width: 92%; animation: ms-float 3s ease-in-out infinite,call-pulse 3s ease-in-out infinite; }
+.call-tab .call-title { font-weight: 900; font-size: 0.98rem; letter-spacing: .06em; text-transform: uppercase; }
+.call-tab .call-number { font-weight: 900; font-size: 1.1rem; }
+.call-tab:focus, .call-tab:active { outline: none; }
+.call-tab:hover { animation-play-state: paused; transform: translateX(-50%) translateY(-6px) scale(1.02); }
+
+
+/* === footer.css === */
+/* =============================================================
+   footer.css — Footer Styles
+   Morning Star Infra Projects
+   ============================================================= */
+
+/* Footer: full-bleed background with centered, responsive inner container */
+#site-footer {
+  position: relative;
+  width: 100%;
+  left: 0;
+  right: 0;
+  background: var(--primary-d);
+  color: rgba(255,255,255,.8);
+  padding: 64px 0 32px;
+  box-sizing: border-box;
+}
+
+/* Keep footer content constrained and aligned like the site container */
+#site-footer > .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+/* Ensure footer content is left-aligned like the rest of the site */
+#site-footer > .container {
+  text-align: left !important;
+}
+
+.footer-grid{ justify-items: start !important; }
+.footer-grid > *{ text-align: left !important; }
+
+.footer-bottom{ justify-content: flex-start !important; align-items: center !important; }
+.footer-bottom .footer-copy{ text-align:left !important; }
+
+@media (max-width: 1100px) {
+  .footer-grid { grid-template-columns: 1fr 1fr !important; gap:28px !important }
+}
+@media (max-width: 680px) {
+  .footer-grid { grid-template-columns: 1fr !important }
+  #site-footer { padding: 40px 0 24px !important }
+}
+
+
+
+/* Brand column */
+.footer-brand { display: flex; flex-direction: column; align-items: flex-start; }
+.footer-brand .logo-link { display: flex; align-items: center; justify-content: flex-start; gap: 8px; }
+.footer-brand .logo-main, .footer-brand .logo-sub { color: var(--white); }
+.footer-brand .logo-text { align-items: flex-start; text-align: left; margin: 0; }
+/* Brand description: place under logo/text and left-align */
+.footer-brand p { margin-top: 8px !important; font-size: .88rem; line-height: 1.7; opacity: .75; max-width: 520px; width:100%; text-align:left; }
+
+/* Headings and links */
+.footer-head { font-family: var(--font-display); font-size: .95rem; font-weight: 700; color: var(--white); margin-bottom: 16px; }
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer-quick { display: flex; flex-direction: column; align-items: flex-start; text-align: left; }
+.footer-quick .footer-head { width: 100%; text-align: left; }
+.footer-links-right { align-items: flex-start; text-align: left; }
+.footer-links-right li { width: 100%; }
+.footer-links-right a { display: block; }
+.footer-links a { font-size: .85rem; opacity: .7; transition: var(--trans); cursor: pointer; }
+.footer-links a:hover { opacity: 1; color: var(--gold); }
+
+/* Contact items */
+.contact-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; font-size: .85rem; opacity: .8; }
+.contact-item span:last-child { word-break: break-word; min-width: 0; }
+.contact-icon { display: inline-flex; align-items: center; flex-shrink: 0; }
+
+/* Footer contact CTA buttons (WhatsApp / Call Now) — wrap on small screens */
+.footer-contact-ctas { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-top: 16px; }
+
+/* Footer bottom bar */
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,.1);
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.footer-bottom {
+  background: var(--navy);
+  padding: 20px 24px;
+}
+.footer-copy { font-size: .8rem; opacity: .9; line-height: 1.5; color: rgba(255,255,255,.95); }
+
+/* Social icons */
+.footer-social { display: flex; gap: 12px; align-items: center; flex-wrap: nowrap; }
+.footer-social a { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 10px; background: rgba(255,255,255,.06); color: rgba(255,255,255,.95); transition: var(--trans); line-height: 0; vertical-align: middle; }
+.footer-social a:hover { background: rgba(255,255,255,.12); transform: translateY(-2px); }
+.footer-social svg { width: 22px; height: 22px; display: block; }
+.footer-social svg:not(.lucide) { fill: currentColor; }
+.footer-social svg.lucide { fill: none; stroke: currentColor; stroke-width: 2px; }
+
+/* Small icon-only CTA style (WhatsApp / Call) */
+.footer-icon{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:8px;background:rgba(255,255,255,.06);color:rgba(255,255,255,.95);text-decoration:none}
+.footer-icon:hover{background:rgba(255,255,255,.12);transform:translateY(-2px)}
+.footer-icon svg{width:20px;height:20px}
+
+
+/* === team.css === */
+/* =============================================================
+   team.css — Our Team Page Styles
+   Morning Star Infra Projects
+   ============================================================= */
+
+/* EXPERTISE GRID */
+.expertise-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.expertise-card{background:#fff;border-radius:16px;padding:36px 28px;border:1.5px solid rgba(10,31,68,.09);box-shadow:0 6px 24px rgba(10,31,68,.06);display:flex;flex-direction:column;align-items:flex-start;gap:16px;transition:transform .3s cubic-bezier(.4,0,.2,1),box-shadow .3s,border-color .3s}
+.expertise-card:hover{transform:translateY(-6px);box-shadow:0 18px 48px rgba(10,31,68,.13);border-color:rgba(247,189,16,.55)}
+.expertise-card-icon{width:56px;height:56px;border-radius:14px;background:linear-gradient(135deg,rgba(247,189,16,.18),rgba(10,31,68,.1));display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.expertise-card-icon .lucide{width:26px;height:26px;color:#0a1f44}
+.expertise-card-title{font-family:var(--font-display);font-size:1.05rem;font-weight:800;color:var(--primary);margin:0}
+.expertise-card-text{font-size:.88rem;color:var(--text-light);line-height:1.65;margin:0}
+
+/* EXPERTISE BADGES */
+.team-badges-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.team-badge{background:#fff;border-radius:12px;padding:20px 18px;border:1.5px solid rgba(10,31,68,.1);box-shadow:0 4px 16px rgba(10,31,68,.05);display:flex;align-items:center;gap:12px;transition:transform .2s ease,box-shadow .2s,border-color .2s;cursor:default}
+.team-badge:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(10,31,68,.1);border-color:rgba(247,189,16,.5)}
+.team-badge-icon{width:36px;height:36px;border-radius:8px;background:linear-gradient(135deg,var(--gold),rgba(247,189,16,.75));display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.team-badge-icon .lucide{width:18px;height:18px;color:#0a1f44}
+.team-badge-text{font-size:.88rem;font-weight:700;color:var(--primary);line-height:1.3}
+
+/* WHY CHOOSE GRID */
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.why-card{background:#fff;border-radius:14px;padding:28px 22px;border:1px solid rgba(10,31,68,.08);box-shadow:0 4px 18px rgba(10,31,68,.05);display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;transition:transform .25s ease,box-shadow .25s,border-color .25s}
+.why-card:hover{transform:translateY(-5px);box-shadow:0 14px 38px rgba(10,31,68,.1);border-color:rgba(247,189,16,.4)}
+.why-card-icon{width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,var(--primary),var(--navy));display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.why-card-icon .lucide{width:24px;height:24px;color:#f7bd10}
+.why-card-title{font-weight:800;font-size:.95rem;color:var(--primary);margin:0}
+.why-card-text{font-size:.82rem;color:var(--text-light);line-height:1.6;margin:0}
+
+/* COMMITMENT SECTION */
+.commitment-section{background:linear-gradient(135deg,var(--primary) 0%,#1a344e 100%);padding:80px 0;position:relative;overflow:hidden}
+.commitment-section::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(247,189,16,.05) 1px,transparent 1px);background-size:32px 32px;pointer-events:none}
+.commitment-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;position:relative;z-index:1}
+.commitment-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:32px 20px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:14px;backdrop-filter:blur(4px);transition:background .3s,transform .3s,border-color .3s}
+.commitment-card:hover{background:rgba(255,255,255,.12);transform:translateY(-4px);border-color:rgba(247,189,16,.4)}
+.commitment-icon{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,rgba(247,189,16,.25),rgba(247,189,16,.1));border:1px solid rgba(247,189,16,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.commitment-icon .lucide{width:22px;height:22px;color:var(--gold)}
+.commitment-title{font-size:.9rem;font-weight:800;color:#fff;margin:0;letter-spacing:.02em}
+.commitment-sub{font-size:.78rem;color:rgba(255,255,255,.65);line-height:1.5;margin:0}
+
+/* TEAM STATS */
+.team-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;background:var(--primary);border-radius:16px;overflow:hidden}
+.team-stat{padding:36px 24px;text-align:center;border-right:1px solid rgba(255,255,255,.1)}
+.team-stat:last-child{border-right:none}
+.team-stat-num{font-family:var(--font-display);font-size:2.4rem;font-weight:900;color:var(--gold);line-height:1}
+.team-stat-label{font-size:.82rem;color:rgba(255,255,255,.7);margin-top:6px;font-weight:500}
+
+/* TEAM HERO override: full-bleed dark split */
+#page-team .hero-split-left{padding:100px 60px}
+
+/* Ensure hero split content is vertically centered (left & right)
+   - Align grid items vertically, provide a sensible min-height for the hero
+   - Use a focused selector to avoid changing other hero styles site-wide
+*/
+#page-team .hero-split{
+  align-items: center;
+  align-content: center;
+  min-height: 60vh;
+}
+
+/* Ensure inner column stacks content centered both horizontally and vertically */
+#page-team .hero-split-left-inner{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* CTA: extra bottom padding so fixed floating call tab doesn't cover buttons */
+#page-team .cta-bar{padding-bottom:120px}
+
+/* Ensure all team sections are properly above the floating call tab */
+#page-team{padding-bottom:0}
+
+/* Responsive */
+@media(max-width:1100px){.expertise-grid{grid-template-columns:repeat(2,1fr)}.commitment-grid{grid-template-columns:repeat(3,1fr)}.why-grid{grid-template-columns:repeat(2,1fr)}.team-badges-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){.expertise-grid{grid-template-columns:1fr}.commitment-grid{grid-template-columns:repeat(2,1fr)}.why-grid{grid-template-columns:1fr}.team-badges-grid{grid-template-columns:1fr}.team-stats{grid-template-columns:repeat(2,1fr)}.team-stat{border-right:none;border-bottom:1px solid rgba(255,255,255,.1)}.team-stat:nth-child(odd){border-right:1px solid rgba(255,255,255,.1)}.team-stat:nth-last-child(-n+2){border-bottom:none}#page-team .hero-split-left{padding:64px 28px}}
+@media(max-width:480px){.commitment-grid{grid-template-columns:1fr}.team-stats{grid-template-columns:1fr}}
+
+/* =============================================================
+   showcase-carousel — Premium Continuous Scrolling Showcase
+   ============================================================= */
+
+:root {
+  --carousel-speed: 25s; /* Medium premium speed for smooth continuous movement */
+}
+
+.showcase-carousel-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 24px 0;
+  display: flex;
+  background: transparent;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Subtle fade gradients on the left and right edges for a premium look */
+.showcase-carousel-fade-left,
+.showcase-carousel-fade-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.showcase-carousel-fade-left {
+  left: 0;
+  background: linear-gradient(90deg, #fdfbf7 0%, rgba(253, 251, 247, 0) 100%);
+}
+
+.showcase-carousel-fade-right {
+  right: 0;
+  background: linear-gradient(-90deg, #fdfbf7 0%, rgba(253, 251, 247, 0) 100%);
+}
+
+/* Horizontal track holding the duplicated groups */
+.showcase-carousel-track {
+  display: flex;
+  width: max-content;
+  white-space: nowrap; /* keep everything on a single horizontal line */
+  will-change: transform;
+  transform: translateZ(0); /* Force GPU acceleration */
+  /* Continuous left-to-right marquee using a 3D transform (smooth, hardware-accelerated).
+     The track contains two identical groups; shifting by -50% -> 0 produces a seamless loop. */
+  animation: marquee 25s linear infinite;
+  -webkit-animation: marquee 25s linear infinite;
+}
+
+/* Keep hover visual effects (scale, shadow) but DO NOT pause animation — motion must never stop */
+@media (hover: hover) and (pointer: fine) {
+  .showcase-carousel-item:hover { /* visual emphasis only */
+    transform: scale(1.05);
+    box-shadow: 0 12px 32px rgba(10, 31, 68, 0.16);
+    z-index: 5;
+  }
+  .showcase-carousel-item:hover .showcase-carousel-img { transform: scale(1.03); }
+}
+
+/* The marquee group containing the list of items */
+.showcase-carousel-group {
+  display: flex;
+  gap: 20px;
+  padding: 0 10px;
+  flex-shrink: 0;
+}
+
+/* Carousel item cards */
+.showcase-carousel-item {
+  position: relative;
+  width: 300px;
+  height: 400px; /* Exact 3:4 aspect ratio (increased size for premium view) */
+  border-radius: 16px; /* Smoother, larger rounded corners */
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: 0 8px 24px rgba(10, 31, 68, 0.08);
+  border: 1px solid rgba(10, 31, 68, 0.05);
+  background: var(--white);
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s ease;
+  contain: layout paint; /* Optimize rendering performance */
+}
+
+/* Slight scale-up and premium shadow effect on hover */
+@media (hover: hover) and (pointer: fine) {
+  .showcase-carousel-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 32px rgba(10, 31, 68, 0.16);
+    z-index: 5;
+  }
+}
+
+/* Image styling */
+.showcase-carousel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.showcase-carousel-item:hover .showcase-carousel-img {
+  transform: scale(1.03);
+}
+
+/* Overlay card details (gradient, text, premium badge) */
+.showcase-carousel-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10, 31, 68, 0.85) 0%, rgba(10, 31, 68, 0.2) 60%, rgba(10, 31, 68, 0) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 16px;
+  color: var(--white);
+}
+
+.showcase-carousel-category {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  margin-bottom: 4px;
+}
+
+.showcase-carousel-name {
+  font-size: 0.95rem;
+  font-weight: 800;
+  margin: 0;
+  line-height: 1.2;
+  font-family: var(--font-display);
+}
+
+/* Seamless infinite marquee animation moving LEFT TO RIGHT (Reverse marquee) */
+@keyframes marquee {
+  0% { transform: translate3d(-50%, 0, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+@-webkit-keyframes marquee {
+  0% { transform: translate3d(-50%, 0, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+
+/* If the user or system requests reduced motion globally, override only for this
+   carousel to keep the marquee continuously animated as requested. This selector
+   is defined here (after main.min.css) and uses !important so it wins the cascade. */
+@media (prefers-reduced-motion: reduce) {
+  .showcase-carousel-track {
+    animation: marquee 25s linear infinite !important;
+    -webkit-animation: marquee 25s linear infinite !important;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .showcase-carousel-item {
+    width: 210px;
+    height: 280px; /* Exact 3:4 aspect ratio for smaller viewports */
+    border-radius: 12px; /* Marginally smaller rounded corners on mobile */
+  }
+  .showcase-carousel-fade-left,
+  .showcase-carousel-fade-right {
+    width: 60px;
+  }
+}
+
+/* ============================================================
+   MOBILE HEADER OPTIMIZATIONS (max-width: 768px)
+   ============================================================ */
+@media (max-width: 768px) {
+  /* Compact, clean header bar */
+  #site-header {
+    min-height: 60px;
+    height: auto;
+  }
+  .hdr-inner {
+    padding: 0 14px;
+    gap: 0;
+    min-height: 60px;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Logo section — left-aligned, no flex-grow */
+  .hdr-left {
+    flex: 0 0 auto;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+  }
+  .logo-icon img {
+    width: 48px;
+    height: 48px;
+  }
+
+  /* Center: logo text takes remaining space, centered */
+  .hdr-center {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1px;
+    min-width: 0;
+    overflow: hidden;
+    padding: 0 8px;
+  }
+  .hdr-center .logo-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    line-height: 1;
+  }
+  .logo-main {
+    font-size: 17px;
+    letter-spacing: .04em;
+    white-space: nowrap;
+  }
+  .logo-sub {
+    font-size: 9.5px !important;
+    letter-spacing: .15em;
+    margin-top: 2px;
+    white-space: nowrap;
+  }
+
+  /* Desktop nav hidden on mobile */
+  .hdr-nav { display: none !important; }
+
+  /* Hamburger — always visible on mobile */
+  .hamburger {
+    display: flex;
+    flex: 0 0 auto;
+    flex-shrink: 0;
+    margin-left: 0;
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  /* Mobile menu — full-width below header */
+  .mobile-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 999;
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 12px 40px rgba(10,31,68,.15);
+  }
+
+  /* Page offset to match compact header */
+  .page { padding-top: 60px; }
+}
+
+/* ============================================================
+   MOBILE FOOTER OPTIMIZATIONS (max-width: 768px)
+   ============================================================ */
+@media (max-width: 768px) {
+  #site-footer {
+    padding: 40px 0 28px;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+  .footer-grid > * {
+    width: 100%;
+    margin: 0;
+  }
+  .footer-brand {
+    align-items: flex-start;
+  }
+  .footer-brand p {
+    max-width: 100%;
+    font-size: .85rem;
+    line-height: 1.65;
+    margin-top: 12px;
+    opacity: .7;
+  }
+  .footer-head {
+    font-size: .9rem;
+    margin-bottom: 10px;
+  }
+  .footer-links {
+    gap: 8px;
+  }
+  .footer-links a {
+    font-size: .85rem;
+    padding: 2px 0;
+  }
+  .contact-item {
+    margin-bottom: 10px;
+    font-size: .85rem;
+  }
+  /* CTA buttons in footer: full width row */
+  .footer-contact-ctas {
+    gap: 10px;
+    margin-top: 14px;
+    flex-wrap: nowrap;
+  }
+  .footer-contact-ctas a {
+    flex: 1;
+    text-align: center;
+    padding: 11px 12px !important;
+    font-size: 13px !important;
+    border-radius: 9px !important;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* Social icons: proper spacing */
+  .footer-social {
+    margin-top: 14px;
+    gap: 10px;
+  }
+  .footer-social a {
+    width: 42px;
+    height: 42px;
+  }
+  /* Footer bottom */
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding-top: 20px;
+    margin-top: 8px;
+  }
+  .footer-copy {
+    font-size: .75rem;
+    line-height: 1.6;
+  }
+}
+
+/* ============================================================
+   SMALL MOBILE REFINEMENTS (max-width: 480px)
+   ============================================================ */
+@media (max-width: 480px) {
+  /* Even more compact header */
+  .hdr-inner {
+    padding: 0 10px;
+    min-height: 56px;
+  }
+  #site-header { min-height: 56px; }
+  .logo-icon img { width: 42px; height: 42px; }
+  .logo-main { font-size: 15px; }
+  .logo-sub { font-size: 9px !important; }
+  .page { padding-top: 56px; }
+
+  /* Footer further tightened */
+  #site-footer { padding: 32px 0 20px; }
+  .footer-grid { gap: 22px !important; }
+  .footer-contact-ctas { flex-direction: row; }
+}
+
+/* ============================================================
+   PREVENT HORIZONTAL OVERFLOW
+   ============================================================ */
+@media (max-width: 768px) {
+  body { overflow-x: hidden; }
+  #site-header { overflow: visible; }  /* let menu drop below */
+  .hdr-inner { max-width: 100%; }
+}
+
+/* === ENFORCE: make blog pages use the same footer sizing/layout as homepage === */
+/* This authoritative block overrides any page-specific footer sizing so individual
+   blog pages match the home screen footer exactly. */
+#site-footer {
+  padding: 64px 0 32px !important;
+  background: var(--primary-d) !important;
+  color: rgba(255,255,255,.9) !important;
+}
+
+.footer-bottom {
+  padding: 20px 24px !important;
+  background: #071530 !important;
+}
+
+/* =========================
+   MOBILE HEADER FIX
+   ========================= */
+@media (max-width:768px){
+
+  #site-header{
+    min-height:72px !important;
+  }
+
+  .hdr-inner{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:space-between !important;
+    min-height:72px !important;
+    padding:10px 16px !important;
+    gap:10px !important;
+  }
+
+  /* LEFT SIDE */
+  .hdr-left{
+    display:flex !important;
+    align-items:center !important;
+    flex:1 !important;
+    min-width:0;
+  }
+
+  .logo-link{
+    display:flex !important;
+    align-items:center !important;
+    gap:10px !important;
+    width:auto;
+  }
+
+  /* LOGO PERFECTLY CENTERED */
+  .logo-icon{
+    width:46px !important;
+    height:46px !important;
+    min-width:46px !important;
+
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+  }
+
+  .logo-icon img,
+  .logo-icon picture img{
+    width:46px !important;
+    height:46px !important;
+    object-fit:contain !important;
+    margin:0 !important;
+  }
+
+  /* SHOW COMPANY NAME IN MOBILE */
+  .hdr-center{
+    display:block !important;
+    flex:none !important;
+    margin:0 !important;
+    text-align:left !important;
+  }
+
+  .logo-text{
+    display:flex !important;
+    flex-direction:column !important;
+    justify-content:center !important;
+    align-items:flex-start !important;
+    line-height:1 !important;
+    margin:0 !important;
+  }
+
+  .logo-main{
+    font-size:14px !important;
+    white-space:nowrap;
+  }
+
+  .logo-sub{
+    font-size:9px !important;
+    letter-spacing:.12em !important;
+    margin-top:3px !important;
+  }
+
+  /* HIDE DESKTOP NAV */
+  .hdr-nav{
+    display:none !important;
+  }
+
+  /* HAMBURGER RIGHT SIDE */
+  .hamburger{
+    display:flex !important;
+    margin-left:auto !important;
+    flex-shrink:0 !important;
+  }
+}
+
+/* =========================
+   MOBILE FOOTER FIX
+   ========================= */
+
+@media (max-width:768px){
+
+.footer-grid{
+display:flex !important;
+flex-direction:column !important;
+gap:30px !important;
+}
+
+.footer-brand{
+display:flex !important;
+align-items:flex-start !important;
+}
+
+.footer-brand .logo-link{
+display:flex !important;
+align-items:center !important;
+gap:10px !important;
+}
+
+.footer-brand .logo-text{
+align-items:flex-start !important;
+text-align:left !important;
+margin:0 !important;
+}
+
+.footer-col{
+margin:0 !important;
+padding:0 !important;
+}
+
+.footer-head{
+margin-bottom:12px !important;
+}
+
+.footer-links{
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+#site-footer{
+padding:42px 16px 24px !important;
+}
+
+#site-footer .container{
+padding:0 !important;
+}
+}
+
+/* Prevent horizontal overflow shifts on mobile */
+html,body{
+overflow-x:hidden;
+}
+
+/* ===================================
+FINAL HEADER ALIGNMENT FIX
+=================================== */
+
+:root{
+--header-height:78px;
+}
+
+/* HEADER */
+
+#site-header{
+height:var(--header-height);
+min-height:var(--header-height);
+}
+
+.hdr-inner{
+max-width:1400px;
+height:100%;
+min-height:var(--header-height);
+
+display:flex !important;
+align-items:center !important;
+justify-content:space-between;
+
+padding:0 24px !important;
+gap:20px;
+}
+
+/* LEFT SIDE BRAND */
+
+.hdr-left{
+display:flex !important;
+align-items:center !important;
+
+flex:0 0 auto;
+height:100%;
+}
+
+/* LOGO + TEXT AS SINGLE UNIT */
+
+.logo-link{
+
+display:flex !important;
+
+align-items:center !important;
+
+justify-content:flex-start;
+
+gap:22px;
+
+height:100%;
+}
+
+/* LOGO SIZE */
+
+.logo-icon{
+
+  width:64px;
+  height:64px;
+
+  min-width:64px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+flex-shrink:0;
+}
+
+.logo-icon img,
+.logo-icon picture img{
+
+  width:64px !important;
+  height:64px !important;
+
+object-fit:contain;
+
+display:block;
+}
+
+
+/* COMPANY TEXT */
+
+.logo-text{
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:flex-start;
+
+line-height:1;
+
+margin:0;
+
+padding:0;
+}
+
+/* MORNING STAR */
+
+.logo-main{
+
+  font-size:1.4rem;
+font-weight:800;
+line-height:1;
+letter-spacing:.02em;
+margin:0;
+}
+
+/* INFRA PROJECTS */
+
+.logo-sub{
+
+  font-size:.95rem;
+  letter-spacing:.18em;
+  margin-top:6px;
+line-height:1;
+opacity:.9;
+}
+
+/* NAV AREA */
+
+.hdr-center{
+display:flex;
+align-items:center;
+justify-content:center;
+flex:1;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+:root{
+--header-height:72px;
+}
+
+.hdr-inner{
+
+padding:0 14px !important;
+
+gap:10px;
+}
+
+/* Equalize footer section gaps and internal padding */
+.footer-grid{
+  gap:30px !important;
+}
+.footer-grid > *{
+  padding:0 12px;
+  box-sizing:border-box;
+}
+
+@media (max-width:768px){
+  .footer-grid > *{
+    padding:0 10px !important;
+  }
+}
+
+/* Ensure footer bottom items have consistent spacing */
+.footer-bottom{gap:16px}
+.footer-bottom .footer-copy{flex:1 1 auto;margin:0}
+
+/* Compact footer brand: reduce logo + text size, merge visually and left-align */
+#site-footer .footer-brand .logo-link{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:flex-start !important;
+  gap:8px !important;
+}
+
+#site-footer .footer-brand .logo-icon{
+  width:40px !important;
+  height:40px !important;
+  min-width:40px !important;
+}
+
+#site-footer .footer-brand .logo-icon img{
+  width:100% !important;
+  height:100% !important;
+  object-fit:contain !important;
+}
+
+#site-footer .footer-brand .logo-text{
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:flex-start !important;
+  text-align:left !important;
+  margin:0 !important;
+}
+
+#site-footer .footer-brand .logo-main{
+  font-size:16px !important;
+  font-weight:800 !important;
+  line-height:1 !important;
+  color:var(--white) !important;
+}
+
+#site-footer .footer-brand .logo-sub{
+  font-size:10px !important;
+  letter-spacing:.14em !important;
+  margin-top:2px !important;
+  color:rgba(255,255,255,.75) !important;
+}
+
+
+.logo-link{
+
+gap:10px;
+}
+
+.logo-icon{
+
+width:50px;
+height:50px;
+min-width:50px;
+}
+
+.logo-icon img{
+
+width:50px !important;
+height:50px !important;
+}
+
+.logo-main{
+
+font-size:14px;
+}
+
+.logo-sub{
+
+font-size:8px;
+
+margin-top:3px;
+
+letter-spacing:.14em;
+}
+
+.hdr-nav{
+
+display:none !important;
+}
+
+.hamburger{
+
+display:flex !important;
+
+margin-left:auto;
+}
+}
+
+/* ====================================
+FINAL FOOTER SPACING + MOBILE FIX
+Put at bottom of components.css
+==================================== */
+
+/* FOOTER MAIN */
+
+#site-footer{
+padding:52px 0 22px !important;
+overflow:hidden;
+}
+
+#site-footer>.container{
+max-width:1400px;
+margin:auto;
+padding:0 28px !important;
+}
+
+
+/* DESKTOP GRID */
+
+.footer-grid{
+display:grid !important;
+grid-template-columns:
+1.7fr
+1fr
+1fr
+1.2fr !important;
+gap:30px !important;
+align-items:start !important;
+margin-bottom:30px !important;
+}
+
+/* ===============================
+GLOBAL HEADER SYSTEM
+FOR ALL PAGES
+================================ */
+
+:root{
+--header-height:84px;
+}
+
+#site-header{
+height:var(--header-height);
+min-height:var(--header-height);
+
+position:fixed;
+top:0;
+left:0;
+right:0;
+
+z-index:1200;
+
+background:rgba(246,245,244,.97);
+
+backdrop-filter:blur(10px);
+
+border-bottom:1px solid rgba(10,31,68,.06);
+}
+
+.hdr-inner{
+
+height:100%;
+
+max-width:1400px;
+
+margin:auto;
+
+padding:0 24px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+}
+
+.hdr-left{
+display:flex;
+align-items:center;
+height:100%;
+}
+
+.logo-link{
+display:flex;
+align-items:center;
+gap:18px;
+height:100%;
+}
+
+.logo-icon{
+
+width:72px;
+height:72px;
+
+min-width:72px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+}
+
+.logo-icon img{
+width:100%!important;
+height:100%!important;
+object-fit:contain;
+}
+
+.logo-text{
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:flex-start;
+}
+
+.logo-main{
+
+font-size:2.5rem;
+
+font-weight:800;
+
+line-height:1;
+}
+
+.logo-sub{
+
+font-size:1rem;
+
+letter-spacing:.24em;
+
+margin-top:6px;
+}
+
+.hdr-center{
+
+flex:1;
+
+display:flex;
+
+justify-content:center;
+}
+
+.hdr-nav{
+
+display:flex;
+
+align-items:center;
+
+gap:6px;
+}
+
+@media(max-width:768px){
+
+:root{
+--header-height:72px;
+}
+
+.hdr-inner{
+
+padding:0 14px;
+}
+
+.logo-link{
+
+gap:10px;
+}
+
+.logo-icon{
+
+width:50px;
+height:50px;
+min-width:50px;
+}
+
+.logo-main{
+
+font-size:14px;
+}
+
+.logo-sub{
+
+font-size:8px;
+
+letter-spacing:.14em;
+}
+
+.hdr-nav{
+display:none!important;
+}
+
+.hamburger{
+display:flex!important;
+margin-left:auto;
+}
+}
+
+/* FOOTER SYSTEM */
+.footer-grid{
+
+display:grid;
+
+grid-template-columns:
+1.7fr
+1fr
+1fr
+1.2fr;
+
+gap:30px;
+
+margin-bottom:30px;
+}
+
+@media(max-width:768px){
+
+.footer-grid{
+
+display:flex!important;
+
+flex-direction:column!important;
+
+gap:24px!important;
+}
+
+.footer-brand,
+.footer-links,
+.footer-quick{
+
+align-items:flex-start!important;
+
+text-align:left!important;
+}
+}
+
+
+/* BRAND */
+
+.footer-brand{
+display:flex;
+flex-direction:column;
+align-items:flex-start;
+justify-content:flex-start;
+padding-right:8px;
+}
+
+.footer-brand .logo-link{
+display:flex;
+align-items:center;
+gap:14px !important;
+}
+
+.footer-brand p{
+margin-top:20px !important;
+max-width:470px;
+line-height:1.7;
+font-size:.93rem;
+}
+
+
+/* SECTION TITLES */
+
+.footer-head{
+margin-bottom:14px !important;
+}
+
+
+/* LINKS */
+
+.footer-links{
+display:flex;
+flex-direction:column;
+gap:12px !important;
+padding:0;
+margin:0;
+}
+
+.footer-links li{
+margin:0;
+}
+
+
+/* CONTACT */
+
+.contact-item{
+display:flex;
+align-items:flex-start;
+gap:12px;
+margin-bottom:16px !important;
+}
+
+
+/* BUTTONS */
+
+.footer-contact-ctas{
+display:flex;
+gap:10px !important;
+margin-top:18px;
+}
+
+
+/* SOCIAL */
+
+.footer-social{
+display:flex;
+gap:12px;
+margin-top:18px;
+}
+
+
+/* BOTTOM BAR */
+
+.footer-bottom{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding-top:24px;
+margin-top:20px;
+border-top:1px solid rgba(255,255,255,.08);
+gap:16px;
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+#site-footer{
+padding:34px 0 18px !important;
+}
+
+#site-footer>.container{
+padding:0 18px !important;
+}
+
+
+/* STACK ITEMS */
+
+.footer-grid{
+display:flex !important;
+flex-direction:column !important;
+gap:26px !important;
+margin-bottom:20px !important;
+}
+
+
+/* LEFT ALIGN EVERYTHING */
+
+.footer-brand,
+.footer-quick,
+.footer-contact,
+.footer-links,
+.footer-social{
+width:100%;
+align-items:flex-start !important;
+justify-content:flex-start !important;
+text-align:left !important;
+}
+
+
+/* LOGO + TEXT */
+
+.footer-brand .logo-link{
+display:flex;
+align-items:center;
+justify-content:flex-start;
+gap:12px !important;
+}
+
+.footer-brand .logo-text{
+align-items:flex-start !important;
+text-align:left !important;
+}
+
+
+/* REMOVE RANDOM SPACING */
+
+.footer-brand p{
+margin-top:14px !important;
+max-width:100% !important;
+}
+
+.footer-links{
+gap:10px !important;
+}
+
+.contact-item{
+margin-bottom:12px !important;
+}
+
+.footer-contact-ctas{
+width:100%;
+flex-wrap:wrap;
+justify-content:flex-start;
+}
+
+.footer-social{
+justify-content:flex-start;
+}
+
+
+/* COPYRIGHT BAR */
+
+.footer-bottom{
+flex-direction:column;
+align-items:flex-start;
+text-align:left;
+gap:10px;
+}
+
+}
+
+/* ====================================
+   PHASE 1 UPGRADES
+   Scroll shrink · Active nav · Scroll lock
+   Top strip · Nav CTA · Mobile groups
+   Footer trust & SEO
+   ==================================== */
+
+#/* ── STICKY SHRINK ON SCROLL ─────────────────────────────────── */
+#site-header {
+  /* Avoid transitioning height (prevents layout jumps); only animate visuals */
+  transition: box-shadow .28s ease, background .28s ease;
+  overflow: visible; /* allow dropdowns and nav elements to render without clipping */
+}
+/* Reduced-impact scrolled state: avoid forcing header/logo height changes
+   to prevent content overflow when the header is toggled. Keep only
+   a subtle visual treatment (box-shadow) so the header appears elevated.
+*/
+#site-header.scrolled {
+  /* height changes removed to keep header content stable on scroll */
+  box-shadow: 0 4px 28px rgba(10,31,68,.13);
+}
+/* Avoid forcing logo/image size changes when scrolled — let layout flow */
+/* #site-header.scrolled .logo-icon, #site-header.scrolled .logo-icon img { ... } */
+/* #site-header.scrolled .logo-main { ... } */
+/* #site-header.scrolled .logo-sub { ... } */
+@media (max-width: 768px) {
+  #site-header.scrolled {
+    height: 60px !important;
+    min-height: 60px !important;
+  }
+}
+
+/* ── GOLD ACTIVE NAV PILL ────────────────────────────────────── */
+.nav-link.active {
+  background: var(--gold) !important;
+  color: var(--primary) !important;
+  font-weight: 700 !important;
+  border-radius: 8px;
+}
+
+/* ── BODY SCROLL LOCK (mobile menu open) ─────────────────────── */
+body.menu-open {
+  overflow: hidden;
+}
+
+/* ── TOP CONTACT STRIP ───────────────────────────────────────── */
+#top-strip {
+  width: 100%;
+  background: var(--primary-d);
+  color: rgba(255,255,255,.82);
+  font-size: .78rem;
+  font-weight: 500;
+  letter-spacing: .03em;
+  z-index: 1100;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.top-strip-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 7px 28px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  justify-content: flex-end;
+}
+.top-strip-inner a {
+  color: rgba(255,255,255,.82);
+  text-decoration: none;
+  transition: color .2s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.top-strip-inner a:hover { color: var(--gold); }
+.top-strip-inner span { opacity: .65; }
+/* Mobile: hide top strip to save space */
+@media (max-width: 768px) {
+  #top-strip { display: none; }
+}
+
+/* ── NAV CTA "GET FREE QUOTE" BUTTON ────────────────────────── */
+.nav-quote-cta {
+  background: var(--gold);
+  color: var(--primary) !important;
+  padding: 9px 18px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  transition: var(--trans);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  margin-left: 6px;
+  letter-spacing: .02em;
+}
+.nav-quote-cta:hover {
+  background: #e6ac00;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(247,189,16,.35);
+}
+
+/* ── MOBILE MENU GROUPED SECTIONS ───────────────────────────── */
+.mob-section-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .15em;
+  color: var(--text-light);
+  text-transform: uppercase;
+  padding: 12px 16px 4px;
+  display: block;
+  pointer-events: none;
+}
+.mob-divider {
+  height: 1px;
+  background: rgba(10,31,68,.08);
+  margin: 6px 0;
+  border: none;
+}
+
+/* ── FOOTER TRUST BADGES ─────────────────────────────────────── */
+.footer-trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+  padding: 18px 28px;
+  margin-top: 8px;
+  border-top: none;
+  background: #071530;
+  color: rgba(255,255,255,.95);
+}
+.footer-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: .8rem;
+  color: rgba(255,255,255,.75);
+  font-weight: 500;
+}
+.footer-trust-item svg {
+  width: 14px;
+  height: 14px;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+@media (max-width: 768px) {
+  .footer-trust { gap: 8px 16px; }
+  .footer-trust-item { font-size: .76rem; }
+}
+
+/* Ensure service area links in the trust/footer use the specified navy and are readable */
+.footer-seo-links a,
+.footer-trust a {
+  color: rgba(255,255,255,.95);
+  text-decoration: none;
+}
+.footer-seo-links a:hover,
+.footer-trust a:hover {
+  color: var(--gold);
+}
+
+/* ── FOOTER SERVICE AREAS ────────────────────────────────────── */
+.footer-service-areas .footer-links a {
+  font-size: .82rem;
+}
+
+/* ── FOOTER SEO INTERNAL LINKS ───────────────────────────────── */
+.footer-seo-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  padding: 16px 0 8px;
+  border-top: 1px solid rgba(255,255,255,.06);
+  margin-top: 4px;
+}
+.footer-seo-links a {
+  font-size: .72rem;
+  color: rgba(255,255,255,.45);
+  text-decoration: none;
+  transition: color .2s;
+  letter-spacing: .01em;
+}
+.footer-seo-links a:hover {
+  color: rgba(255,255,255,.75);
+}
+@media (max-width: 768px) {
+  .footer-seo-links { gap: 6px 14px; }
+}
+
+/* ============================================================
+   USER: Final authoritative header/footer overrides
+   Appended per request — this block is the final authority
+   and should live at the VERY BOTTOM of components.css
+   ============================================================ */
+
+/* Lock header as fixed, authoritative layout across all pages */
+#site-header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:9999;
+  background:rgba(246,245,244,.98);
+  backdrop-filter:blur(10px);
+}
+
+.hdr-inner{
+  max-width:1400px;
+  margin:auto;
+  padding:8px 24px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.hdr-left{display:flex;align-items:center}
+
+.logo-link{display:flex;align-items:center;gap:14px}
+
+.logo-text{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;text-align:left}
+
+.logo-icon{width:72px;height:72px;flex-shrink:0}
+
+.logo-icon img{width:100%;height:100%;object-fit:contain}
+
+/* Slightly larger logo/text for desktop */
+.logo-main{font-size:26px!important;font-weight:800}
+.logo-sub{font-size:13px!important;letter-spacing:.2em}
+
+/* Mobile override */
+@media(max-width:768px){
+  .logo-main{font-size:14px!important}
+  .logo-sub{font-size:9px!important}
+  .logo-icon{width:46px!important;height:46px!important}
+}
+
+/* Ensure main content respects header height variable */
+main, .page { padding-top: var(--hdr-h, 84px); }
+
+<<<<<<< HEAD
+/* ==========================
+  HEADER
+========================== */
+
+:root{
+ --primary:#0a1f44;
+ --primary-d:#071530;
+ --bg:#f6f5f4;
+ --white:#ffffff;
+ --text:#2c2c2c;
+ --gold:#f7bd10;
+
+ --shadow:0 4px 24px rgba(10,31,68,.12);
+ --radius:12px;
+ --hdr-h:96px;
+
+ --trans:all .15s cubic-bezier(.4,0,.2,1);
+
+ --font-sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+ --font-display:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+ --font-mono:monospace;
+}
+
+#site-header{
+position:fixed;
+top:0;
+left:0;
+right:0;
+z-index:1000;
+background:rgba(246,245,244,.98);
+border-bottom:1px solid rgba(10,31,68,.08);
+min-height:var(--hdr-h);
+transition:var(--trans);
+}
+
+#site-header.scrolled{
+box-shadow:0 2px 8px rgba(10,31,68,.1);
+}
+
+.hdr-inner{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:12px;
+max-width:1400px;
+margin:auto;
+padding:8px 24px;
+min-height:var(--hdr-h);
+}
+
+.hdr-left{
+display:flex;
+align-items:center;
+}
+
+.hdr-city{
+font-family:var(--font-mono);
+font-size:9px;
+letter-spacing:.15em;
+color:var(--primary);
+opacity:.6;
+font-weight:700;
+}
+
+.hdr-center{
+display:flex;
+align-items:center;
+justify-content:center;
+flex:1;
+gap:10px;
+}
+
+.logo-link{
+display:flex;
+align-items:center;
+text-decoration:none;
+}
+
+.logo-icon{
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.logo-icon img{
+width:72px;
+height:72px;
+object-fit:contain;
+}
+
+.logo-text{
+display:flex;
+flex-direction:column;
+line-height:1;
+align-items:center;
+}
+
+.logo-main{
+font-size:40px;
+font-weight:700;
+letter-spacing:.05em;
+color:var(--primary);
+}
+
+.logo-sub{
+font-size:18px;
+letter-spacing:.2em;
+opacity:.8;
+margin-top:4px;
+}
+
+.hdr-nav{
+display:flex;
+align-items:center;
+gap:4px;
+}
+
+.nav-link{
+font-size:13px;
+font-weight:500;
+padding:8px 12px;
+border-radius:8px;
+cursor:pointer;
+transition:.3s;
+}
+
+.nav-link:hover,
+.nav-link.active{
+color:var(--primary);
+background:rgba(10,31,68,.06);
+}
+
+.nav-cta{
+background:var(--primary);
+color:white;
+padding:9px 18px;
+border-radius:8px;
+font-size:13px;
+font-weight:600;
+display:flex;
+align-items:center;
+gap:6px;
+}
+
+.nav-cta:hover{
+background:var(--primary-d);
+transform:translateY(-1px);
+}
+
+.hamburger{
+display:none;
+flex-direction:column;
+gap:5px;
+background:none;
+border:none;
+cursor:pointer;
+padding:8px;
+}
+
+.hamburger span{
+display:block;
+width:24px;
+height:2px;
+background:var(--primary);
+border-radius:2px;
+}
+
+.mobile-menu{
+display:none;
+flex-direction:column;
+padding:16px;
+gap:6px;
+background:var(--bg);
+border-top:1px solid rgba(10,31,68,.1);
+}
+
+.mobile-menu.open{
+display:flex;
+}
+
+.mob-link,
+.mob-cta{
+padding:12px;
+border-radius:8px;
+cursor:pointer;
+}
+
+.mob-link:hover{
+background:rgba(10,31,68,.06);
+}
+
+.mob-cta{
+background:var(--primary);
+color:white;
+}
+
+
+/* ==========================
+  FOOTER
+========================== */
+
+#site-footer{
+background:var(--primary-d);
+color:white;
+padding:64px 0 32px;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:2fr 1fr 1fr 1.5fr;
+gap:48px;
+margin-bottom:48px;
+}
+
+.footer-brand{
+display:flex;
+flex-direction:column;
+align-items:flex-start;
+}
+
+.footer-brand .logo-link{
+display:flex;
+align-items:center;
+gap:8px;
+}
+
+.footer-brand .logo-text{
+align-items:flex-start;
+text-align:left;
+}
+
+.footer-brand p{
+margin-top:16px;
+font-size:.88rem;
+line-height:1.7;
+opacity:.75;
+max-width:280px;
+}
+
+.footer-head{
+font-size:.95rem;
+font-weight:700;
+margin-bottom:16px;
+color:white;
+}
+
+.footer-links{
+list-style:none;
+display:flex;
+flex-direction:column;
+gap:10px;
+padding:0;
+}
+
+.footer-links a{
+font-size:.85rem;
+opacity:.7;
+transition:.3s;
+text-decoration:none;
+color:white;
+}
+
+.footer-links a:hover{
+opacity:1;
+color:var(--gold);
+}
+
+.contact-item{
+display:flex;
+align-items:flex-start;
+gap:10px;
+margin-bottom:12px;
+font-size:.85rem;
+opacity:.8;
+}
+
+.contact-icon{
+display:inline-flex;
+align-items:center;
+flex-shrink:0;
+}
+
+.footer-bottom{
+border-top:1px solid rgba(255,255,255,.1);
+padding-top:24px;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+
+gap:12px;
+}
+
+.footer-copy{
+font-size:.8rem;
+opacity:.5;
+}
+
+
+/* ==========================
+  MOBILE
+========================== */
+
+@media(max-width:900px){
+
+.hdr-nav{
+display:none;
+}
+
+.hamburger{
+display:flex;
+}
+
+#site-header{
+min-height:72px;
+}
+
+.logo-icon img{
+width:56px;
+height:56px;
+}
+
+.logo-main{
+font-size:28px;
+}
+
+.logo-sub{
+font-size:14px;
+}
+
+.hdr-inner{
+padding:8px 16px;
+}
+
+.mobile-menu{
+position:absolute;
+top:100%;
+left:0;
+right:0;
+width:100%;
+background:var(--bg);
+box-shadow:0 8px 30px rgba(0,0,0,.08);
+}
+
+.footer-grid{
+grid-template-columns:1fr;
+gap:24px;
+}
+
+}
+
+
+@media(max-width:520px){
+
+.logo-main{
+font-size:22px;
+}
+
+.logo-sub{
+font-size:12px;
+}
+
+.hdr-inner{
+padding:8px 12px;
+}
+
+.footer-copy{
+font-size:.75rem;
+}
+
+}
+
+
+=======
+>>>>>>> a0b17b1412b75c773195b63819d7b228c068fe83

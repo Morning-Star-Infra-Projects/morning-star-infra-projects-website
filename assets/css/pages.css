@@ -1,0 +1,3352 @@
+/* =============================================================
+   pages.css — Page & Section Specific Styles
+   Morning Star Infra Projects
+   ============================================================= */
+
+/* HERO VARIANTS */
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background: none
+}
+
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, .15)0%, rgba(0, 0, 0, .35)100%)
+}
+
+.hero-tag {
+  display: inline-block;
+  background: rgba(247, 189, 16, .2);
+  border: 1px solid rgba(247, 189, 16, .5);
+  color: var(--gold);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: .15em;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 20px
+}
+
+.hero-title {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, .4)
+}
+
+.hero-sub {
+  text-shadow: 0 1px 4px rgba(0, 0, 0, .4)
+}
+
+/* Split hero */
+.hero-split {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  min-height: 90vh;
+  overflow: hidden;
+  margin-bottom: 0
+}
+
+.hero-split-left {
+  background: linear-gradient(135deg, var(--primary-d)0%, var(--primary)60%, var(--navy)100%);
+  display: flex;
+  align-items: center;
+  padding: 100px 60px;
+  position: relative;
+  overflow: hidden
+}
+
+.hero-split-left::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(247, 189, 16, .07)1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none
+}
+
+.hero-split-left-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 520px
+}
+
+.hero-split-right {
+  position: relative;
+  overflow: hidden
+}
+
+.hero-split-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  transform: translateZ(0)
+}
+
+.hero-split-right::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(7, 21, 48, .35)0%, transparent 50%);
+  pointer-events: none
+}
+
+.hero-split-badge {
+  position: absolute;
+  bottom: 32px;
+  left: 28px;
+  background: rgba(247, 189, 16, .95);
+  color: var(--primary);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  padding: 10px 18px;
+  border-radius: 6px;
+  z-index: 2;
+  backdrop-filter: blur(4px)
+}
+
+/* Our Team page: make hero match Our Story (no image, centered content) */
+#page-team .hero-split {
+  grid-template-columns: 1fr;
+  /* Ensure the team hero has vertical space so centering is meaningful */
+  min-height: 60vh;
+  align-items: center; /* vertical align of grid items */
+}
+
+#page-team .hero-split-left {
+  /* Use same background as the .sec-dark section */
+  background: var(--primary) !important;
+  color: var(--white);
+  padding: 48px 32px !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+#page-team .hero-split-left-inner {
+  max-width: 820px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#page-team .hero-title { text-align: center; }
+
+/* Ensure hero text and controls are visible on navy background */
+#page-team .hero-split-left .hero-title,
+#page-team .hero-split-left .hero-sub,
+#page-team .hero-split-left .hero-tag {
+  color: var(--white) !important;
+}
+
+#page-team .hero-split-left .btn-secondary {
+  color: var(--white) !important;
+  border-color: rgba(255,255,255,.25) !important;
+}
+
+#page-team .hero-split-left .btn-primary { box-shadow:none; }
+
+/* Removed page-specific header overrides (page-team-header) to unify header across site */
+
+/* Collage hero */
+.hero-collage {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  min-height: auto;
+  overflow: hidden;
+  padding-top: 0;
+  margin-bottom: 0;
+  background: linear-gradient(145deg, var(--primary-d)0%, var(--primary)55%, var(--navy)100%)
+}
+
+.hero-collage-left {
+  background: transparent;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  min-height: 280px
+}
+
+.hero-collage-left::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(247, 189, 16, .06)1px, transparent 1px);
+  background-size: 26px 26px;
+  pointer-events: none
+}
+
+.hero-collage-left-inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: none;
+  background: transparent;
+  padding: 2px 0;
+  border-radius: 0;
+  box-sizing: border-box
+}
+
+.hero-collage-right {
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  overflow: hidden;
+  min-height: 280px
+}
+
+.hero-collage-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  max-width: 100%;
+  max-height: 100%
+}
+
+.collage-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(247, 189, 16, .18);
+  border: 1px solid rgba(247, 189, 16, .4);
+  color: var(--gold);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: .15em;
+  padding: 7px 16px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  font-weight: 700
+}
+
+/* STATS */
+.stats-strip {
+  background: var(--primary);
+  padding: 48px 0
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  text-align: center
+}
+
+.stat-num {
+  font-family: var(--font-display);
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--gold);
+  line-height: 1
+}
+
+.stat-label {
+  font-size: .85rem;
+  color: rgba(255, 255, 255, .7);
+  margin-top: 6px
+}
+
+/* PRICING */
+.pricing-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-bottom: 8px;
+  cursor: grab;
+  margin-right: -24px;
+  padding-right: 24px
+}
+
+.pricing-grid::-webkit-scrollbar {
+  display: none
+}
+
+.pricing-grid.is-dragging {
+  cursor: grabbing;
+  scroll-snap-type: none;
+  user-select: none
+}
+
+.price-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  border: 2px solid rgba(10, 31, 68, .1);
+  text-align: center;
+  transition: var(--trans);
+  position: relative;
+  aspect-ratio: 9/16;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 0 0 calc(28% - 15px);
+  scroll-snap-align: start
+}
+
+.price-card:hover,
+.price-card.featured {
+  border-color: var(--primary);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow)
+}
+
+.price-card.featured {
+  background: var(--primary)
+}
+
+.price-card.featured .price-name,
+.price-card.featured .price-inc {
+  color: rgba(255, 255, 255, .8)
+}
+
+.price-card.featured .price-amount {
+  color: var(--gold)
+}
+
+.price-card.featured .price-badge {
+  display: block
+}
+
+.price-badge {
+  display: none;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--gold);
+  color: var(--primary);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+  font-family: var(--font-mono);
+  letter-spacing: .05em;
+  z-index: 10
+}
+
+.price-card:focus {
+  outline: none
+}
+
+.price-card:focus-visible {
+  box-shadow: 0 0 0 4px rgba(247, 189, 16, .15), 0 0 0 2px var(--gold);
+  border-radius: 12px
+}
+
+.price-name {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 16px
+}
+
+.price-amount {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--primary);
+  font-family: var(--font-display);
+  line-height: 1
+}
+
+.price-inc {
+  font-size: .8rem;
+  color: var(--text-light);
+  margin-top: 4px
+}
+
+.price-features {
+  list-style: none;
+  margin-top: 16px;
+  text-align: left
+}
+
+.price-features li {
+  font-size: .95rem;
+  font-weight: 500;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, .06);
+  color: var(--text);
+  display: flex;
+  align-items: flex-start;
+  gap: 6px
+}
+
+.price-features li::before {
+  content: '';
+  color: var(--gold);
+  font-weight: 700;
+  flex-shrink: 0
+}
+
+.price-card.featured .price-features li {
+  border-color: rgba(255, 255, 255, .1);
+  color: rgba(255, 255, 255, .85)
+}
+
+.price-card.featured .price-features li::before {
+  color: var(--gold)
+}
+
+/* DIVISION TABS */
+.div-tabs-wrapper {
+  position: relative;
+  overflow: hidden
+}
+
+.div-tabs {
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-bottom: 4px;
+  cursor: grab;
+  touch-action: pan-x
+}
+
+.div-tabs::-webkit-scrollbar {
+  display: none
+}
+
+.div-tabs.is-dragging {
+  cursor: grabbing;
+  scroll-snap-type: none;
+  user-select: none
+}
+
+.div-tab {
+  position: relative;
+  aspect-ratio: 9/16;
+  flex: 0 0 calc(28.5% - 12px);
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform .3s cubic-bezier(.4, 0, .2, 1), box-shadow .3s ease;
+  border-radius: 16px;
+  border: 1px solid rgba(10, 31, 68, .12);
+  box-shadow: 0 10px 28px rgba(10, 31, 68, .12);
+  background: var(--white);
+  scroll-snap-align: start;
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  display: block;
+  text-decoration: none
+}
+
+.div-tab-bg {
+  position: absolute;
+  inset: 0;
+  transition: transform .4s ease;
+  pointer-events: none;
+  image-rendering: high-quality;
+  background: none
+}
+
+.div-tab-media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  transition: transform .4s ease;
+  image-rendering: high-quality
+}
+
+.div-tab-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block
+}
+
+.div-tab::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, .1)0%, rgba(0, 0, 0, .55)100%);
+  transition: var(--trans);
+  pointer-events: none;
+  z-index: 1
+}
+
+.div-tab:hover::after {
+  background: linear-gradient(180deg, rgba(0, 0, 0, .05)0%, rgba(0, 0, 0, .4)100%)
+}
+
+.div-tab:hover .div-tab-bg {
+  transform: scale(1.06)
+}
+
+.div-tab:hover .div-tab-media {
+  transform: scale(1.06)
+}
+
+.div-tab:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(10, 31, 68, .2)
+}
+
+.div-tab-content {
+  position: relative;
+  z-index: 2;
+  padding: 32px 24px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end
+}
+
+.div-tab-num {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--gold);
+  letter-spacing: .2em;
+  margin-bottom: 12px;
+  opacity: .8
+}
+
+.div-tab-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.4;
+  margin-bottom: 16px
+}
+
+.div-tab-desc {
+  font-size: .82rem;
+  color: rgba(255, 255, 255, .75);
+  line-height: 1.5;
+  margin-bottom: 20px
+}
+
+.div-tab-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--gold);
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 10px 18px;
+  border-radius: 6px;
+  transition: var(--trans);
+  pointer-events: auto
+}
+
+.div-tab:hover .div-tab-cta {
+  background: var(--white)
+}
+
+.div-tab:focus {
+  outline: none
+}
+
+.div-tab:focus-visible {
+  box-shadow: 0 0 0 4px rgba(247, 189, 16, .15), 0 0 0 2px var(--gold);
+  border-radius: 12px
+}
+
+/* ACCORDION (construction packages) */
+.construction-packages {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 1024px) {
+  .construction-packages {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .construction-packages {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+/* Mobile-only: convert division carousel to 2x2 grid (exactly mobile screens) */
+@media (max-width: 720px) {
+
+/* Compact info block: Commercial & Industrial summary */
+.ci-info-block {
+  display: flex;
+  justify-content: center;
+  padding: 80px 16px; /* generous vertical spacing: 60-90px */
+  background: var(--white);
+}
+
+.ci-info-inner {
+  max-width: 750px; /* fit in 600-750px as requested */
+  width: min(94%, 750px);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ci-info-accent {
+  width: 64px;
+  height: 6px;
+  background: var(--gold);
+  margin: 0 auto 18px;
+  border-radius: 4px;
+  opacity: .98;
+}
+
+.ci-info-title {
+  font-family: var(--font-display, 'Inter', sans-serif);
+  font-size: clamp(1.9rem, 2.6vw, 2.6rem); /* strong visual hierarchy */
+  font-weight: 900;
+  color: var(--navy);
+  margin: 0 0 16px;
+  line-height: 1.04;
+}
+
+.ci-info-sub {
+  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+  font-weight: 600;
+  color: var(--primary-d);
+  margin: 0 0 14px;
+}
+
+.ci-info-desc {
+  font-size: 1rem;
+  color: rgba(10,31,68,0.72);
+  max-width: 700px;
+  margin: 0 auto;
+  opacity: .95;
+}
+
+@media (max-width: 900px) {
+  .ci-info-block { padding: 56px 14px; }
+  .ci-info-title { font-size: clamp(1.4rem, 3vw, 2rem); }
+  .ci-info-sub { font-size: 1rem; }
+}
+
+@media (max-width: 480px) {
+  .ci-info-block { padding: 36px 12px; }
+  .ci-info-accent { width: 40px; height: 4px; }
+  .ci-info-title { font-size: 1.35rem; }
+  .ci-info-sub { font-size: .95rem; }
+  .ci-info-desc { font-size: .9rem; }
+}
+
+/* Variants under the info block (muted, stacked options) */
+.ci-info-variants {
+  margin-top: 20px;
+  display: grid;
+  gap: 12px;
+  justify-items: center;
+}
+
+.ci-variant {
+  max-width: 680px;
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid rgba(10,31,68,0.06);
+  padding-top: 12px;
+}
+
+.ci-variant-title {
+  font-size: .95rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 0 0 6px;
+}
+
+.ci-variant-text {
+  font-size: .95rem;
+  color: rgba(10,31,68,0.72);
+  margin: 0;
+  line-height: 1.45;
+}
+
+.ci-variant-text.highlighted {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--navy);
+  background: linear-gradient(90deg, rgba(247,189,16,0.06), rgba(247,189,16,0.02));
+  padding: 10px 14px;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(10,31,68,0.04);
+}
+
+@media (max-width: 680px) {
+  .ci-variant { padding-top: 10px; }
+  .ci-variant-title { font-size: .92rem; }
+  .ci-variant-text { font-size: .92rem; }
+}
+/* Desktop: ensure CI info block has its own layout and spacing */
+@media (min-width: 721px) {
+  .ci-info-block {
+    display: flex;
+    justify-content: center;
+    padding: 80px 24px;
+    background: var(--white);
+  }
+
+  .ci-info-inner {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .ci-info-accent {
+    width: 84px;
+    height: 8px;
+    margin: 0 auto 20px;
+    border-radius: 6px;
+  }
+
+  .ci-info-title {
+    font-size: 2.6rem;
+    line-height: 1.04;
+    margin-bottom: 18px;
+  }
+
+  .ci-info-sub {
+    font-size: 1.15rem;
+    margin-bottom: 12px;
+  }
+
+  .ci-info-desc {
+    font-size: 1.05rem;
+    max-width: 840px;
+    margin: 0 auto 10px;
+  }
+
+  .ci-info-variants {
+    margin-top: 24px;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  .ci-variant {
+    max-width: 360px;
+    width: 100%;
+    text-align: center;
+    border-top: none;
+    padding-top: 14px;
+    border-left: 1px solid rgba(10,31,68,0.04);
+    padding: 16px;
+    border-radius: 8px;
+    background: rgba(247,189,16,0.02);
+  }
+
+  .ci-variant-text {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  .ci-variant-text.highlighted {
+    padding: 12px 16px;
+  }
+}
+  .div-tabs {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 14px !important;
+    padding: 0 12px !important;
+    box-sizing: border-box;
+    touch-action: pan-y;
+    overflow: visible !important;
+  }
+
+  .div-tabs .div-tab {
+    flex: none !important;
+    width: 100% !important;
+    aspect-ratio: 4/3 !important;
+    min-height: 160px;
+    display: block;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 28px rgba(10, 31, 68, .12);
+    transition: transform .25s ease, box-shadow .25s ease;
+  }
+
+  .div-tab-media,
+  .div-tab-bg,
+  .div-tab::after {
+    border-radius: 12px;
+  }
+
+  .div-tab-media {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .div-tab-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block
+  }
+
+  .div-tab-content {
+    position: relative;
+    z-index: 2;
+    padding: 18px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start
+  }
+
+  .div-tab-title {
+    font-size: 1rem;
+    line-height: 1.2
+  }
+
+  .div-tab-desc {
+    font-size: .85rem
+  }
+
+  /* keep hover effects on mobile where supported */
+  .div-tab:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(10, 31, 68, .15)
+  }
+
+  /* ensure the progress bar doesn't cause layout overflow */
+  #division-progress-track {
+    margin-top: 16px
+  }
+
+  /* ensure container centering and no horizontal scroll */
+  .div-tabs-wrapper {
+    overflow: visible
+  }
+}
+
+/* Mobile header alignment is now centralized in components.css final header block */
+
+.package-card {
+  background: var(--white);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(10, 31, 68, .12);
+  box-shadow: 0 6px 20px rgba(10, 31, 68, .04);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: var(--trans);
+  max-width: 300px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.package-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(10, 31, 68, .1);
+  border-color: rgba(10, 31, 68, .2);
+}
+
+.package-top {
+  background: var(--gold);
+  padding: 16px 14px;
+  color: var(--primary);
+  text-align: center;
+}
+
+.package-top h3 {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: .05em;
+  margin-bottom: 4px;
+  color: var(--primary);
+  text-transform: uppercase;
+}
+
+.price-area {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 2px;
+}
+
+.rupee {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.price {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--primary);
+  font-family: var(--font-display);
+  line-height: 1;
+}
+
+.unit {
+  font-size: .8rem;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.accordion {
+  padding: 4px 0;
+  flex-grow: 1;
+}
+
+.accordion-item {
+  border-bottom: 1px solid rgba(10, 31, 68, .08);
+}
+
+.accordion-btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: .82rem;
+  font-weight: 600;
+  color: var(--primary);
+  text-align: left;
+  transition: var(--trans);
+}
+
+.accordion-btn:hover {
+  background: rgba(10, 31, 68, .03);
+}
+
+.accordion-btn span {
+  font-size: 1rem;
+  color: var(--primary);
+  font-weight: 700;
+  flex-shrink: 0;
+  transition: transform .25s ease;
+}
+
+.content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .35s ease;
+}
+
+.content.open {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.content::-webkit-scrollbar {
+  width: 4px;
+}
+
+.content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.content::-webkit-scrollbar-thumb {
+  background: rgba(10, 31, 68, .15);
+  border-radius: 2px;
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+  background: rgba(10, 31, 68, .3);
+}
+
+.content ul {
+  list-style: none;
+  padding: 6px 16px 12px;
+}
+
+.content ul li {
+  font-size: .78rem;
+  color: var(--text);
+  padding: 4px 0;
+  border-bottom: 1px solid rgba(10, 31, 68, .05);
+  line-height: 1.4;
+}
+
+.content ul li strong {
+  color: var(--primary);
+}
+
+.spec-btn {
+  display: block;
+  width: calc(100% - 32px);
+  margin: 12px auto 16px;
+  padding: 10px 16px;
+  background: var(--gold);
+  color: var(--primary);
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: var(--trans);
+  box-shadow: 0 4px 10px rgba(247, 189, 16, 0.18);
+}
+
+.spec-btn:hover {
+  background: var(--gold-d);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(247, 189, 16, 0.3);
+}
+
+/* BHK CARDS */
+.bhk-card {
+  background: var(--white);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform .2s ease, box-shadow .2s ease;
+  will-change: transform
+}
+
+.bhk-card:hover {
+  transform: translateY(-6px)
+}
+
+.bhk-card--outlined {
+  border: 2px solid rgba(10, 31, 68, .1);
+  box-shadow: 0 4px 24px rgba(10, 31, 68, .08)
+}
+
+.bhk-card--outlined:hover {
+  box-shadow: 0 12px 40px rgba(10, 31, 68, .15)
+}
+
+.bhk-card--featured {
+  border: 2px solid var(--primary);
+  box-shadow: 0 8px 36px rgba(10, 31, 68, .18)
+}
+
+.bhk-card--featured:hover {
+  box-shadow: 0 16px 48px rgba(10, 31, 68, .22)
+}
+
+.bhk-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  max-width: 1000px;
+  margin: 0 auto 40px
+}
+
+.bhk-card-header {
+  padding: 28px 32px
+}
+
+.bhk-card-body {
+  padding: 32px 36px
+}
+
+.bhk-card-body li {
+  font-size: 1rem;
+  line-height: 1.7;
+  padding: 0
+}
+
+.bhk-card-body ul {
+  gap: 18px
+}
+
+.bhk-card-body p {
+  font-size: .85rem
+}
+
+/* GALLERY */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px
+}
+
+.gallery-item {
+  border-radius: var(--radius);
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  position: relative
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .5s ease;
+  display: block
+}
+
+.gallery-item:hover img {
+  transform: scale(1.07)
+}
+
+/* SPEC TABLE */
+.spec-table {
+  width: 100%;
+  border-collapse: collapse
+}
+
+.spec-table th {
+  background: var(--primary);
+  color: var(--white);
+  padding: 12px 16px;
+  text-align: left;
+  font-size: .85rem;
+  font-weight: 600
+}
+
+.spec-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(10, 31, 68, .08);
+  font-size: .85rem;
+  color: var(--text)
+}
+
+.spec-table tr:nth-child(even) td {
+  background: rgba(10, 31, 68, .03)
+}
+
+/* FAQ ACCORDION */
+.faq-item {
+  border-bottom: 1px solid rgba(10, 31, 68, .1)
+}
+
+.faq-q {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--primary);
+  font-size: .95rem;
+  gap: 12px;
+  transition: var(--trans)
+}
+
+.faq-q:hover {
+  color: var(--primary-d)
+}
+
+.faq-icon {
+  font-size: 18px;
+  flex-shrink: 0;
+  transition: transform .25s ease;
+  color: var(--gold)
+}
+
+.faq-item.open .faq-icon {
+  transform: rotate(45deg)
+}
+
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .35s ease, padding .35s ease
+}
+
+.faq-item.open .faq-a {
+  max-height: 300px;
+  padding-bottom: 16px
+}
+
+.faq-a p {
+  font-size: .9rem;
+  color: var(--text-light);
+  line-height: 1.7
+}
+
+/* TIMELINE */
+.timeline {
+  position: relative;
+  padding-left: 32px
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--gold), var(--primary))
+}
+
+/* Related Services card: make the Explore label a premium button */
+.rs-card {
+  display: block;
+  background: var(--white);
+  border-radius: 12px;
+  padding: 22px;
+  text-decoration: none;
+  color: var(--text);
+  box-shadow: 0 8px 24px rgba(10, 31, 68, .06);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.rs-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 48px rgba(10, 31, 68, .12);
+}
+
+.rs-card h3 {
+  margin: 12px 0 8px;
+  font-size: 1.05rem;
+  color: var(--primary);
+}
+
+.rs-card p {
+  margin: 0 0 12px;
+  color: var(--text);
+  font-size: 0.95rem
+}
+
+.rs-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, var(--gold), #f4c341);
+  color: var(--primary);
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 0.92rem;
+  text-decoration: none;
+  box-shadow: 0 8px 30px rgba(247, 189, 16, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+
+.rs-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px rgba(247, 189, 16, 0.18);
+}
+
+.rs-link {
+  display: none
+}
+
+.tl-item {
+  position: relative;
+  margin-bottom: 28px
+}
+
+.tl-dot {
+  position: absolute;
+  left: -27px;
+  width: 16px;
+  height: 16px;
+  background: var(--gold);
+  border-radius: 50%;
+  border: 3px solid var(--white);
+  box-shadow: 0 0 0 2px var(--primary)
+}
+
+.tl-title {
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 4px;
+  font-size: .95rem
+}
+
+.tl-text {
+  font-size: .85rem;
+  color: var(--text-light);
+  line-height: 1.6
+}
+
+/* CTA BAR */
+.cta-bar {
+  background: linear-gradient(135deg, var(--primary)0%, var(--navy)100%);
+  padding: 80px 0;
+  text-align: center;
+  margin-top: 0
+}
+
+.cta-bar h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.4rem);
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 12px
+}
+
+.cta-bar p {
+  color: rgba(255, 255, 255, .75);
+  margin-bottom: 32px;
+  font-size: 1rem
+}
+
+.cta-btns {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center
+}
+
+/* FLOATING ACTION BUTTONS */
+.fab {
+  position: fixed;
+  right: 20px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 900;
+  transition: var(--trans);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, .25)
+}
+
+.fab svg {
+  width: 26px;
+  height: 26px
+}
+
+.fab:hover {
+  transform: scale(1.1) translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .3)
+}
+
+.fab-wa {
+  bottom: 180px;
+  background: #25d366;
+  color: var(--white)
+}
+
+.fab-call {
+  bottom: 120px;
+  background: var(--primary);
+  color: var(--white)
+}
+
+/* MODAL */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, .6);
+  backdrop-filter: blur(4px);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+  padding: 20px
+}
+
+.modal-overlay.open {
+  display: flex
+}
+
+.modal-box {
+  background: var(--bg);
+  border-radius: 16px;
+  padding: 40px;
+  max-width: 520px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, .4);
+  animation: fadeIn .3s ease
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(10, 31, 68, .08);
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--trans)
+}
+
+.modal-close:hover {
+  background: var(--primary);
+  color: var(--white)
+}
+
+.modal-title {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 6px
+}
+
+.modal-sub {
+  font-size: .9rem;
+  color: var(--text-light);
+  margin-bottom: 24px
+}
+
+.quote-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px
+}
+
+.quote-form input,
+.quote-form select,
+.quote-form textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid rgba(10, 31, 68, .2);
+  border-radius: 8px;
+  font-family: var(--font-sans);
+  font-size: .9rem;
+  background: var(--white);
+  color: var(--text);
+  outline: none;
+  transition: var(--trans)
+}
+
+.quote-form input:focus,
+.quote-form select:focus,
+.quote-form textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(10, 31, 68, .1)
+}
+
+/* MISSION SECTION */
+.mission-section {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 56px 48px;
+  box-shadow: 0 6px 24px rgba(10, 31, 68, .06);
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: left
+}
+
+.mission-section h3,
+.mission-section h4 {
+  color: var(--primary);
+  margin-top: 18px;
+  font-weight: 800
+}
+
+.mission-text {
+  font-size: 1.125rem;
+  line-height: 1.95;
+  color: var(--text);
+  font-style: normal;
+  margin-top: 12px
+}
+
+.mission-text+.mission-text {
+  margin-top: 12px
+}
+
+.mission-section ul {
+  margin-top: 10px;
+  margin-left: 20px
+}
+
+.mission-card {
+  background: var(--white);
+  box-shadow: 0 8px 30px rgba(10, 31, 68, .04)
+}
+
+/* WARRANTY */
+.warranty-box {
+  background: linear-gradient(135deg, var(--primary), var(--navy));
+  border-radius: var(--radius);
+  padding: 32px;
+  color: var(--white);
+  text-align: center
+}
+
+.warranty-num {
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--gold);
+  font-family: var(--font-display);
+  line-height: 1
+}
+
+.warranty-label {
+  font-size: .95rem;
+  opacity: .85;
+  margin-top: 6px
+}
+
+/* PEB COMPARE */
+.peb-compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px
+}
+
+.peb-col {
+  border-radius: var(--radius);
+  padding: 28px;
+  text-align: center
+}
+
+.peb-col.peb-trad {
+  background: rgba(10, 31, 68, .06);
+  border: 1px solid rgba(10, 31, 68, .1)
+}
+
+.peb-col.peb-fast {
+  background: var(--primary);
+  color: var(--white)
+}
+
+.peb-months {
+  font-size: 3rem;
+  font-weight: 800;
+  font-family: var(--font-display);
+  line-height: 1
+}
+
+.peb-col.peb-trad .peb-months {
+  color: var(--primary)
+}
+
+.peb-col.peb-fast .peb-months {
+  color: var(--gold)
+}
+
+.peb-sub {
+  font-size: .85rem;
+  opacity: .75;
+  margin-top: 6px
+}
+
+.peb-label {
+  font-size: .8rem;
+  font-weight: 600;
+  margin-top: 12px;
+  opacity: .6;
+  text-transform: uppercase;
+  letter-spacing: .1em
+}
+
+/* Media cover helpers */
+.media-cover-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none
+}
+
+.media-cover-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block
+}
+
+.hero-bg,
+.div-tab-bg {
+  /* no background-size to avoid gray placeholders */
+}
+
+.gallery-item img,
+.hero-bg img {
+  max-width: 100%;
+  height: auto
+}
+
+/* ═══ BREADCRUMB — Premium Rewrite ════════════════════════════════ */
+
+/* The breadcrumb strip: full-width, left-edge aligned, below fixed header */
+nav.breadcrumb,
+.breadcrumb {
+  display: block;
+  width: 100%;
+  background: linear-gradient(90deg, rgba(10,31,68,.05) 0%, rgba(10,31,68,.02) 100%);
+  border-bottom: 1px solid rgba(10,31,68,.10);
+  padding: 11px 0;
+  position: relative;
+  z-index: 995; /* just below header (1000) */
+  box-sizing: border-box;
+  /* Default: place breadcrumb below header. Pages that include breadcrumb inside
+     <main> will override this and rely on main's padding-top. */
+  margin-top: var(--hdr-h);
+}
+
+/* When placed as direct child of <main> (service pages) — no extra margin needed;
+   <main> already carries padding-top: var(--hdr-h). */
+/* If breadcrumb is placed inside <main>, the main element already provides
+   the header offset via `padding-top: var(--hdr-h)`. Remove the extra margin
+   so the breadcrumb sits immediately below the header. */
+main > nav.breadcrumb:first-child,
+main > .breadcrumb:first-child {
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Also handle pages that use a .page wrapper rather than <main> */
+.page > nav.breadcrumb:first-child,
+.page > .breadcrumb:first-child {
+  margin-top: 0;
+}
+
+/* Inner container: left-aligned */
+nav.breadcrumb .container,
+.breadcrumb .container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* The ordered list */
+.breadcrumb-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 0;
+  font-size: .82rem;
+  font-weight: 500;
+  color: var(--text-light);
+  line-height: 1;
+}
+
+/* Each list item */
+.breadcrumb-list > li {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+/* Clickable crumb links */
+.breadcrumb-list > li > a {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+  padding: 3px 1px;
+  border-radius: 4px;
+  transition: color .18s ease;
+  position: relative;
+}
+
+.breadcrumb-list > li > a:hover {
+  color: var(--gold);
+}
+
+/* Separator: chevron › rendered via CSS, not DOM elements */
+.breadcrumb-list > li + li::before {
+  content: '›';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(10,31,68,.35);
+  font-size: .78rem;
+  font-weight: 400;
+  margin: 0 7px;
+  line-height: 1;
+  /* Accessible: separators are decorative */
+  aria-hidden: true;
+}
+
+/* Current/last crumb — plain text, not a link */
+.breadcrumb-list > li[aria-current="page"],
+.breadcrumb-list > li:last-child:not(:first-child) > span {
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+/* House icon before 'Home' — optional premium touch */
+.breadcrumb-list > li:first-child > a::before {
+  content: '';
+  /* no icon override — keep text only */
+}
+
+/* Ensure main content sits below fixed header */
+main {
+  padding-top: var(--hdr-h);
+}
+main[style] {
+  padding-top: var(--hdr-h) !important;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .breadcrumb-list {
+    font-size: .76rem;
+  }
+  nav.breadcrumb,
+  .breadcrumb {
+    padding: 9px 0;
+  }
+  /* Slightly smaller gap on tablet/mobile so layout remains compact */
+  main > nav.breadcrumb:first-child,
+  main > .breadcrumb:first-child {
+    margin-top: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .breadcrumb-list {
+    font-size: .73rem;
+    flex-wrap: wrap;
+    row-gap: 2px;
+  }
+  .breadcrumb-list > li + li::before {
+    margin: 0 5px;
+  }
+}
+
+/* Slightly larger gap on wide desktops for better visual balance */
+@media (min-width: 1200px) {
+  main > nav.breadcrumb:first-child,
+  main > .breadcrumb:first-child {
+    margin-top: 24px;
+  }
+}
+
+/* ═══ RELATED SERVICES ══════════════════════════════════════════ */
+.related-services {
+  background: var(--bg);
+  padding: 72px 0;
+  border-top: 1px solid rgba(10, 31, 68, .07)
+}
+
+.rs-heading {
+  text-align: center;
+  margin-bottom: 40px
+}
+
+.rs-heading h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 8px
+}
+
+.rs-heading p {
+  font-size: .95rem;
+  color: var(--text-light);
+  max-width: 500px;
+  margin: 0 auto
+}
+
+.rs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px
+}
+
+.rs-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  border: 1.5px solid rgba(10, 31, 68, .09);
+  text-decoration: none;
+  color: inherit;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease
+}
+
+.rs-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(10, 31, 68, .13);
+  border-color: var(--primary)
+}
+
+.rs-icon {
+  font-size: 1.8rem;
+  line-height: 1
+}
+
+.rs-card h3 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin: 0
+}
+
+.rs-card p {
+  font-size: .85rem;
+  color: var(--text-light);
+  line-height: 1.6;
+  margin: 0;
+  flex: 1
+}
+
+.rs-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: .8rem;
+  font-weight: 700;
+  color: var(--gold);
+  margin-top: 4px;
+  font-family: var(--font-mono);
+  letter-spacing: .04em
+}
+
+/* ═══ BLOG GRID ═════════════════════════════════════════════════ */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 28px;
+  margin-top: 40px
+}
+
+.blog-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1.5px solid rgba(10, 31, 68, .08);
+  transition: transform .25s ease, box-shadow .25s ease
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(10, 31, 68, .13)
+}
+
+.blog-card-body {
+  padding: 28px 24px
+}
+
+.blog-tag {
+  display: inline-block;
+  background: rgba(247, 189, 16, .15);
+  border: 1px solid rgba(247, 189, 16, .4);
+  color: #8a6800;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  padding: 3px 10px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  font-family: var(--font-mono)
+}
+
+.blog-card-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 10px;
+  line-height: 1.35
+}
+
+.blog-card-title a {
+  text-decoration: none;
+  color: inherit
+}
+
+.blog-card-title a:hover {
+  color: var(--gold)
+}
+
+.blog-card p {
+  font-size: .87rem;
+  color: var(--text-light);
+  line-height: 1.65;
+  margin-bottom: 16px
+}
+
+.blog-card p a {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px dotted currentColor
+}
+
+.blog-card p a:hover {
+  color: var(--gold)
+}
+
+.blog-meta {
+  font-size: .75rem;
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(10, 31, 68, .07)
+}
+
+.blog-read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: .82rem;
+  font-weight: 700;
+  color: var(--primary);
+  font-family: var(--font-mono)
+}
+
+@media(max-width:768px) {
+  .breadcrumb-list {
+    font-size: .78rem
+  }
+
+  .rs-grid {
+    grid-template-columns: 1fr 1fr
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr
+  }
+}
+
+@media(max-width:480px) {
+  .rs-grid {
+    grid-template-columns: 1fr
+  }
+}
+
+/* Full-screen Google Maps section placed above the footer */
+.map-section {
+  width: 100%;
+  height: 420px;
+  max-height: 60vh;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg)
+}
+
+.map-wrap {
+  position: relative;
+  height: 100%;
+  width: 100%
+}
+
+/* Mobile optimization tweaks */
+@media (max-width: 900px) {
+  .hero-split {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding-bottom: 20px
+  }
+
+  .hero-split-left {
+    padding: 40px 20px
+  }
+
+  .hero-split-right {
+    display: none
+  }
+
+  .hero-collage {
+    grid-template-columns: 1fr;
+    min-height: auto
+  }
+
+  .hero-collage-left {
+    padding: 32px 18px
+  }
+
+  .hero-collage-right {
+    display: none
+  }
+
+  .hero-title {
+    font-size: clamp(1.8rem, 6vw, 2.8rem)
+  }
+
+  .hero-sub {
+    font-size: .95rem
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr)
+  }
+
+  .pricing-grid {
+    padding-right: 12px;
+    margin-right: -12px
+  }
+
+  .price-card {
+    flex: 0 0 82%;
+    aspect-ratio: auto;
+    padding: 20px
+  }
+
+  .div-tab {
+    flex: 0 0 70%
+  }
+
+  .premium-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px
+  }
+
+  .rs-grid {
+    grid-template-columns: 1fr
+  }
+
+  .cta-bar {
+    padding: 40px 0
+  }
+
+  .modal-box {
+    padding: 24px
+  }
+}
+
+@media (max-width: 600px) {
+  .stats-grid {
+    grid-template-columns: 1fr
+  }
+
+  .hero-title {
+    font-size: clamp(1.6rem, 7vw, 2.4rem)
+  }
+
+  .hero-sub {
+    font-size: .95rem
+  }
+
+  .div-tab {
+    flex: 0 0 85%
+  }
+
+  .price-card {
+    flex: 0 0 88%
+  }
+
+  .tl-title {
+    font-size: .92rem
+  }
+
+  .tl-text {
+    font-size: .9rem
+  }
+
+  .faq-q {
+    padding: 14px 0
+  }
+
+  .spec-btn {
+    width: 100%;
+    padding: 12px
+  }
+
+  .breadcrumb-list {
+    font-size: .78rem
+  }
+}
+
+.map-section iframe {
+  border: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: auto
+}
+
+@media(max-width:768px) {
+  .map-section {
+    height: 40vh
+  }
+
+  .map-overlay {
+    font-size: .95rem
+  }
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════
+   COMPREHENSIVE MOBILE RESPONSIVE ENHANCEMENTS
+   ═══════════════════════════════════════════════════════════════════
+   Fixes inline-style overrides with !important, adds missing
+   responsive breakpoints, safe-area support for notched phones,
+   touch-friendly tap targets, landscape & print media.
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* ── Global: overflow & text protection ────────────────────────────── */
+.contact-item {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.footer-copy {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+/* ── Spec table: horizontal scroll on narrow screens ───────────────── */
+@media (max-width: 900px) {
+  .spec-table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .spec-table th,
+  .spec-table td {
+    white-space: nowrap;
+    min-width: 120px;
+  }
+}
+
+/* ═══ TABLET ≤ 900px ═══════════════════════════════════════════════ */
+@media (max-width: 900px) {
+
+  /* Fix CSS variable so inner-page padding-top matches real header height */
+  :root {
+    --hdr-h: 64px;
+  }
+
+  /* Override inline styles on index.html hero-content */
+  .hero-content[style] {
+    padding: 32px 22px !important;
+    max-width: 95% !important;
+    margin-top: 8px !important;
+  }
+
+  .hero-sub[style] {
+    font-size: 0.92rem !important;
+    margin: 10px 0 16px !important;
+  }
+
+  /* Gallery grid → 2 columns */
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* Footer bottom → stack vertically */
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* ═══ MOBILE ≤ 768px ═══════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* Hero content: beat inline padding / max-width / margin */
+  .hero-content,
+  .hero-content[style] {
+    padding: 26px 18px !important;
+    max-width: 100% !important;
+    margin-top: 0 !important;
+  }
+
+  .hero-sub,
+  .hero-sub[style] {
+    font-size: 0.9rem !important;
+    margin: 10px 0 14px !important;
+  }
+
+  .hero-btns {
+    justify-content: center;
+    width: 100%;
+  }
+
+  /* Section tag & title inline overrides */
+  .section-tag[style] {
+    font-size: 13px !important;
+    letter-spacing: 0.18em !important;
+  }
+
+  .section-title[style] {
+    font-size: clamp(1.5rem, 4.5vw, 2.6rem) !important;
+  }
+
+  /* BHK grid → single column */
+  .bhk-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* CTA bar: extra bottom padding so floating call-tab doesn't overlap */
+  .cta-bar {
+    padding-bottom: 100px !important;
+  }
+
+  /* Map section compact */
+  .map-section {
+    height: 280px !important;
+  }
+
+  /* Highlight box */
+  .highlight-box {
+    padding: 20px !important;
+  }
+
+  /* Lead text inline override */
+  .lead[style] {
+    font-size: 0.95rem !important;
+  }
+
+  /* Hero collage left inline padding */
+  .hero-collage-left[style] {
+    padding: 28px 16px !important;
+  }
+
+  /* Mission section */
+  .mission-section {
+    padding: 28px 18px !important;
+  }
+
+  /* Premium cards */
+  .premium-heading {
+    font-size: 20px !important;
+  }
+
+  .premium-sub {
+    font-size: 14px !important;
+  }
+
+  /* Container inline min-height: let content dictate height */
+  .container[style*="min-height"] {
+    min-height: auto !important;
+  }
+
+  /* Grid-2 inline columns → single column */
+  .grid-2[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Grid-2 inline large gaps → tighter */
+  .grid-2[style*="gap:60px"],
+  .grid-2[style*="gap: 60px"] {
+    gap: 28px !important;
+  }
+}
+
+/* ═══ SMALL PHONE ≤ 600px ══════════════════════════════════════════ */
+@media (max-width: 600px) {
+
+  .hero-content,
+  .hero-content[style] {
+    padding: 22px 16px !important;
+    border-radius: 10px !important;
+  }
+
+  /* Hero buttons → full-width vertical stack */
+  .hero-btns {
+    flex-direction: column !important;
+    gap: 8px !important;
+    width: 100%;
+  }
+
+  .hero-btns .btn-secondary,
+  .hero-btns .btn-primary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* CTA buttons → full-width vertical stack */
+  .cta-btns {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  .cta-btns .btn-primary,
+  .cta-btns .btn-secondary {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* Footer brand → center on narrow screens */
+  .footer-brand {
+    align-items: center !important;
+    text-align: center;
+  }
+
+  .footer-brand p {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .footer-brand .logo-link[style] {
+    justify-content: center !important;
+  }
+
+  .footer-brand .logo-text[style] {
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  /* Gallery → single column */
+  .gallery-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Package card → full width */
+  .package-card {
+    max-width: 100% !important;
+  }
+
+  /* BHK card padding */
+  .bhk-card-header {
+    padding: 20px 16px !important;
+  }
+
+  .bhk-card-body {
+    padding: 20px 16px !important;
+  }
+}
+
+/* ═══ VERY SMALL PHONE ≤ 480px ═════════════════════════════════════ */
+@media (max-width: 480px) {
+
+  .hero-content,
+  .hero-content[style] {
+    padding: 18px 14px !important;
+  }
+
+  .hero-title {
+    font-size: clamp(1.2rem, 5vw, 1.7rem) !important;
+    margin-bottom: 10px !important;
+  }
+
+  .hero-sub,
+  .hero-sub[style] {
+    font-size: 0.85rem !important;
+    margin: 6px 0 12px !important;
+  }
+
+  /* Showcase carousel — smaller cards */
+  .showcase-carousel-item {
+    width: 160px !important;
+    height: 220px !important;
+    border-radius: 10px !important;
+  }
+
+  .showcase-carousel-group {
+    gap: 12px !important;
+  }
+
+  .showcase-carousel-fade-left,
+  .showcase-carousel-fade-right {
+    width: 36px !important;
+  }
+
+  /* Map */
+  .map-section {
+    height: 200px !important;
+  }
+
+  /* Section title inline */
+  .section-title[style] {
+    font-size: clamp(1.2rem, 4vw, 1.8rem) !important;
+  }
+
+  /* Container min-height */
+  .container[style*="min-height"] {
+    min-height: auto !important;
+  }
+}
+
+/* ═══ SAFE AREA — iPhone X / 11 / 12 / 13 / 14 / 15 / 16 ═════════ */
+@supports (padding: max(0px)) {
+  .call-tab {
+    bottom: max(12px, env(safe-area-inset-bottom));
+  }
+
+  /* DEPRECATED: #site-footer safe-area moved to components.css
+  #site-footer {
+    padding-bottom: max(32px, env(safe-area-inset-bottom));
+  } */
+
+  .fab-call {
+    bottom: max(120px, calc(env(safe-area-inset-bottom) + 60px));
+  }
+
+  .fab-wa {
+    bottom: max(180px, calc(env(safe-area-inset-bottom) + 120px));
+  }
+
+  .mobile-menu.open {
+    padding-bottom: max(16px, env(safe-area-inset-bottom)) !important;
+  }
+}
+
+/* ═══ TOUCH-FRIENDLY TAP TARGETS (WCAG 2.5.8 — 44×44 px min) ═════ */
+@media (pointer: coarse) {
+
+  .mob-link,
+  .mob-cta {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+  }
+
+  .drop-link {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .footer-links a {
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .faq-q {
+    min-height: 48px;
+  }
+
+  .accordion-btn {
+    min-height: 48px;
+  }
+}
+
+/* ═══ LANDSCAPE PHONE ═════════════════════════════════════════════ */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero {
+    min-height: 100vh;
+  }
+
+  .hero-content,
+  .hero-content[style] {
+    padding: 16px 20px !important;
+  }
+
+  .hero-title {
+    font-size: clamp(1.2rem, 3vw, 1.6rem) !important;
+    margin-bottom: 6px !important;
+  }
+
+  .hero-sub,
+  .hero-sub[style] {
+    font-size: 0.82rem !important;
+    margin: 4px 0 8px !important;
+  }
+
+  /* Hide floating call tab in landscape to save space */
+  .call-tab {
+    display: none !important;
+  }
+
+  .section {
+    padding: 28px 0 !important;
+  }
+}
+
+/* ═══ PRINT ═══════════════════════════════════════════════════════ */
+@media print {
+
+  .call-tab,
+  .fab,
+  .fab-wa,
+  .fab-call,
+  .hamburger,
+  .mobile-menu,
+  #quote-modal {
+    display: none !important;
+  }
+
+  .hero {
+    min-height: auto !important;
+    page-break-after: avoid;
+  }
+
+  .section {
+    padding: 20px 0 !important;
+    page-break-inside: avoid;
+  }
+
+  #site-header {
+    position: static !important;
+  }
+}
+
+/* ═══ ADDITIONAL EDGE-CASE FIXES ═════════════════════════════════ */
+
+/* Hero badges (home-construction.html) — wrap gracefully on mobile */
+@media (max-width: 600px) {
+  .hero-content .badge[style] {
+    font-size: 0.78rem !important;
+    padding: 6px 10px !important;
+    gap: 6px !important;
+  }
+
+  .hero-btns[style] {
+    margin-top: 24px !important;
+  }
+}
+
+/* Gallery items — reduce fixed image height on mobile */
+@media (max-width: 600px) {
+  .gallery-item img[style*="height:180px"] {
+    height: 140px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-item img[style*="height:180px"] {
+    height: 120px !important;
+  }
+}
+
+/* Offer banner text — better wrapping on small screens */
+@media (max-width: 600px) {
+  [style*="background:var(--gold)"] strong[style] {
+    font-size: 0.85rem !important;
+    line-height: 1.5 !important;
+  }
+}
+
+/* Modal — prevent body scroll and ensure full-screen usability on mobile */
+@media (max-width: 768px) {
+  .modal-overlay.open {
+    align-items: flex-start !important;
+    padding: 16px !important;
+    overflow-y: auto !important;
+  }
+
+  .modal-box {
+    max-width: 100% !important;
+    max-height: none !important;
+    margin: auto 0 !important;
+    padding: 28px 18px !important;
+  }
+
+  .modal-title {
+    font-size: 1.3rem !important;
+  }
+}
+
+/* Section inline padding overrides for pages with style="padding:80px 0" etc. */
+@media (max-width: 600px) {
+
+  .section[style*="padding:80px"],
+  .section[style*="padding: 80px"] {
+    padding: 40px 0 !important;
+  }
+
+  #premium-highlights[style] {
+    padding: 40px 0 !important;
+  }
+}
+
+/* Floating call tab: ensure it clears the bottom CTA bar and footer */
+@media (max-width: 768px) {
+  .call-tab {
+    min-width: 200px !important;
+    max-width: 88% !important;
+    font-size: 0.9rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .call-tab {
+    min-width: 180px !important;
+    padding: 8px 14px !important;
+  }
+
+  .call-tab .call-title {
+    font-size: 0.82rem !important;
+  }
+
+  .call-tab .call-number {
+    font-size: 0.92rem !important;
+  }
+}
+
+/* Ensure construction packages grid works well on all sizes */
+@media (max-width: 480px) {
+  .construction-packages {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .package-top h3 {
+    font-size: 0.78rem !important;
+  }
+
+  .price {
+    font-size: 1.8rem !important;
+  }
+}
+
+/* Section sub inline styles — responsive override */
+@media (max-width: 768px) {
+  .section-sub[style] {
+    margin: 0 auto !important;
+    max-width: 100% !important;
+    font-size: 0.9rem !important;
+  }
+}
+
+/* Fix inline max-width on story page containers */
+@media (max-width: 768px) {
+
+  [style*="max-width:900px"],
+  [style*="max-width:820px"],
+  [style*="max-width:1000px"] {
+    max-width: 100% !important;
+    padding: 0 4px !important;
+  }
+}
+
+/* Ensure footer social icons don't overflow */
+.footer-social {
+  flex-wrap: wrap;
+}
+
+/* Fix hero-collage title override for our-story page */
+@media (max-width: 600px) {
+  .hero-collage-left .hero-title[style] {
+    font-size: clamp(1.8rem, 6vw, 3rem) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-collage-left .hero-title[style] {
+    font-size: clamp(1.4rem, 5.5vw, 2.2rem) !important;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   CI PRICING BANNER — Civil & PEB / RCC cost-per-sq-ft design
+   ═══════════════════════════════════════════════════════════════════ */
+
+.ci-pricing-banner {
+  width: 100%;
+  background: #fff;
+  border-top: 4px solid #c8102e;
+  box-shadow: 0 8px 40px rgba(10, 31, 68, .13);
+  overflow: hidden;
+  font-family: var(--font-sans, 'Inter', sans-serif);
+}
+
+/* ── Each pricing row ─────────────────────────────────────────────── */
+.ci-row {
+  position: relative;
+  background: #f7f8fa;
+}
+
+.ci-row--peb {
+  background: #f0f2f6;
+}
+
+.ci-row--rcc {
+  background: #fff;
+}
+
+/* "Civil & PEB" floating label top-right of row-1 */
+.ci-row-label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #c8102e;
+  color: #fff;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  padding: 6px 16px 6px 14px;
+  border-bottom-left-radius: 10px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  text-transform: uppercase;
+}
+
+/* Row inner: photo + price side-by-side */
+.ci-row-inner {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  min-height: 240px;
+}
+
+/* Photo panel */
+.ci-photo-panel {
+  position: relative;
+  overflow: hidden;
+  min-height: 220px;
+}
+
+.ci-photo-panel picture {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ci-photo-panel img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .5s ease;
+}
+
+.ci-row:hover .ci-photo-panel img {
+  transform: scale(1.04);
+}
+
+.ci-photo-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, .22) 0%, rgba(0, 0, 0, .04) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Price panel */
+.ci-price-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 32px 24px;
+  background: #fff;
+}
+
+.ci-row--peb .ci-price-panel {
+  background: #f9f9f9;
+}
+
+/* Yellow price badge */
+.ci-price-badge {
+  background: #f7bd10;
+  border-radius: 14px;
+  padding: 16px 28px 12px;
+  text-align: center;
+  box-shadow: 0 6px 28px rgba(247, 189, 16, .5);
+  min-width: 190px;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.ci-row:hover .ci-price-badge {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(247, 189, 16, .6);
+}
+
+.ci-price-value {
+  font-family: var(--font-display, 'Inter', sans-serif);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0a1f44;
+  line-height: 1;
+  letter-spacing: -.01em;
+}
+
+.ci-price-value span {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: #0a1f44;
+  display: inline-block;
+  line-height: 1;
+}
+
+/* Meta info below badge */
+.ci-price-meta {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.ci-price-label {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #0a1f44;
+  letter-spacing: .02em;
+}
+
+.ci-price-delivery {
+  font-size: .84rem;
+  font-weight: 700;
+  color: #c8102e;
+  letter-spacing: .01em;
+}
+
+.ci-price-note {
+  font-size: .73rem;
+  color: #777;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+/* ── Red category banner ─────────────────────────────────────────── */
+.ci-category-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 24px;
+  font-family: var(--font-display, 'Inter', sans-serif);
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-weight: 900;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+
+.ci-category-banner--red {
+  background: #c8102e;
+  color: #f7f0c0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, .28);
+}
+
+.ci-sep {
+  color: rgba(247, 240, 192, .55);
+  font-weight: 400;
+  font-size: 1.1em;
+  margin: 0 4px;
+}
+
+/* ── ISO certification bar ───────────────────────────────────────── */
+.ci-iso-bar {
+  background: #fff;
+  border-top: 2px solid #c8102e;
+  color: #0a1f44;
+  font-size: .82rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 11px 20px;
+  letter-spacing: .06em;
+  font-family: var(--font-mono, monospace);
+}
+
+/* ── Responsive ──────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .ci-row-inner {
+    grid-template-columns: 50% 50%;
+    min-height: 200px;
+  }
+
+  .ci-price-value span {
+    font-size: 2.2rem;
+  }
+
+  .ci-price-badge {
+    min-width: 155px;
+    padding: 12px 18px 10px;
+  }
+}
+
+@media (max-width: 680px) {
+  .ci-row-inner {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .ci-photo-panel {
+    min-height: 190px;
+    height: 190px;
+  }
+
+  .ci-price-panel {
+    padding: 22px 16px;
+    flex-direction: row;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  .ci-price-meta {
+    text-align: left;
+  }
+
+  .ci-category-banner {
+    font-size: clamp(.88rem, 4vw, 1.15rem);
+    gap: 6px;
+    padding: 12px 16px;
+  }
+
+  .ci-row-label {
+    font-size: .7rem;
+    padding: 5px 12px 5px 10px;
+  }
+
+  .ci-iso-bar {
+    font-size: .72rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .ci-price-value span {
+    font-size: 1.85rem;
+  }
+
+  .ci-price-label {
+    font-size: .9rem;
+  }
+
+  .ci-price-panel {
+    gap: 12px;
+    padding: 16px 12px;
+  }
+
+  .ci-category-banner {
+    font-size: .82rem;
+    gap: 4px;
+    padding: 10px 12px;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   MASTER RESPONSIVE FIX — v2
+   All-device alignment, layout, touch-target and overflow fixes
+   covering desktop (1280px+), laptop (1024–1280px), tablet (768–1024px),
+   mobile (360–768px) and very small phones (≤360px).
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* ── 0. Logo icon: scale down on smaller screens ───────────────── */
+@media (max-width: 900px) {
+  .logo-icon img,
+  .logo-icon picture img {
+    width: 48px !important;
+    height: 48px !important;
+  }
+  #site-header { min-height: 64px; }
+  .page { padding-top: 64px; }
+}
+@media (max-width: 600px) {
+  .logo-icon img,
+  .logo-icon picture img {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  .logo-main { font-size: 16px !important; }
+  .logo-sub  { font-size: 10px !important; }
+  #site-header { min-height: 58px; }
+  :root { --hdr-h: 58px; }
+}
+
+/* ── 1. Sync main[style] padding-top with real --hdr-h ─────────── */
+/* Remove the fixed 8px offset that caused visible gap under header  */
+main { padding-top: var(--hdr-h) !important; }
+main[style] { padding-top: var(--hdr-h) !important; }
+
+/* Breadcrumb first-child: no gap offset needed now */
+main > .breadcrumb:first-child,
+main > nav.breadcrumb:first-of-type {
+  margin-top: 0;
+}
+
+/* ── 2. Hero: fix inline-style overrides site-wide ─────────────── */
+@media (max-width: 1100px) {
+  .hero-content[style] {
+    padding: 44px 48px !important;
+    max-width: 680px !important;
+  }
+}
+@media (max-width: 900px) {
+  .hero { min-height: 70vh; }
+  .hero-content[style] {
+    padding: 28px 22px !important;
+    max-width: 96% !important;
+    margin-top: 0 !important;
+    border-radius: 10px !important;
+  }
+}
+@media (max-width: 768px) {
+  .hero { min-height: 55vh; }
+  .hero-content[style] {
+    padding: 22px 16px !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    border-radius: 8px !important;
+  }
+  .hero-title {
+    font-size: clamp(1.4rem, 5.5vw, 2.2rem) !important;
+    line-height: 1.15 !important;
+    margin-bottom: 12px !important;
+  }
+  .hero-sub[style] {
+    font-size: 0.88rem !important;
+    margin: 8px 0 14px !important;
+    line-height: 1.65 !important;
+  }
+}
+@media (max-width: 480px) {
+  .hero { min-height: 50vh; }
+  .hero-content[style] {
+    padding: 18px 14px !important;
+  }
+  .hero-title {
+    font-size: clamp(1.2rem, 5vw, 1.6rem) !important;
+    margin-bottom: 10px !important;
+  }
+  .hero-sub, .hero-sub[style] {
+    font-size: 0.82rem !important;
+    margin: 6px 0 10px !important;
+  }
+}
+
+/* ── 3. Hero buttons: index.html has 3 side-by-side .btn-secondary ─ */
+@media (max-width: 768px) {
+  .hero-btns {
+    flex-direction: column !important;
+    gap: 8px !important;
+    align-items: stretch !important;
+    width: 100%;
+  }
+  .hero-btns .btn-primary,
+  .hero-btns .btn-secondary,
+  .hero-btns .btn-purple {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
+@media (min-width: 600px) and (max-width: 900px) {
+  /* Allow 2-column on mid-size mobile in landscape */
+  .hero-btns {
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+    justify-content: center !important;
+  }
+  .hero-btns .btn-primary,
+  .hero-btns .btn-secondary,
+  .hero-btns .btn-purple {
+    width: auto;
+    flex: 1 1 auto;
+    min-width: 140px;
+  }
+}
+
+/* ── 4. Construction packages: add 3-col breakpoint at 1024px ───── */
+@media (max-width: 1100px) {
+  .construction-packages {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .construction-packages {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── 5. Footer grid: intermediate 900–1024px breakpoint ─────────── */
+@media (max-width: 1100px) {
+  /* DEPRECATED .footer-grid rules moved to components.css
+  .footer-grid {
+    grid-template-columns: 1.6fr 1fr 1fr 1.2fr;
+    gap: 28px;
+  }
+  */
+}
+@media (max-width: 900px) {
+  /* DEPRECATED .footer-grid rules moved to components.css
+  .footer-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 28px !important;
+  }
+  */
+  .footer-brand {
+    grid-column: 1 / -1; /* Brand always spans full width on tablet */
+  }
+}
+@media (max-width: 600px) {
+  /* DEPRECATED .footer-grid rules moved to components.css
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  */
+  .footer-brand {
+    grid-column: auto;
+  }
+  .footer-bottom {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 8px !important;
+  }
+  .footer-copy {
+    font-size: 0.72rem;
+  }
+}
+
+/* ── 6. Call-tab: increase bottom clearance on mobile ────────────── */
+@media (max-width: 900px) {
+  .call-tab {
+    bottom: 16px;
+    min-width: 210px;
+  }
+}
+@media (max-width: 600px) {
+  .call-tab {
+    bottom: 10px !important;
+    min-width: 180px !important;
+    max-width: 85% !important;
+    padding: 10px 16px !important;
+    border-radius: 12px !important;
+  }
+  .cta-bar {
+    padding-bottom: 90px !important;
+  }
+}
+@media (max-width: 480px) {
+  .call-tab {
+    bottom: 8px !important;
+    min-width: 160px !important;
+    padding: 8px 14px !important;
+  }
+  .call-tab .call-title { font-size: 0.80rem !important; }
+  .call-tab .call-number { font-size: 0.90rem !important; }
+}
+
+/* ── 7. BHK grid: allow wider on large screens ──────────────────── */
+.bhk-grid {
+  max-width: 1100px; /* was 1000px — too narrow on desktop */
+}
+@media (max-width: 768px) {
+  .bhk-grid {
+    grid-template-columns: 1fr !important;
+    max-width: 100%;
+    gap: 16px;
+  }
+}
+
+/* ── 8. Stats strip: 4-col on desktop, 2-col tablet, 1-col phone ── */
+@media (min-width: 1025px) {
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  .stat-num { font-size: 2rem; }
+}
+
+/* ── 9. CTA bar: responsive padding and button layout ───────────── */
+@media (max-width: 768px) {
+  .cta-bar {
+    padding: 40px 0 90px !important;
+  }
+  .cta-bar h2 {
+    font-size: clamp(1.2rem, 4.5vw, 1.8rem) !important;
+  }
+  .cta-bar p {
+    font-size: 0.88rem;
+  }
+  .cta-btns {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+  }
+  .cta-btns .btn-primary,
+  .cta-btns .btn-secondary {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+}
+@media (max-width: 480px) {
+  .cta-bar {
+    padding: 32px 0 80px !important;
+  }
+}
+
+/* ── 10. FAB buttons: don't overlap each other on smallest phones ── */
+@media (max-width: 480px) {
+  .fab {
+    width: 46px;
+    height: 46px;
+    right: 14px;
+  }
+  .fab-wa  { bottom: 160px; }
+  .fab-call { bottom: 100px; }
+  .fab svg { width: 22px; height: 22px; }
+}
+
+/* ── 11. Container: prevent overflow on very small screens ──────── */
+@media (max-width: 360px) {
+  .container,
+  .container-wide {
+    padding: 0 10px !important;
+  }
+  html { font-size: 12px; }
+  .logo-main { font-size: 15px !important; }
+  .hero-title {
+    font-size: clamp(1.1rem, 5vw, 1.4rem) !important;
+  }
+}
+
+/* ── 12. Section spacing: desktop stays full, tablet/mobile scales ─ */
+@media (max-width: 1024px) {
+  .section { padding: 64px 0; }
+  .section-sm { padding: 48px 0; }
+}
+@media (max-width: 768px) {
+  .section { padding: 48px 0; }
+  .section-sm { padding: 36px 0; }
+}
+@media (max-width: 480px) {
+  .section { padding: 36px 0; }
+  .section-sm { padding: 28px 0; }
+}
+
+/* ── 13. Section title: inline style font-size overrides ─────────── */
+@media (max-width: 900px) {
+  .section-title[style] {
+    font-size: clamp(1.6rem, 4.5vw, 2.8rem) !important;
+  }
+}
+@media (max-width: 600px) {
+  .section-title[style] {
+    font-size: clamp(1.3rem, 5vw, 2rem) !important;
+  }
+}
+@media (max-width: 480px) {
+  .section-title[style] {
+    font-size: clamp(1.1rem, 4.5vw, 1.6rem) !important;
+  }
+}
+
+/* ── 14. Section-sub inline max-width fix ────────────────────────── */
+@media (max-width: 768px) {
+  .section-sub[style*="max-width"] {
+    max-width: 100% !important;
+  }
+}
+
+/* ── 15. Grid layouts: proper collapse ordering ──────────────────── */
+@media (max-width: 768px) {
+  .grid-2, .grid-3, .grid-4 {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+}
+@media (max-width: 1024px) {
+  .grid-3 { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+}
+
+/* ── 16. Related services grid on tablet ─────────────────────────── */
+@media (min-width: 601px) and (max-width: 900px) {
+  .rs-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* ── 17. Modal: full-height scroll on mobile ──────────────────────── */
+@media (max-width: 600px) {
+  .modal-overlay.open {
+    align-items: flex-start !important;
+    padding: 12px !important;
+    overflow-y: auto !important;
+  }
+  .modal-box {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 22px 14px !important;
+    border-radius: 12px !important;
+    margin: 0 !important;
+  }
+  .form-row {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── 18. Spec table: horizontal scroll on mobile ─────────────────── */
+@media (max-width: 768px) {
+  .spec-table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .spec-table {
+    min-width: 500px;
+  }
+}
+
+/* ── 19. Desktop-specific polish (1280px+) ───────────────────────── */
+@media (min-width: 1280px) {
+  .hero-content {
+    max-width: 760px;
+    padding: 64px 72px;
+  }
+  .section { padding: 88px 0; }
+  .section-sm { padding: 64px 0; }
+  .footer-grid {
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 52px;
+  }
+}
+
+/* ── 20. Laptop (1024–1280px): intermediate polish ───────────────── */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .hero-content {
+    max-width: 700px;
+    padding: 56px 56px;
+  }
+  .footer-grid {
+    grid-template-columns: 1.8fr 1fr 1fr 1.3fr;
+    gap: 36px;
+  }
+  .construction-packages {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+  }
+}
+
+/* ── 21. Overflow-x global guard ─────────────────────────────────── */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+* {
+  min-width: 0; /* Prevents flex/grid children from overflowing */
+}

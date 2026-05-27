@@ -1,0 +1,13 @@
+# Robots.txt for Morning Star Infra Projects
+# https://www.morningstarinfra.com
+
+User-agent: *
+Allow: /
+Allow: /images/
+
+# Block internal/private areas only if they exist
+Disallow: /unused_backup/
+
+# Sitemap files
+Sitemap: https://www.morningstarinfra.com/sitemap.xml
+Sitemap: https://www.morningstarinfra.com/sitemap-images.xml
