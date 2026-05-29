@@ -1829,8 +1829,6 @@ body.menu-open {
 
 /* Ensure main content respects header height variable */
 main, .page { padding-top: var(--hdr-h, 84px); }
-
-<<<<<<< HEAD
 /* ==========================
   HEADER
 ========================== */

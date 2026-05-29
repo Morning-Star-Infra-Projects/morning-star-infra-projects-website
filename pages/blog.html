@@ -17,56 +17,98 @@
 </head>
 <body>
 <header id="site-header">
-<div class="hdr-inner">
-<div class="hdr-left">
-<a class="logo-link" href="../index.html">
-<div class="logo-icon">
-<picture>
-<source srcset="../assets/images/Morning-Star-Infra-Projects-Header-Logo.jpeg 72w, ../assets/images/Morning-Star-Infra-Projects-Header-Logo.jpeg 144w" type="image/webp"/>
-<img alt="Morning Star Infra Projects logo" decoding="async" height="72" src="../assets/images/Morning-Star-Infra-Projects-Header-Logo.jpeg" srcset="../assets/images/Morning-Star-Infra-Projects-Header-Logo.jpeg 72w, ../assets/images/Morning-Star-Infra-Projects-Header-Logo.jpeg 144w" width="72"/>
-</picture>
-</div>
-</a>
-</div>
-<div class="hdr-center">
-<div class="logo-text">
-<span class="logo-main">MORNING STAR</span>
-<span class="logo-sub">INFRA PROJECTS</span>
-</div>
-<nav class="hdr-nav">
-<a class="nav-link" href="../index.html">Home</a>
-<a class="nav-link" href="our-story.html">Our Story</a>
-<a class="nav-link" href="our-team.html">Our Team</a>
-<div class="nav-dropdown">
-<span class="nav-link nav-drop-trigger">Divisions ▾</span>
-<div class="nav-drop-menu">
-<a class="drop-link" href="/residential/">Home Construction</a>
-<a class="drop-link" href="/industrial/">Commercial &amp; Industrial</a>
-<a class="drop-link" href="/interiors/">Interior Fitouts</a>
-<a class="drop-link" href="/structural/">Structural Repair</a>
-</div>
-</div>
-<a class="nav-link" href="certifications.html">Certifications</a>
-<a class="nav-link" href="blog.html">Blog</a>
-</nav>
-</div>
-<button aria-controls="mobile-menu" aria-expanded="false" aria-label="Menu" class="hamburger" id="hamburger">
-<span></span><span></span><span></span>
-</button>
-</div>
-<div aria-hidden="true" class="mobile-menu" id="mobile-menu">
-<a class="mob-link" href="../index.html">Home</a>
-<a class="mob-link" href="our-story.html">Our Story</a>
-<a class="mob-link" href="our-team.html">Our Team</a>
-<a class="mob-link" href="/residential/">Home Construction</a>
-<a class="mob-link" href="/industrial/">Commercial &amp; Industrial</a>
-<a class="mob-link" href="/interiors/">Interior Fitouts</a>
-<a class="mob-link" href="/structural/">Structural Repair</a>
-<a class="mob-link" href="certifications.html">Certifications</a>
-<a class="mob-link" href="blog.html">Blog</a>
-<a class="mob-cta" href="tel:+918098889984"><i data-lucide="phone" style="width:1em;height:1em"></i> Call Now</a>
-</div>
+  <div class="hdr-inner">
+
+    <div class="hdr-left hdr-brand">
+      <a href="/" class="logo-link">
+
+        <div class="logo-icon">
+          <img src="/assets/images/Morning-Star-Infra-Projects-Header-Logo.jpeg" alt="Morning Star Infra Projects logo">
+        </div>
+
+        <div class="logo-text">
+          <span class="logo-main">MORNING STAR</span>
+          <span class="logo-sub">INFRA PROJECTS</span>
+        </div>
+
+      </a>
+    </div>
+
+    <nav class="hdr-nav">
+
+      <a class="nav-link" href="/" data-page="home">Home</a>
+
+      <a class="nav-link" href="/pages/our-story.html" data-page="story">Our Story</a>
+
+      <a class="nav-link" href="/pages/our-team.html" data-page="team">Our Team</a>
+
+      <div class="nav-dropdown">
+        <span class="nav-link nav-drop-trigger">Divisions ▾</span>
+        <div class="nav-drop-menu">
+          <a class="drop-link" href="/pages/home-construction.html">Home Construction</a>
+          <a class="drop-link" href="/pages/commercial-and-industrial.html">Commercial &amp; Industrial</a>
+          <a class="drop-link" href="/pages/interior-fitouts.html">Interior Fitouts</a>
+          <a class="drop-link" href="/pages/structural-repair.html">Structural Repair</a>
+        </div>
+      </div>
+
+      <a class="nav-link" href="/pages/certifications.html" data-page="certifications">Certifications</a>
+
+      <a class="nav-link" href="/pages/blog.html" data-page="blog">Blog</a>
+
+      <a class="nav-cta" href="#quote" onclick="openModal();return false;">Get Quote</a>
+
+    </nav>
+
+    <button id="hamburger" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+
+  <div id="mobile-menu" class="mobile-menu">
+
+    <a class="mob-link" href="/" data-page="home">Home</a>
+
+    <a class="mob-link" href="/pages/our-story.html" data-page="story">Our Story</a>
+
+    <a class="mob-link" href="/pages/our-team.html" data-page="team">Our Team</a>
+
+    <div class="mob-divider" style="padding:8px 16px 4px;color:var(--text);font-weight:700">Divisions</div>
+    <a class="mob-link" href="/pages/home-construction.html">Home Construction</a>
+    <a class="mob-link" href="/pages/commercial-and-industrial.html">Commercial &amp; Industrial</a>
+    <a class="mob-link" href="/pages/interior-fitouts.html">Interior Fitouts</a>
+    <a class="mob-link" href="/pages/structural-repair.html">Structural Repair</a>
+
+    <a class="mob-link" href="/pages/certifications.html" data-page="certifications">Certifications</a>
+
+    <a class="mob-link" href="/pages/blog.html" data-page="blog">Blog</a>
+
+    <a class="mob-cta" href="#quote" onclick="openModal();return false;">Get Quote</a>
+
+  </div>
+
 </header>
+
+<script>
+  (function(){
+    function updateHeaderHeight(){
+      var header = document.getElementById('site-header');
+      if(!header) return;
+      var h = Math.ceil(header.getBoundingClientRect().height);
+      document.documentElement.style.setProperty('--hdr-h', h + 'px');
+    }
+    window.addEventListener('load', updateHeaderHeight);
+    window.addEventListener('resize', updateHeaderHeight);
+    var hdr = document.getElementById('site-header');
+    if(hdr && window.MutationObserver){
+      var obs = new MutationObserver(function(){ updateHeaderHeight(); });
+      obs.observe(hdr, { childList: true, subtree: true, attributes: true });
+    }
+  })();
+</script>
 <main class="container" id="blog-index" style="padding-top:calc(var(--hdr-h) + 24px)">
   <nav aria-label="Breadcrumb" class="breadcrumb">
     <div class="container">

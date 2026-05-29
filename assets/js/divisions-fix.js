@@ -26,7 +26,6 @@
     }
 
     function onPointerDown(e) {
-      if (window.innerWidth > 768) return;
       const tab = e.target && e.target.closest ? e.target.closest('.div-tab') : null;
       if (!tab) return;
       const id = (typeof e.pointerId !== 'undefined') ? e.pointerId : 'mouse';
@@ -47,7 +46,6 @@
     }
 
     function onPointerUp(e) {
-      if (window.innerWidth > 768) return;
       const id = (typeof e.pointerId !== 'undefined') ? e.pointerId : 'mouse';
       const st = pointers.get(id);
       if (!st) return clearPointer(id);
@@ -65,7 +63,6 @@
     }
 
     function onClick(e) {
-      if (window.innerWidth > 768) return;
       // If a drag was recently detected, prevent the click from triggering navigation
       if (track.classList.contains('is-dragging')) { e.preventDefault(); e.stopImmediatePropagation(); }
     }
@@ -80,7 +77,6 @@
       // Touch fallback
       let touchState = null;
       track.addEventListener('touchstart', function(e){
-        if (window.innerWidth > 768) return;
         const t = e.changedTouches[0];
         if (!t) return;
         const tab = t.target && t.target.closest ? t.target.closest('.div-tab') : null;
