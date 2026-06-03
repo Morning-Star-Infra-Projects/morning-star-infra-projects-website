@@ -2302,19 +2302,24 @@ main[style] {
     text-align: center;
   }
 
-  /* Footer brand → center on narrow screens */
+
+  /* Footer brand: keep left alignment to match latest desktop implementation */
   .footer-brand {
-    align-items: center !important;
-    text-align: center;
+    align-items: flex-start !important;
+    text-align: left !important;
   }
 
   .footer-brand p {
     max-width: 100%;
-    text-align: center;
+    text-align: left !important;
+    /* use computed paragraph offset from logo script if available */
+    margin-left: calc(var(--logo-paragraph-offset,0px) - 30px);
   }
 
+  /* Ensure logo lockup stays left-aligned on narrow pages */
   .footer-brand .logo-link[style] {
-    justify-content: center !important;
+    justify-content: flex-start !important;
+    gap: 12px !important;
   }
 
   .footer-brand .logo-text[style] {
