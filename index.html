@@ -145,6 +145,13 @@
   #site-footer .footer-links{margin:0;padding:0;list-style:none}
   /* match list spacing to Contact Us item spacing */
   #site-footer .footer-links li{margin:6px 0}
+
+  /* Desktop-only: make Quick Links and Our Divisions compact and consistent.
+     Keep mobile/tablet behavior unchanged by scoping to min-width:1000px. */
+  @media (min-width:1000px){
+    #site-footer .footer-links{display:flex;flex-direction:column;gap:12px;margin:0;padding:0}
+    #site-footer .footer-links li{margin:0}
+  }
   /* Contact items: match vertical spacing and alignment used by lists */
   #site-footer .contact-item{display:flex;align-items:center;gap:10px;margin:6px 0;color:var(--white)}
   #site-footer .contact-item .contact-icon{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px}
