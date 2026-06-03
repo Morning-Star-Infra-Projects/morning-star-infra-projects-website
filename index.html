@@ -129,9 +129,13 @@
     box-sizing:border-box;
     display:inline-block !important;
   }
-  /* Slightly reduced tracking on small screens for legibility */
+  /* Slightly reduced tracking on small screens for legibility and tighter fit
+     so the subtitle width aligns under the main wordmark on mobile. */
   @media (max-width:720px){
-    #site-header .logo-text .logo-sub, #site-footer .logo-text .logo-sub{letter-spacing:0.58em !important;word-spacing:0.15em !important}
+    #site-header .logo-text .logo-sub, #site-footer .logo-text .logo-sub{
+      letter-spacing:0.42em !important;
+      word-spacing:0.12em !important;
+    }
   }
   #site-header .logo-icon img{height:56px;max-height:64px;width:auto;display:block}
   @media (max-width:720px){#site-header .logo-icon img{height:44px}}
