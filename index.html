@@ -108,17 +108,30 @@
   /* Logo lockup: keep main and subtitle perfectly aligned by width and tracking.
      We compute the exact subtitle letter-spacing at runtime so both header and
      footer lockups behave identically and remain responsive. */
-  #site-header .logo-text, #site-footer .logo-text{display:inline-flex;flex-direction:column;align-items:flex-start}
+  /* Logo lockup: prefer tracking (letter-spacing) + small controlled word-spacing
+     over justification. Make the lockup width follow the main title so the
+     subtitle starts/ends directly under the main wordmark. */
+  #site-header .logo-text, #site-footer .logo-text{
+    display:inline-flex;flex-direction:column;align-items:flex-start;/* size to content */
+    width:max-content;
+  }
   #site-header .logo-text .logo-main, #site-footer .logo-text .logo-main,
   #site-header .logo-text .logo-sub, #site-footer .logo-text .logo-sub{display:inline-block;white-space:nowrap}
   #site-header .logo-text .logo-sub, #site-footer .logo-text .logo-sub{
-    text-align:justify;
-    text-align-last:justify;
+    /* Treat subtitle as a single inline text element and force our
+       tracking/width to override component rules and runtime measurement. */
     overflow:visible;
     margin-top:4px;
-    width:var(--logo-main-w,auto);
-    letter-spacing:var(--logo-sub-letter-spacing,0);
+    width:100% !important; /* ensure subtitle spans the same visual width */
+    letter-spacing:0.65em !important; /* increased per final alignment attempt */
+    word-spacing:0.16em !important;   /* small extra gap between words */
     -webkit-font-smoothing:antialiased;
+    box-sizing:border-box;
+    display:inline-block !important;
+  }
+  /* Slightly reduced tracking on small screens for legibility */
+  @media (max-width:720px){
+    #site-header .logo-text .logo-sub, #site-footer .logo-text .logo-sub{letter-spacing:0.58em !important;word-spacing:0.15em !important}
   }
   #site-header .logo-icon img{height:56px;max-height:64px;width:auto;display:block}
   @media (max-width:720px){#site-header .logo-icon img{height:44px}}
@@ -661,11 +674,10 @@ Registered Structural Engineers
         // Clamp to reasonable values to avoid extreme tracking
         var clamped = Math.max(Math.min(perGap, 20), -6);
 
-        // Apply as CSS variables and inline styles for immediate effect on the logo-text
+        // Write main width for layout uses (footer paragraph alignment),
+        // but do not force subtitle width or inline letter-spacing so
+        // CSS-driven tracking (0.58em) can determine final spacing.
         container.style.setProperty('--logo-main-w', mainW + 'px');
-        container.style.setProperty('--logo-sub-letter-spacing', clamped + 'px');
-        sub.style.width = mainW + 'px';
-        sub.style.letterSpacing = clamped + 'px';
 
         // For footer paragraph alignment: write vars to the nearest .footer-brand ancestor
         var footerBrand = container.closest('.footer-brand');
