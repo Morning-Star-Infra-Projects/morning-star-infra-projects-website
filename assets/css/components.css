@@ -674,8 +674,8 @@ main, .page { padding-top: var(--hdr-h, 76px); }
     font-size: .85rem;
     line-height: 1.65;
     margin-top: 6px;
-    /* preserve desktop left-shift behavior on mobile: shift paragraph left ~30px */
-    margin-left: calc(var(--logo-paragraph-offset,0px) - 30px);
+    /* Mobile: paragraph aligned to same left column as logo */
+    margin-left: 0;
     opacity: .7;
     text-align: left;
     text-indent: 0; /* remove excessive indentation on mobile */
@@ -683,30 +683,27 @@ main, .page { padding-top: var(--hdr-h, 76px); }
   }
   .footer-head {
     font-size: .9rem;
-    margin-bottom: 10px;
-  }
-  .footer-links {
+    margin-top: 6px;
+    /* Use single left column on mobile: paragraph starts at container left edge */
+    margin-left: 0;
     gap: 14px; /* compact spacing between links on mobile */
+    text-align: left;
+    text-indent: 0;
     text-align: left;
     align-items: flex-start;
     justify-items: start;
   }
 
   /* Match header/footer logo lockup spacing on mobile */
-  #site-footer .footer-brand .logo-link{gap:12px}
-  .footer-links a {
-    font-size: .85rem;
-    padding: 6px 0; /* larger touch target while compact */
+    gap: 12px; /* compact spacing between links on mobile */
     display: block;
     text-align: left;
   }
   .contact-item {
     margin-bottom: 12px;
     font-size: .85rem;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    justify-content: flex-start;
+    font-size: .85rem;
+    padding: 6px 0; /* touch area while compact */
     text-align: left;
   }
   /* CTA buttons in footer: full width row */
@@ -716,13 +713,13 @@ main, .page { padding-top: var(--hdr-h, 76px); }
     flex-wrap: nowrap;
   }
   .footer-contact-ctas a {
-    flex: 1;
-    text-align: center;
-    padding: 11px 12px !important;
-    font-size: 13px !important;
-    border-radius: 9px !important;
-    min-height: 44px;
+    margin-bottom: 14px;
+    font-size: .85rem;
     display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: flex-start;
+    text-align: left;
     align-items: center;
     justify-content: center;
   }
@@ -783,7 +780,7 @@ main, .page { padding-top: var(--hdr-h, 76px); }
   /* Mobile small: ensure footer brand alignment mirrors desktop improvements */
   .footer-brand{margin-left:0;padding-left:0;text-align:left;align-items:flex-start}
   #site-footer .footer-brand .logo-link{gap:12px;justify-content:flex-start}
-  .footer-brand p{margin-left:calc(var(--logo-paragraph-offset,0px) - 30px);text-align:left;padding-right:0}
+  .footer-brand p{margin-left:0;text-align:left;padding-right:0}
 
   /* Small screens: fix logo subtitle monospacing */
   .logo-text .logo-sub,

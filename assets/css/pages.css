@@ -2312,8 +2312,8 @@ main[style] {
   .footer-brand p {
     max-width: 100%;
     text-align: left !important;
-    /* use computed paragraph offset from logo script if available */
-    margin-left: calc(var(--logo-paragraph-offset,0px) - 30px);
+    /* align paragraph to the same left column as logo on mobile */
+    margin-left: 0 !important;
   }
 
   /* Ensure logo lockup stays left-aligned on narrow pages */
