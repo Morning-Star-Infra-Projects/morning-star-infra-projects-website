@@ -105,6 +105,21 @@
   #site-header .hdr-left.hdr-brand{display:flex;align-items:center;gap:14px}
   #site-header .logo-link{display:flex;align-items:center;gap:12px;text-decoration:none}
   #site-header .logo-text{text-align:left;line-height:1}
+  /* Logo lockup: keep main and subtitle perfectly aligned by width and tracking.
+     We compute the exact subtitle letter-spacing at runtime so both header and
+     footer lockups behave identically and remain responsive. */
+  #site-header .logo-text, #site-footer .logo-text{display:inline-flex;flex-direction:column;align-items:flex-start}
+  #site-header .logo-text .logo-main, #site-footer .logo-text .logo-main,
+  #site-header .logo-text .logo-sub, #site-footer .logo-text .logo-sub{display:inline-block;white-space:nowrap}
+  #site-header .logo-text .logo-sub, #site-footer .logo-text .logo-sub{
+    text-align:justify;
+    text-align-last:justify;
+    overflow:visible;
+    margin-top:4px;
+    width:var(--logo-main-w,auto);
+    letter-spacing:var(--logo-sub-letter-spacing,0);
+    -webkit-font-smoothing:antialiased;
+  }
   #site-header .logo-icon img{height:56px;max-height:64px;width:auto;display:block}
   @media (max-width:720px){#site-header .logo-icon img{height:44px}}
   /* Footer: left-align brand logo and description */
@@ -585,6 +600,52 @@ Registered Structural Engineers
     }
     // Safety: ensure it loads after 3s if anything blocks
     setTimeout(function(){ if(iframe.src==='about:blank') loadMap(); }, 3000);
+  })();
+  </script>
+  <script>
+  (function(){
+    function updateLogoLockups(){
+      document.querySelectorAll('.logo-text').forEach(function(container){
+        var main = container.querySelector('.logo-main');
+        var sub = container.querySelector('.logo-sub');
+        if(!main || !sub) return;
+
+        // Reset to natural width for accurate measurement
+        sub.style.letterSpacing = '0px';
+        sub.style.width = 'auto';
+
+        // Force reflow and measure
+        var mainW = Math.round(main.getBoundingClientRect().width);
+        var subNaturalW = Math.round(sub.getBoundingClientRect().width);
+
+        // Compute gaps between glyphs. Use characters including spaces so words distribute
+        var text = sub.textContent || '';
+        var gaps = Math.max(text.length - 1, 1);
+
+        // desired total extra spacing to reach main width
+        var neededTotal = mainW - subNaturalW;
+        var perGap = neededTotal / gaps;
+
+        // Clamp to reasonable values to avoid extreme tracking
+        var clamped = Math.max(Math.min(perGap, 20), -6);
+
+        // Apply as CSS variables and inline styles for immediate effect
+        container.style.setProperty('--logo-main-w', mainW + 'px');
+        container.style.setProperty('--logo-sub-letter-spacing', clamped + 'px');
+        sub.style.width = mainW + 'px';
+        sub.style.letterSpacing = clamped + 'px';
+      });
+    }
+
+    // Update on load and resize; also when fonts or DOM change
+    window.addEventListener('load', updateLogoLockups);
+    window.addEventListener('resize', function(){ requestAnimationFrame(updateLogoLockups); });
+    if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', updateLogoLockups);
+    else updateLogoLockups();
+
+    // Observe brand blocks for content or font changes
+    var obs = new MutationObserver(function(){ updateLogoLockups(); });
+    document.querySelectorAll('.logo-text').forEach(function(node){ obs.observe(node, { childList:true, subtree:true, characterData:true }); });
   })();
   </script>
 <script defer="" src="./assets/js/main.min.js"></script>
