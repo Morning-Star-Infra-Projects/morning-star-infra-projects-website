@@ -248,7 +248,7 @@ main, .page { padding-top: var(--hdr-h, 76px); }
 .footer-brand .logo-main, .footer-brand .logo-sub { color: var(--white); }
 .footer-brand .logo-text { align-items: flex-start; text-align: left; margin: 0; }
 /* Brand description: place under logo/text and left-align */
-.footer-brand p { margin-top: 8px !important; font-size: .88rem; line-height: 1.7; opacity: .75; max-width: 520px; width:100%; text-align:left; }
+.footer-brand p { margin-top: 4px !important; font-size: .88rem; line-height: 1.7; opacity: .75; max-width: 480px; width:100%; text-align:left; }
 
 /* Headings and links */
 .footer-head { font-family: var(--font-display); font-size: .95rem; font-weight: 700; color: var(--white); margin-bottom: 16px; }
@@ -667,7 +667,7 @@ main, .page { padding-top: var(--hdr-h, 76px); }
     max-width: 100%;
     font-size: .85rem;
     line-height: 1.65;
-    margin-top: 12px;
+    margin-top: 6px;
     opacity: .7;
   }
   .footer-head {
@@ -1430,7 +1430,7 @@ gap:14px !important;
 }
 
 .footer-brand p{
-margin-top:20px !important;
+margin-top:10px !important;
 max-width:470px;
 line-height:1.7;
 font-size:.93rem;
@@ -1555,7 +1555,7 @@ text-align:left !important;
 /* REMOVE RANDOM SPACING */
 
 .footer-brand p{
-margin-top:14px !important;
+margin-top:7px !important;
 max-width:100% !important;
 }
 
@@ -2063,7 +2063,7 @@ text-align:left;
 }
 
 .footer-brand p{
-margin-top:16px;
+margin-top:8px;
 font-size:.88rem;
 line-height:1.7;
 opacity:.75;

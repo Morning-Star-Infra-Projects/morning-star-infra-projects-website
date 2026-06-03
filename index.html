@@ -124,14 +124,38 @@
   @media (max-width:720px){#site-header .logo-icon img{height:44px}}
   /* Footer: left-align brand logo and description */
   :root{--footer-brand-w:420px}
-  #site-footer .footer-brand{display:block;text-align:left;max-width:var(--footer-brand-w)}
-  #site-footer .footer-brand .logo-link{display:flex;align-items:center;gap:6px;text-decoration:none}
+  #site-footer .footer-brand{display:block;text-align:left;max-width:var(--footer-brand-w);margin-left:0;padding-left:0}
+  #site-footer .footer-brand .logo-link{display:flex;align-items:center;gap:12px;text-decoration:none}
   /* slightly reduce footer logo size to balance with text */
   #site-footer .footer-brand .logo-icon img{height:52px;max-height:56px;width:auto;display:block}
   #site-footer .footer-brand .logo-text{line-height:1;text-align:left}
   /* match paragraph width to the brand block and justify both sides */
   #site-footer .footer-brand p{margin-top:12px;text-align:justify;color:var(--white);max-width:100%;font-size:15px;line-height:1.5}
   @media (max-width:720px){#site-footer .footer-brand .logo-icon img{height:44px}}
+  </style>
+
+  <style>
+  /* Footer description: align left & right edges to the company name block on desktop.
+     We use CSS vars written by the logo measurement script to set max-width and offset. */
+  #site-footer .footer-brand p{margin-top:12px;color:var(--white);font-size:15px;line-height:1.5}
+
+  @media (min-width:1000px){
+    #site-footer .footer-brand p{
+      text-align:justify;
+      text-align-last:left;
+      text-indent:2em;
+      /* width and left offset controlled by CSS vars: make paragraph fill the
+         available brand column width while preserving the current start offset */
+      /* width and left offset controlled by CSS vars: make paragraph fill the
+        available brand column width while preserving the current start offset */
+      max-width:calc(var(--footer-brand-w,420px) - var(--logo-paragraph-offset,0px));
+      /* explicitly set width so right edge aligns with company-name block */
+      width:calc(var(--footer-brand-w,420px) - var(--logo-paragraph-offset,0px));
+      /* paragraph start aligned to logo-icon left edge (set by JS) */
+      margin-left:calc(var(--logo-paragraph-offset,0px) - 30px);
+      box-sizing:border-box;
+    }
+  }
   </style>
 
   <style>
@@ -622,7 +646,8 @@ Registered Structural Engineers
         sub.style.width = 'auto';
 
         // Force reflow and measure
-        var mainW = Math.round(main.getBoundingClientRect().width);
+        var mainRect = main.getBoundingClientRect();
+        var mainW = Math.round(mainRect.width);
         var subNaturalW = Math.round(sub.getBoundingClientRect().width);
 
         // Compute gaps between glyphs. Use characters including spaces so words distribute
@@ -636,11 +661,29 @@ Registered Structural Engineers
         // Clamp to reasonable values to avoid extreme tracking
         var clamped = Math.max(Math.min(perGap, 20), -6);
 
-        // Apply as CSS variables and inline styles for immediate effect
+        // Apply as CSS variables and inline styles for immediate effect on the logo-text
         container.style.setProperty('--logo-main-w', mainW + 'px');
         container.style.setProperty('--logo-sub-letter-spacing', clamped + 'px');
         sub.style.width = mainW + 'px';
         sub.style.letterSpacing = clamped + 'px';
+
+        // For footer paragraph alignment: write vars to the nearest .footer-brand ancestor
+        var footerBrand = container.closest('.footer-brand');
+        if(footerBrand){
+          // compute offset of logo-text relative to footer-brand (left edge alignment)
+          var parentRect = footerBrand.getBoundingClientRect();
+          var offset = Math.round(mainRect.left - parentRect.left);
+          footerBrand.style.setProperty('--footer-logo-w', mainW + 'px');
+          footerBrand.style.setProperty('--logo-text-offset', offset + 'px');
+          // Additionally compute the logo-icon left edge so the paragraph can start
+          // directly under the logo symbol (not the company name).
+          var logoIcon = footerBrand.querySelector('.logo-icon');
+          if(logoIcon){
+            var iconRect = logoIcon.getBoundingClientRect();
+            var iconOffset = Math.round(iconRect.left - parentRect.left);
+            footerBrand.style.setProperty('--logo-paragraph-offset', iconOffset + 'px');
+          }
+        }
       });
     }
 
