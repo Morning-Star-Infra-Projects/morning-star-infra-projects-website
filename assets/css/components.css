@@ -747,6 +747,17 @@ main, .page { padding-top: var(--hdr-h, 76px); }
     font-size: .75rem;
     line-height: 1.6;
   }
+
+  /* Ensure logo subtitle uses monospace + JS-computed letter-spacing on mobile */
+  .logo-text .logo-sub,
+  #site-footer .logo-text .logo-sub {
+    font-family: var(--font-mono) !important;
+    letter-spacing: var(--logo-sub-letter-spacing, .2em) !important;
+    width: var(--logo-main-w, auto) !important;
+    display: inline-block !important;
+    white-space: nowrap !important;
+    -webkit-font-smoothing: antialiased !important;
+  }
 }
 
 /* ============================================================
@@ -773,6 +784,16 @@ main, .page { padding-top: var(--hdr-h, 76px); }
   .footer-brand{margin-left:0;padding-left:0;text-align:left;align-items:flex-start}
   #site-footer .footer-brand .logo-link{gap:12px;justify-content:flex-start}
   .footer-brand p{margin-left:calc(var(--logo-paragraph-offset,0px) - 30px);text-align:left;padding-right:0}
+
+  /* Small screens: fix logo subtitle monospacing */
+  .logo-text .logo-sub,
+  #site-footer .logo-text .logo-sub {
+    font-family: var(--font-mono) !important;
+    letter-spacing: var(--logo-sub-letter-spacing, .18em) !important;
+    width: var(--logo-main-w, auto) !important;
+    display: inline-block !important;
+    white-space: nowrap !important;
+  }
 }
 
 /* ============================================================
