@@ -178,24 +178,47 @@
 
   <style>
   /* Footer grid: make columns evenly spaced and responsive */
+  /* Reduce vertical spacing between footer items and keep it consistent */
+  #site-footer{--footer-item-gap:6px}
   #site-footer .container{padding-top:42px;padding-bottom:42px}
   #site-footer .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:36px;align-items:start}
-  /* give each column a small horizontal padding so gaps appear uniform */
-  #site-footer .footer-grid > div{padding:0 8px;min-width:0}
+  /* give each column a small horizontal padding so gaps appear uniform
+     and ensure consistent vertical rhythm between heading and items */
+  #site-footer .footer-grid > div{padding:0 8px;min-width:0;display:flex;flex-direction:column;gap:var(--footer-item-gap)}
   /* normalize heading and list spacing across columns */
-  #site-footer .footer-head{margin:0 0 12px 0;font-weight:700}
-  #site-footer .footer-links{margin:0;padding:0;list-style:none}
+  #site-footer .footer-head{margin:0 0 var(--footer-item-gap) 0;font-weight:700}
+  #site-footer .footer-links{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:var(--footer-item-gap)}
   /* match list spacing to Contact Us item spacing */
-  #site-footer .footer-links li{margin:6px 0}
+  #site-footer .footer-links li{margin:0}
 
-  /* Desktop-only: make Quick Links and Our Divisions compact and consistent.
-     Keep mobile/tablet behavior unchanged by scoping to min-width:1000px. */
+  /* Desktop-only: slightly increase grid gap on wide screens but keep item gap */
   @media (min-width:1000px){
-    #site-footer .footer-links{display:flex;flex-direction:column;gap:12px;margin:0;padding:0}
+    #site-footer .footer-grid{gap:44px}
+    /* lists already use gap; keep li margins at 0 to avoid double spacing */
     #site-footer .footer-links li{margin:0}
   }
   /* Contact items: match vertical spacing and alignment used by lists */
-  #site-footer .contact-item{display:flex;align-items:center;gap:10px;margin:6px 0;color:var(--white)}
+  #site-footer .contact-item{display:flex;align-items:center;gap:10px;margin:0;color:var(--white)}
+  /* Social icons: remove extra inline top margin and match column gap */
+  #site-footer .footer-social{margin-top:0;display:flex;gap:var(--footer-item-gap);align-items:center}
+    /* Force-reset common overrides so Contact Us uses the same compact rhythm
+      as the link lists. Use high-specificity and !important to prevent external
+      styles from re-introducing large margins or padding. */
+    #site-footer .contact-item,
+    #site-footer .footer-links li,
+    #site-footer .footer-social,
+    #site-footer .contact-item span,
+    #site-footer .contact-item a {
+     margin: 0 !important;
+     padding: 0 !important;
+    }
+
+    /* Ensure the column-level gap controls vertical spacing and cannot be
+      overridden by other selectors. */
+    #site-footer .footer-grid > div{gap:var(--footer-item-gap) !important}
+
+    /* Make social links align consistently with contact rows */
+    #site-footer .footer-social a{display:inline-flex;align-items:center;justify-content:center}
   #site-footer .contact-item .contact-icon{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px}
   /* ensure brand column spacing is visually balanced with others */
   #site-footer .footer-brand{padding-right:6px}
@@ -564,7 +587,7 @@ Contact Us
 
 </div>
 
-<div class="footer-social" style="margin-top:16px;">
+<div class="footer-social">
   <a aria-label="Instagram" href="https://www.instagram.com/morningstarinfra/" rel="noopener noreferrer" target="_blank">
     <svg aria-hidden="true" class="lucide" fill="none" focusable="false" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
       <rect height="20" rx="5" width="20" x="2" y="2"></rect>
