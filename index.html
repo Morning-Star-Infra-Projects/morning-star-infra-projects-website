@@ -153,6 +153,41 @@
   </style>
 
   <style>
+  /* Mobile / responsive fixes to prevent layout shifts and improve touch targets */
+  @media (max-width:768px){
+    .hero-content{
+      padding:24px 20px !important;
+      margin-top:0 !important;
+    }
+
+    .hero-btns{display:flex;flex-direction:column;gap:10px;width:100%}
+    .hero-btns a, .hero-btns button{width:100%;text-align:center}
+
+    #site-footer .footer-brand p{font-size:14px;line-height:1.8;text-align:left}
+
+    #site-footer .footer-grid{grid-template-columns:1fr;gap:24px}
+
+    :root{--footer-brand-w:100%}
+
+    .footer-social a{width:40px;height:40px;display:inline-flex;align-items:center;justify-content:center}
+
+    .fab{width:52px;height:52px;bottom:20px}
+    .fab-call{bottom:80px}
+
+    .call-tab{width:90%;max-width:320px;left:50%;transform:translateX(-50%)}
+
+    /* Make contact text wrap and align for multi-line items */
+    #site-footer .contact-item{word-break:break-word;align-items:flex-start}
+    #site-footer .contact-item .contact-icon{margin-top:4px}
+  }
+
+  @media (max-width:480px){
+    .logo-sub{letter-spacing:0.15em !important}
+    .div-tab{aspect-ratio:3/4}
+  }
+  </style>
+
+  <style>
   /* Footer description: align left & right edges to the company name block on desktop.
      We use CSS vars written by the logo measurement script to set max-width and offset. */
   #site-footer .footer-brand p{margin-top:12px;color:var(--white);font-size:15px;line-height:1.5}
@@ -672,14 +707,24 @@ Registered Structural Engineers
       var src = iframe.getAttribute('data-src');
       if(src && (iframe.src === '' || iframe.src === 'about:blank')) iframe.src = src;
     };
-    // Eager, short delayed load so the map is available before users scroll to it
-    if(document.readyState === 'complete' || document.readyState === 'interactive'){
-      setTimeout(loadMap, 500);
+
+    // Prefer IntersectionObserver to load the map only when it's near the viewport.
+    if('IntersectionObserver' in window){
+      var io = new IntersectionObserver(function(entries, obs){
+        entries.forEach(function(entry){
+          if(entry.isIntersecting){ loadMap(); obs.disconnect(); }
+        });
+      }, {rootMargin: '400px'});
+      io.observe(iframe);
     } else {
-      window.addEventListener('DOMContentLoaded', function(){ setTimeout(loadMap, 500); }, {once:true});
+      // Fallback: short delayed load
+      if(document.readyState === 'complete' || document.readyState === 'interactive'){
+        setTimeout(loadMap, 500);
+      } else {
+        window.addEventListener('DOMContentLoaded', function(){ setTimeout(loadMap, 500); }, {once:true});
+      }
+      setTimeout(function(){ if(iframe.src==='about:blank') loadMap(); }, 3000);
     }
-    // Safety: ensure it loads after 3s if anything blocks
-    setTimeout(function(){ if(iframe.src==='about:blank') loadMap(); }, 3000);
   })();
   </script>
   <script>
