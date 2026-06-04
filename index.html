@@ -178,8 +178,8 @@
 
   <style>
   /* Footer grid: make columns evenly spaced and responsive */
-  /* Reduce vertical spacing between footer items and keep it consistent */
-  #site-footer{--footer-item-gap:6px}
+  /* Use the visual "sweet spot" so all footer columns share the same rhythm */
+  #site-footer{--footer-item-gap:10px}
   #site-footer .container{padding-top:42px;padding-bottom:42px}
   #site-footer .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:36px;align-items:start}
   /* give each column a small horizontal padding so gaps appear uniform
@@ -198,9 +198,17 @@
     #site-footer .footer-links li{margin:0}
   }
   /* Contact items: match vertical spacing and alignment used by lists */
-  #site-footer .contact-item{display:flex;align-items:center;gap:10px;margin:0;color:var(--white)}
-  /* Social icons: remove extra inline top margin and match column gap */
-  #site-footer .footer-social{margin-top:0;display:flex;gap:var(--footer-item-gap);align-items:center}
+  #site-footer .contact-item{
+    display:flex;
+    align-items:center;
+    gap:12px; /* icon-to-text spacing */
+    margin:0 0 10px 0 !important; /* make rows match list spacing */
+    padding:0 !important;
+    line-height:1.4;
+    color:var(--white)
+  }
+  /* Social icons: position closer to the location item and match rhythm */
+  #site-footer .footer-social{margin-top:10px !important;display:flex;gap:12px;align-items:center}
     /* Force-reset common overrides so Contact Us uses the same compact rhythm
       as the link lists. Use high-specificity and !important to prevent external
       styles from re-introducing large margins or padding. */
