@@ -9,120 +9,145 @@
 
 (function () {
 
-  // ── DOM refs ────────────────────────────────────────────────────────────────
-  var hamburger  = document.getElementById('hamburger');
-  var mobileMenu = document.getElementById('mobile-menu');
-  var siteHeader = document.getElementById('site-header');
+  // Single init guard to prevent duplicate event binding per header instance
+  function initHeaderBehavior() {
+    var siteHeader = document.getElementById('site-header');
+    if (!siteHeader) return;
+    if (siteHeader.dataset.navInitialized === '1') return;
 
-  // ── Hamburger toggle ────────────────────────────────────────────────────────────────────────────
-  if (hamburger && mobileMenu) {
-    // Defensive: ensure button is enabled and clickable
-    try { hamburger.disabled = false; } catch (e) {}
-    // Ensure visible stacking so it receives touch/clicks
-    if (hamburger.style) { hamburger.style.zIndex = hamburger.style.zIndex || '1202'; hamburger.style.position = hamburger.style.position || 'relative'; }
+    var hamburger  = document.getElementById('hamburger');
+    var mobileMenu = document.getElementById('mobile-menu');
 
-    var toggleMenu = function () {
-      var isOpen = mobileMenu.classList.toggle('open');
-      // Visual state for hamburger (X animation)
-      hamburger.classList.toggle('is-active', isOpen);
-      hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-      mobileMenu.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
-      // Lock background scroll while menu is open
-      document.body.classList.toggle('menu-open', isOpen);
-    };
+    // Hamburger toggle
+    if (hamburger && mobileMenu) {
+      try { hamburger.disabled = false; } catch (e) {}
+      if (hamburger.style) { hamburger.style.zIndex = hamburger.style.zIndex || '1202'; hamburger.style.position = hamburger.style.position || 'relative'; }
 
-    hamburger.addEventListener('click', function (e) { e.preventDefault(); toggleMenu(); });
-    // Some mobile browsers are more responsive to touchstart
-    hamburger.addEventListener('touchstart', function (e) { e.preventDefault(); toggleMenu(); }, { passive: false });
-  }
+      var toggleMenu = function () {
+        var isOpen = mobileMenu.classList.toggle('open');
+        hamburger.classList.toggle('is-active', isOpen);
+        hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        mobileMenu.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+        document.body.classList.toggle('menu-open', isOpen);
+      };
 
-  // ── Close mobile menu when any mobile link is clicked ────────────────────────────────────
-  if (mobileMenu) {
-    mobileMenu.addEventListener('click', function (e) {
-      var link = e.target.closest('a');
-      if (link) {
-        mobileMenu.classList.remove('open');
-        if (hamburger) {
-          hamburger.classList.remove('is-active');
-          hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.addEventListener('click', function (e) { e.preventDefault(); toggleMenu(); });
+      hamburger.addEventListener('touchstart', function (e) { e.preventDefault(); toggleMenu(); }, { passive: false });
+    }
+
+    // Close mobile menu when any mobile link is clicked
+    if (mobileMenu) {
+      mobileMenu.addEventListener('click', function (e) {
+        var link = e.target.closest('a');
+        if (link) {
+          mobileMenu.classList.remove('open');
+          if (hamburger) {
+            hamburger.classList.remove('is-active');
+            hamburger.setAttribute('aria-expanded', 'false');
+          }
+          mobileMenu.setAttribute('aria-hidden', 'true');
         }
-        mobileMenu.setAttribute('aria-hidden', 'true');
-      }
-    });
-    // Close when clicking outside the menu
-    document.addEventListener('click', function (e) {
-      if (!mobileMenu.classList.contains('open')) return;
-      var within = e.target.closest && (e.target.closest('#mobile-menu') || e.target.closest('#hamburger'));
-      if (!within) {
-        mobileMenu.classList.remove('open');
-        if (hamburger) {
-          hamburger.classList.remove('is-active');
-          hamburger.setAttribute('aria-expanded', 'false');
+      });
+      // Close when clicking outside the menu
+      document.addEventListener('click', function (e) {
+        if (!mobileMenu.classList.contains('open')) return;
+        var within = e.target.closest && (e.target.closest('#mobile-menu') || e.target.closest('#hamburger'));
+        if (!within) {
+          mobileMenu.classList.remove('open');
+          if (hamburger) {
+            hamburger.classList.remove('is-active');
+            hamburger.setAttribute('aria-expanded', 'false');
+          }
+          mobileMenu.setAttribute('aria-hidden', 'true');
         }
-        mobileMenu.setAttribute('aria-hidden', 'true');
-      }
-    });
-    // Close on Escape key
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
-        mobileMenu.classList.remove('open');
-        if (hamburger) {
-          hamburger.classList.remove('is-active');
-          hamburger.setAttribute('aria-expanded', 'false');
+      });
+      // Close on Escape key
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+          mobileMenu.classList.remove('open');
+          if (hamburger) {
+            hamburger.classList.remove('is-active');
+            hamburger.setAttribute('aria-expanded', 'false');
+          }
+          mobileMenu.setAttribute('aria-hidden', 'true');
         }
-        mobileMenu.setAttribute('aria-hidden', 'true');
-      }
-    });
-    // Close when resizing to desktop (>= 769px)
-    window.addEventListener('resize', function () {
-      if (window.innerWidth >= 769 && mobileMenu.classList.contains('open')) {
-        mobileMenu.classList.remove('open');
-        if (hamburger) {
-          hamburger.classList.remove('is-active');
-          hamburger.setAttribute('aria-expanded', 'false');
+      });
+      // Close when resizing to desktop (>= 769px)
+      window.addEventListener('resize', function () {
+        if (window.innerWidth >= 769 && mobileMenu.classList.contains('open')) {
+          mobileMenu.classList.remove('open');
+          if (hamburger) {
+            hamburger.classList.remove('is-active');
+            hamburger.setAttribute('aria-expanded', 'false');
+          }
+          mobileMenu.setAttribute('aria-hidden', 'true');
         }
-        mobileMenu.setAttribute('aria-hidden', 'true');
-      }
-    });
-  }
+      });
+    }
 
-  // ── Header scroll shadow ────────────────────────────────────────────────────
-  if (siteHeader) {
+    // Header scroll shadow
     window.addEventListener('scroll', function () {
       siteHeader.classList.toggle('scrolled', window.scrollY > 20);
     }, { passive: true });
+
+    // Active nav link highlighting
+    function highlightActiveLinks(){
+      // remove previous active states first
+      document.querySelectorAll('.nav-link.active, .drop-link.active, .mob-link.active').forEach(function(el){ el.classList.remove('active'); });
+      var currentFile = window.location.pathname.replace(/^.*\//, '') || 'index.html';
+      document.querySelectorAll('.nav-link, .drop-link, .mob-link').forEach(function (el) {
+        var href = (el.getAttribute('href') || '').replace(/^.*\//, '');
+        if (href && href === currentFile) {
+          el.classList.add('active');
+        }
+      });
+      // For division pages: mark the dropdown trigger active if a drop-link is active
+      var dropMenu = document.querySelectorAll('.nav-drop-menu a');
+      var anyDivisionActive = Array.prototype.slice.call(dropMenu).some(function(a){ return a.classList.contains('active'); });
+      var dropTrigger = document.querySelector('.nav-drop-trigger');
+      if(dropTrigger) dropTrigger.classList.toggle('active', anyDivisionActive);
+    }
+    highlightActiveLinks();
+
+    // Dynamic header height: set CSS variable --hdr-h
+    function updateHeaderHeight(){
+      var hdr = document.getElementById('site-header');
+      if(!hdr) return;
+      try{
+        var h = Math.ceil(hdr.getBoundingClientRect().height);
+        document.documentElement.style.setProperty('--hdr-h', h + 'px');
+        document.documentElement.style.setProperty('--header-height', h + 'px');
+      }catch(e){ /* ignore */ }
+    }
+    // Debounce helper
+    function debounce(fn, wait){ var t; return function(){ var args = arguments; clearTimeout(t); t = setTimeout(function(){ fn.apply(null, args); }, wait); }; }
+    window.addEventListener('load', updateHeaderHeight);
+    window.addEventListener('resize', debounce(updateHeaderHeight, 120));
+    // Use ResizeObserver when available to minimize layout thrash
+    var hdrEl = document.getElementById('site-header');
+    if (hdrEl && 'ResizeObserver' in window){
+      try{
+        var ro = new ResizeObserver(debounce(updateHeaderHeight, 120));
+        ro.observe(hdrEl);
+      }catch(e){ /* ignore */ }
+    } else if (window.MutationObserver){
+      var _hdr = document.getElementById('site-header');
+      if (_hdr){
+        var obs = new MutationObserver(debounce(function(){ updateHeaderHeight(); }, 120));
+        obs.observe(_hdr, { childList: true, subtree: true, attributes: true });
+      }
+    }
+
+    // mark initialized
+    siteHeader.dataset.navInitialized = '1';
   }
 
-  // ── Active nav link: highlight the link matching the current page ───────────
-  var currentFile = window.location.pathname.replace(/^.*\//, '') || 'index.html';
-  document.querySelectorAll('.nav-link, .drop-link, .mob-link').forEach(function (el) {
-    var href = (el.getAttribute('href') || '').replace(/^.*\//, '');
-    if (href && href === currentFile) {
-      el.classList.add('active');
-    }
-  });
+  // Initialize when DOM is ready
+  document.addEventListener('DOMContentLoaded', function(){ initHeaderBehavior(); });
+  // Also ensure init after full load in case header modified by other scripts
+  window.addEventListener('load', function(){ initHeaderBehavior(); });
 
-  // ── Dynamic header height: set CSS variable --hdr-h so pages reserve space
-  function updateHeaderHeight(){
-    var hdr = document.getElementById('site-header');
-    if(!hdr) return;
-    try{
-      var h = Math.ceil(hdr.getBoundingClientRect().height);
-      // set both variables so CSS and main content offset stay in sync
-      document.documentElement.style.setProperty('--hdr-h', h + 'px');
-      document.documentElement.style.setProperty('--header-height', h + 'px');
-    }catch(e){ /* ignore */ }
-  }
-  // Run on load + resize
-  window.addEventListener('load', updateHeaderHeight);
-  window.addEventListener('resize', updateHeaderHeight);
-  // Observe header changes (mobile menu toggles, logo swaps)
-  if (window.MutationObserver){
-    var _hdr = document.getElementById('site-header');
-    if (_hdr){
-      var obs = new MutationObserver(function(){ updateHeaderHeight(); });
-      obs.observe(_hdr, { childList: true, subtree: true, attributes: true });
-    }
-  }
+  // Allow external tools to trigger initialization when header/footer injected
+  window.addEventListener('site:header:ready', function(){ initHeaderBehavior(); });
 
 })();
