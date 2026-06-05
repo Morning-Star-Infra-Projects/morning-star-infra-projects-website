@@ -253,6 +253,165 @@
 </figure>
 </div>
 </div>
+<!-- RUNNING IMAGE SHOWCASE (Interior Fitouts) - matches Home Construction implementation -->
+<div class="section" style="background:var(--white);padding:48px 0 36px">
+<div class="container container-wide" style="max-width:1400px;margin:0 auto">
+  <style>
+    .hc-showcase-header{display:block;text-align:center;margin-bottom:18px}
+    .hc-showcase-header .section-tag{font-weight:800}
+    .hc-slider-outer{position:relative;width:100%;overflow:hidden}
+    .hc-slider-outer::before,.hc-slider-outer::after{content:'';position:absolute;top:0;bottom:0;width:120px;z-index:10;pointer-events:none}
+    .hc-slider-outer::before{left:0;background:linear-gradient(to right,#ffffff 0%,rgba(255,255,255,0) 100%)}
+    .hc-slider-outer::after{right:0;background:linear-gradient(to left,#ffffff 0%,rgba(255,255,255,0) 100%)}
+
+    .hc-slider-track{display:flex;width:max-content;will-change:transform;transform:translateZ(0);animation:hc-marquee 55s linear infinite}
+    .hc-slider-outer:hover .hc-slider-track{animation-play-state:paused}
+
+    .hc-slide-item{flex-shrink:0;width:280px;height:280px;margin-right:0;overflow:hidden;display:block;position:relative}
+    .hc-slide-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s cubic-bezier(.25,.8,.25,1);transform:translateZ(0);will-change:transform}
+    .hc-slider-outer:hover .hc-slide-item:hover img{transform:scale(1.07)}
+    .hc-slide-item::after{content:'';position:absolute;top:0;right:0;width:2px;height:100%;background:rgba(255,255,255,0.18);pointer-events:none;z-index:2}
+
+    @keyframes hc-marquee{0%{transform:translate3d(0,0,0)}100%{transform:translate3d(-50%,0,0)}}
+
+    @media (max-width:900px){.hc-slide-item{width:220px;height:220px}.hc-slider-outer::before,.hc-slider-outer::after{width:60px}}
+    @media (max-width:480px){.hc-showcase-header{padding:0 12px}.hc-slide-item{width:160px;height:160px}.hc-slider-outer::before,.hc-slider-outer::after{width:40px}}
+    @media (prefers-reduced-motion:reduce){.hc-slider-track{animation:hc-marquee 55s linear infinite!important}}
+  </style>
+
+  <div class="hc-showcase-header">
+    <span class="section-tag">OUR WORK</span>
+    <h2>Interior Fitouts Showcase</h2>
+    <p>A continuous gallery of interior fitouts — modular kitchens, wardrobes, and premium finishes.</p>
+  </div>
+
+  <div class="hc-slider-outer" id="hc-slider-outer">
+    <div class="hc-slider-track" id="hc-slider-track">
+      <!-- Group A -->
+      <div class="hc-slide-item">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-1.webp" alt="Interior fitout project 1" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-2.jpg" alt="Interior fitout project 2" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-3.jpg" alt="Interior fitout project 3" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-4.jpg" alt="Interior fitout project 4" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-5.jpg" alt="Interior fitout project 5" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-6.jpg" alt="Interior fitout project 6" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-7.jpg" alt="Interior fitout project 7" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-8.jpg" alt="Interior fitout project 8" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-9.jpg" alt="Interior fitout project 9" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-10.jpg" alt="Interior fitout project 10" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-11.jpg" alt="Interior fitout project 11" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-12.jpg" alt="Interior fitout project 12" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-13.jpg" alt="Interior fitout project 13" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-14.jpg" alt="Interior fitout project 14" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-15.jpg" alt="Interior fitout project 15" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-16.jpg" alt="Interior fitout project 16" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-17.jpg" alt="Interior fitout project 17" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <!-- Group B duplicate for seamless loop -->
+      <div class="hc-slide-item" aria-hidden="true">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-1.webp" alt="" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item" aria-hidden="true">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-2.jpg" alt="" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item" aria-hidden="true">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-3.jpg" alt="" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item" aria-hidden="true">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-4.jpg" alt="" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item" aria-hidden="true">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-5.jpg" alt="" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item" aria-hidden="true">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-6.jpg" alt="" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item" aria-hidden="true">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-7.jpg" alt="" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item" aria-hidden="true">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-8.jpg" alt="" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item" aria-hidden="true">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-9.jpg" alt="" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item" aria-hidden="true">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-10.jpg" alt="" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item" aria-hidden="true">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-11.jpg" alt="" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item" aria-hidden="true">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-12.jpg" alt="" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item" aria-hidden="true">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-13.jpg" alt="" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item" aria-hidden="true">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-14.jpg" alt="" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item" aria-hidden="true">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-15.jpg" alt="" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item" aria-hidden="true">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-16.jpg" alt="" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item" aria-hidden="true">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-17.jpg" alt="" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+    </div>
+  </div>
+  <script>
+  /* Dynamically adjust animation speed based on actual track width for pixel-perfect loop */
+  (function () {
+    var track = document.getElementById('hc-slider-track');
+    if (!track) return;
+    /* Speed: ~80px per second feels premium — moderate, not too fast */
+    var pxPerSec = 80;
+    function setDuration() {
+      /* Half the full track width = one clone group = distance to shift */
+      var halfW = track.scrollWidth / 2;
+      var dur = Math.round(halfW / pxPerSec);
+      track.style.animationDuration = dur + 's';
+    }
+    setDuration();
+    window.addEventListener('resize', setDuration, { passive: true });
+  })();
+  </script>
+</div>
+</div>
 </div>
 <section aria-labelledby="rs-heading" class="related-services">
 <div class="container">
