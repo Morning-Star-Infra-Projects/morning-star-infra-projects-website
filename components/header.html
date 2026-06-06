@@ -27,10 +27,41 @@
         </div>
       </div>
       <a class="nav-link" href="/pages/certifications.html" data-page="certifications">Certifications</a>
-      <a class="nav-link" href="/pages/blog.html" data-page="blog">Blog</a>
+      <a class="nav-link nav-blog" href="/blog/blog.html" data-page="blog">Blog</a>
       <a class="nav-cta" href="#quote" onclick="openModal();return false;">Get Quote</a>
     </nav>
 
     <button id="hamburger" class="hamburger"><span></span><span></span><span></span></button>
   </div>
 </header>
+<style>
+/* Active / highlighted nav link styles — cover both temporary touch highlights
+   and persistent "active" class set by navigation.js */
+.hdr-nav .nav-link.link-active,
+.hdr-nav .nav-link.active,
+.hdr-nav .drop-link.active,
+.mobile-menu .mob-link.link-active,
+.mobile-menu .mob-link.active{
+  background:rgba(247,189,16,0.08);
+  border-radius:8px;
+  padding:6px 8px;
+}
+@media (max-width:720px){
+  .hdr-nav .nav-link.link-active,
+  .hdr-nav .nav-link.active{background:transparent}
+}
+</style>
+
+<script>
+// Add touch/click highlight for nav links (keeps design consistent)
+(function(){
+  var links = document.querySelectorAll('.hdr-nav .nav-link, .mobile-menu .mob-link');
+  links.forEach(function(el){
+    el.addEventListener('touchstart', function(){ el.classList.add('link-active'); }, {passive:true});
+    el.addEventListener('mousedown', function(){ el.classList.add('link-active'); });
+    el.addEventListener('touchend', function(){ el.classList.remove('link-active'); });
+    el.addEventListener('mouseup', function(){ el.classList.remove('link-active'); });
+    el.addEventListener('mouseleave', function(){ el.classList.remove('link-active'); });
+  });
+})();
+</script>

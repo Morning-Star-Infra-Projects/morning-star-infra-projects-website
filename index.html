@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en-IN">
 <head>
 <meta charset="utf-8"/>
@@ -344,7 +344,7 @@
 
       <a class="nav-link" href="/pages/certifications.html" data-page="certifications">Certifications</a>
 
-      <a class="nav-link" href="/pages/blog.html" data-page="blog">Blog</a>
+      <a class="nav-link nav-blog" href="/blog/blog.html" data-page="blog">Blog</a>
 
       <a class="nav-cta" href="#quote" onclick="openModal();return false;">
         Get Quote
@@ -375,8 +375,7 @@
     <a class="mob-link" href="/pages/structural-repair.html">Structural Repair</a>
 
     <a class="mob-link" href="/pages/certifications.html" data-page="certifications">Certifications</a>
-
-    <a class="mob-link" href="/pages/blog.html" data-page="blog">Blog</a>
+    <a class="mob-link" href="/blog/blog.html" data-page="blog">Blog</a>
 
     <a class="mob-cta" href="#quote" onclick="openModal();return false;">
       Get Quote
@@ -513,6 +512,15 @@
 <span class="call-number">+91-8098889984</span>
 </a>
 <!-- MAP SECTION (compact, interactive) -->
+<style>
+/* Make the Google Map edge-to-edge and responsive */
+.map-section{padding:0;margin:0;width:100%}
+.map-wrap{width:100%;max-width:none;padding:0;margin:0}
+.map-wrap iframe{width:100%;height:500px;border:0;display:block;border-radius:0;box-shadow:none}
+@media (max-width:768px){
+  .map-wrap iframe{height:350px}
+}
+</style>
 <section aria-label="Our Location on Google Maps" class="map-section">
 <div class="map-wrap">
 <iframe allowfullscreen="" data-src="https://www.google.com/maps?q=5/13%20Sadasivam%20Street%20Gopalapuram%20Chennai-86&amp;output=embed" id="site-map-iframe" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="about:blank" title="Morning Star Infra Projects location on Google Maps"></iframe>

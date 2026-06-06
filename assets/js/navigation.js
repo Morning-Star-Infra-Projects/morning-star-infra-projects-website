@@ -94,18 +94,51 @@
     function highlightActiveLinks(){
       // remove previous active states first
       document.querySelectorAll('.nav-link.active, .drop-link.active, .mob-link.active').forEach(function(el){ el.classList.remove('active'); });
-      var currentFile = window.location.pathname.replace(/^.*\//, '') || 'index.html';
-      document.querySelectorAll('.nav-link, .drop-link, .mob-link').forEach(function (el) {
-        var href = (el.getAttribute('href') || '').replace(/^.*\//, '');
-        if (href && href === currentFile) {
-          el.classList.add('active');
-        }
-      });
-      // For division pages: mark the dropdown trigger active if a drop-link is active
-      var dropMenu = document.querySelectorAll('.nav-drop-menu a');
-      var anyDivisionActive = Array.prototype.slice.call(dropMenu).some(function(a){ return a.classList.contains('active'); });
-      var dropTrigger = document.querySelector('.nav-drop-trigger');
-      if(dropTrigger) dropTrigger.classList.toggle('active', anyDivisionActive);
+      var currentPath = window.location.pathname.toLowerCase();
+
+      function setActiveByData(page){
+        var nodes = document.querySelectorAll('[data-page="' + page + '"]');
+        nodes.forEach(function(n){ n.classList.add('active'); });
+      }
+
+      // Home: exact root or index.html only
+      if (currentPath === '/' || currentPath === '' || currentPath === '/index.html' || currentPath.endsWith('/index.html')){
+        setActiveByData('home');
+        return;
+      }
+
+      // Blog
+      if (currentPath.indexOf('/blog/') !== -1 || currentPath.indexOf('/blog.html') !== -1){ setActiveByData('blog'); return; }
+
+      // Our Story
+      if (currentPath.indexOf('our-story') !== -1){ setActiveByData('story'); return; }
+
+      // Our Team
+      if (currentPath.indexOf('our-team') !== -1){ setActiveByData('team'); return; }
+
+      // Certifications
+      if (currentPath.indexOf('certifications') !== -1){ setActiveByData('certifications'); return; }
+
+      // Divisions (mark specific drop-link and trigger)
+      if (currentPath.indexOf('/home-construction') !== -1 || currentPath.indexOf('/commercial-and-industrial') !== -1 || currentPath.indexOf('/interior-fitouts') !== -1 || currentPath.indexOf('/structural-repair') !== -1){
+        document.querySelectorAll('.nav-drop-menu a').forEach(function(a){
+          try{
+            var href = (a.getAttribute('href')||'').toLowerCase();
+            if(href && currentPath.indexOf(href.replace(/^.*\//,'')) !== -1) a.classList.add('active');
+          }catch(e){}
+        });
+        var dropTrigger = document.querySelector('.nav-drop-trigger'); if(dropTrigger) dropTrigger.classList.add('active');
+        return;
+      }
+
+      // Fallback: exact filename match
+      var file = currentPath.replace(/^.*\//,'');
+      if(file){
+        document.querySelectorAll('.nav-link, .drop-link, .mob-link').forEach(function(el){
+          var h = (el.getAttribute('href')||'').split('?')[0].split('#')[0].replace(/^.*\//,'').toLowerCase();
+          if(h && h === file) el.classList.add('active');
+        });
+      }
     }
     highlightActiveLinks();
 
