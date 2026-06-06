@@ -67,7 +67,21 @@
     function onClick(e) {
       if (window.innerWidth > 768) return;
       // If a drag was recently detected, prevent the click from triggering navigation
-      if (track.classList.contains('is-dragging')) { e.preventDefault(); e.stopImmediatePropagation(); }
+      if (track.classList.contains('is-dragging')) {
+        e.preventDefault(); e.stopImmediatePropagation();
+        return;
+      }
+      // If this was a genuine tap/click on a tab, ensure navigation (some browsers
+      // may not follow anchors when touch handlers are active). Perform navigation
+      // via the same helper used elsewhere to be consistent.
+      const tab = e.target && e.target.closest ? e.target.closest('.div-tab') : null;
+      if (tab && tab.getAttribute) {
+        const href = tab.getAttribute('href');
+        if (href) {
+          e.preventDefault(); e.stopImmediatePropagation();
+          navigateToTab(href);
+        }
+      }
     }
 
     // Pointer events preferred
