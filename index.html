@@ -190,7 +190,6 @@
 
   @media (max-width:480px){
     .logo-sub{letter-spacing:0.15em !important}
-    .div-tab{aspect-ratio:3/4}
   }
   </style>
 
@@ -428,12 +427,6 @@
   .div-tabs.divisions-grid .div-tab-content{pointer-events:auto}
   .div-tabs.divisions-grid .div-tab-content{position:absolute;left:10px;right:10px;bottom:10px;z-index:2;color:#fff;display:flex;flex-direction:column;gap:6px;align-items:flex-start;text-shadow:0 2px 6px rgba(0,0,0,.45);padding:8px;background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.35) 60%,rgba(0,0,0,.5) 100%);border-radius:8px}
   @media (min-width:1000px){ .div-tabs.divisions-grid{gap:24px;padding:16px 0} }
-  /* Mobile: force consistent portrait sizing across devices */
-  @media (max-width:768px){
-    .div-tabs.divisions-grid{padding:12px 10px}
-    /* Use height-driven sizing on mobile so cards preserve desktop portrait ratio */
-    .div-tabs.divisions-grid .div-tab{height:min(68vh,560px);aspect-ratio:9/16;width:auto;flex:0 0 auto !important;min-width:160px}
-  }
 </style>
 <div aria-roledescription="carousel" class="div-tabs divisions-grid" id="division-track" role="region">
 <!-- 01: Home Construction -->
