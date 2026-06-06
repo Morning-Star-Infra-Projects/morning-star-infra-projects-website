@@ -1840,6 +1840,45 @@ main[style] {
   letter-spacing: .04em
 }
 
+/* Mobile: make Related Services a horizontal carousel showing 2 cards + partial peek */
+@media (max-width: 768px) {
+  .related-services { padding: 28px 0; }
+  .related-services .rs-grid {
+    display: flex !important;
+    flex-direction: row;
+    gap: 14px; /* 12-16px */
+    padding-left: 16px;
+    padding-right: 16px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    align-items: stretch;
+  }
+
+  .related-services .rs-grid::-webkit-scrollbar { display: none; }
+  .related-services .rs-grid { -ms-overflow-style: none; scrollbar-width: none; }
+
+  .related-services .rs-card {
+    flex: 0 0 42vw; /* between 42vw and 45vw */
+    max-width: 45vw; /* enforce <=45% */
+    height: 380px; /* between 340-400px */
+    min-height: 340px;
+    box-sizing: border-box;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  /* Ensure inner media (images) cover and overlay remain intact */
+  .related-services .rs-card img,
+  .related-services .rs-card picture { width:100%; height:auto; object-fit:cover; display:block }
+
+  /* Slight right padding so last card isn't flush to edge when partially visible */
+  .related-services .rs-grid > .rs-card:last-child { margin-right: 8px; }
+}
+
 /* Blog styles removed; use dedicated blog.page.css for blog index and articles */
   height: 420px;
   max-height: 60vh;
