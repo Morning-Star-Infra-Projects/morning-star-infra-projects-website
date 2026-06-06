@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+
+<html lang="en-IN">
+<head>
+<!-- Styles moved to css/style.min.css -->
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport">
+<!-- Favicon (Google Search friendly) -->
+<link href="https://www.morningstarinfra.com/assets/favicon/favicon.ico" rel="icon" sizes="any"/>
+<link href="https://www.morningstarinfra.com/assets/favicon/favicon.ico" rel="shortcut icon"/>
+<link href="https://www.morningstarinfra.com/assets/favicon/favicon-48x48.png" rel="icon" sizes="48x48" type="image/png"/>
+<link href="https://www.morningstarinfra.com/assets/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="https://www.morningstarinfra.com/assets/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="https://www.morningstarinfra.com/assets/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="../favicon/site.webmanifest" rel="manifest"/>
+<!-- removed unused preconnects to reduce critical request chains -->
+<title>Structural Repair &amp; Retrofitting Chennai | Morning Star Infra</title>
+<meta content="Expert structural repair, NDT diagnostics, FRP jacketing and building retrofitting services across Chennai." name="description"/>
+<meta content="#0a1f44" name="theme-color"/>
+<meta content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" name="robots"/>
+<link href="https://www.morningstarinfra.com/structural/" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="https://www.morningstarinfra.com/structural/" property="og:url"/>
+<meta content="Structural Repair &amp; Retrofitting Chennai | Morning Star Infra" property="og:title"/>
+<meta content="Expert structural repair, NDT diagnostics, FRP jacketing and building retrofitting services across Chennai." property="og:description"/>
+<meta content="https://www.morningstarinfra.com/assets/images/hero/hero_brand.webp" property="og:image"/>
+<meta content="Morning Star Infra Projects construction services in Chennai" property="og:image:alt"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="Morning Star Infra Projects" property="og:site_name"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://www.morningstarinfra.com/structural/" name="twitter:url"/>
+<meta content="Structural Repair &amp; Retrofitting Chennai | Morning Star Infra" name="twitter:title"/>
+<meta content="Expert structural repair, NDT diagnostics, FRP jacketing and building retrofitting services across Chennai." name="twitter:description"/>
+<meta content="https://www.morningstarinfra.com/assets/images/hero/hero_brand.webp" name="twitter:image"/>
+<link as="image" fetchpriority="high" href="../assets/images/hero-Morning-Star-Infra-Projects-Home.webp" imagesizes="100vw" imagesrcset="../assets/images/hero_brand-400.webp 400w, ../assets/images/hero-Morning-Star-Infra-Projects-Home.webp 800w, ../assets/images/hero_brand.webp 1600w" rel="preload"/>
+<link as="style" href="../assets/css/main.min.css" rel="preload"/>
+<link href="../assets/css/main.min.css" rel="stylesheet"/>
+<link as="style" href="../assets/css/components.css" onload="this.rel='stylesheet'" rel="preload"/>
+<noscript><link href="../assets/css/components.css" rel="stylesheet"/></noscript>
+<link as="style" href="../assets/css/pages.css" onload="this.rel='stylesheet'" rel="preload"/>
+<noscript><link href="../assets/css/pages.css" rel="stylesheet"/></noscript>
+<!-- Font preload / preconnect (uncomment when adding custom fonts) -->
+<!--
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+-->
+<meta content="IN-TN" name="geo.region"/>
+<meta content="Chennai" name="geo.placename"/>
+<!-- Inline CSS removed and moved to external styles -->
+<!-- styles/critical.css replaced -->
+<!-- styles/main.css replaced -->
+<!-- style.css replaced -->
+<!-- Styles extracted to assets/css/ -->
+<!-- Mobile: show division tabs as 2x2 grid for easier tapping -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.morningstarinfra.com/"},{"@type":"ListItem","position":2,"name":"Structural Repair","item":"https://www.morningstarinfra.com/pages/structural-repair.html"}]}
+</script>
+	<link rel="canonical" href="https://www.morningstarinfra.com/pages/structural-repair.html">
+	<meta name="description" content="Premium construction and engineering services in Chennai. Morning Star Infra Projects.">
+</head>
+<body>
+<header id="site-header">
+  <div class="hdr-inner">
+
+    <div class="hdr-left hdr-brand">
+      <a href="/" class="logo-link">
+
+        <div class="logo-icon">
+          <img src="/assets/images/Morning-Star-Infra-Projects-Header-Logo.jpeg" alt="Morning Star Infra Projects logo">
+        </div>
+
+        <div class="logo-text">
+          <span class="logo-main">MORNING STAR</span>
+          <span class="logo-sub">INFRA PROJECTS</span>
+        </div>
+
+      </a>
+    </div>
+
+    <nav class="hdr-nav">
+
+      <a class="nav-link" href="/" data-page="home">Home</a>
+
+      <a class="nav-link" href="/pages/our-story.html" data-page="story">Our Story</a>
+
+      <a class="nav-link" href="/pages/our-team.html" data-page="team">Our Team</a>
+
+      <div class="nav-dropdown">
+        <span class="nav-link nav-drop-trigger">Divisions ▾</span>
+        <div class="nav-drop-menu">
+		  <a class="drop-link" href="/pages/home-construction.html">Home Construction</a>
+		  <a class="drop-link" href="/pages/commercial-and-industrial.html">Commercial &amp; Industrial</a>
+		  <a class="drop-link" href="/pages/interior-fitouts.html">Interior Fitouts</a>
+		  <a class="drop-link" href="/pages/structural-repair.html">Structural Repair</a>
+        </div>
+      </div>
+
+      <a class="nav-link" href="/pages/certifications.html" data-page="certifications">Certifications</a>
+
+	<!-- Blog removed -->
+
+      <a class="nav-cta" href="#quote" onclick="openModal();return false;">
+        Get Quote
+      </a>
+
+    </nav>
+
+    <button id="hamburger" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+
+  <div id="mobile-menu" class="mobile-menu">
+
+    <a class="mob-link" href="/" data-page="home">Home</a>
+
+    <a class="mob-link" href="/pages/our-story.html" data-page="story">Our Story</a>
+
+    <a class="mob-link" href="/pages/our-team.html" data-page="team">Our Team</a>
+
+    <div class="mob-divider" style="padding:8px 16px 4px;color:var(--text);font-weight:700">Divisions</div>
+	<a class="mob-link" href="/pages/home-construction.html">Home Construction</a>
+	<a class="mob-link" href="/pages/commercial-and-industrial.html">Commercial &amp; Industrial</a>
+	<a class="mob-link" href="/pages/interior-fitouts.html">Interior Fitouts</a>
+	<a class="mob-link" href="/pages/structural-repair.html">Structural Repair</a>
+
+    <a class="mob-link" href="/pages/certifications.html" data-page="certifications">Certifications</a>
+
+	<!-- Blog removed -->
+
+    <a class="mob-cta" href="#quote" onclick="openModal();return false;">
+      Get Quote
+    </a>
+
+  </div>
+
+</header>
+<main style="padding-top:var(--hdr-h)">
+<nav aria-label="Breadcrumb" class="breadcrumb">
+	<div class="container">
+		<ol class="breadcrumb-list">
+			<li><a href="../index.html">Home</a></li>
+			<li aria-current="page">Structural Repair &amp; Retrofitting</li>
+		</ol>
+	</div>
+</nav>
+<!-- STRUCTURAL HERO -->
+<div class="hero">
+<picture aria-hidden="false" class="hero-media" style="position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none">
+<source srcset="../assets/images/structural-repair-retrofitting.webp 800w, ../assets/images/structural-repair-retrofitting.webp 1200w" type="image/webp"/>
+<img alt="Morning Star Infra Projects - structural repair and retrofitting" decoding="async" height="900" loading="lazy" src="../assets/images/structural-repair-retrofitting.webp" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block" width="1600"/>
+</picture>
+<div class="hero-content">
+<h1 class="hero-title">Advanced Structural Diagnostics<br/><span>&amp; Lifespan Extension</span></h1>
+<p class="hero-sub">Owning our own NDT equipment, Morning Star brings clinical precision to structural diagnosis — from rebound hammer testing to carbon FRP wrapping and full jacketing solutions.</p>
+<div class="hero-btns">
+<button class="btn-primary" onclick="openModal()">Request a Structural Audit →</button>
+<a class="btn-secondary" href="tel:+918098889984"><i data-lucide="phone" style="width:16px;height:16px"></i> Emergency Consultation</a>
+</div>
+</div>
+</div>
+<!-- NDT AUTHORITY -->
+<!-- NDT AUTHORITY stats-strip removed as requested -->
+<!-- NDT HIGHLIGHT -->
+<!-- NDT HIGHLIGHT removed as requested -->
+<!-- CAPABILITIES -->
+<!-- running-image section moved below (near related-services) -->
+<div class="section" style="background:var(--white)">
+<div class="container">
+<div style="text-align:center;margin-bottom:48px">
+<span class="section-tag">REPAIR CAPABILITIES</span>
+<h2 class="section-title">Our Repair &amp; Retrofitting Arsenal</h2>
+<div class="divider" style="margin:12px auto 16px"></div>
+</div>
+<div class="grid-3">
+<div class="card">
+<div class="card-icon"><i data-lucide="layers"></i></div>
+<div class="card-title">Micro-Concreting</div>
+<div class="card-text">Precision injection and micro-concrete application to restore degraded concrete sections. Restores full structural capacity of damaged columns, beams, and slabs without demolition.</div>
+</div>
+<div class="card">
+<div class="card-icon"><i data-lucide="wind"></i></div>
+<div class="card-title">Carbon FRP Wrapping</div>
+<div class="card-text">Carbon Fiber Reinforced Polymer wrapping of columns and beams for seismic retrofitting and load capacity enhancement. Dramatically extends structural life without adding dead load.</div>
+</div>
+<div class="card">
+<div class="card-icon"><i data-lucide="columns-3"></i></div>
+<div class="card-title">Structural Jacketing</div>
+<div class="card-text">RCC, steel, or GFRP jacketing of columns and beams to increase cross-section and load capacity. Ideal for buildings undergoing additional floor construction or usage change.</div>
+</div>
+<div class="card">
+<div class="card-icon"><i data-lucide="wrench"></i></div>
+<div class="card-title">Crack Injection &amp; Repair</div>
+<div class="card-text">Epoxy and polyurethane resin injection for structural and non-structural cracks. Halts moisture ingress, prevents rebar corrosion, and seals the concrete matrix permanently.</div>
+</div>
+<div class="card">
+<div class="card-icon"><i data-lucide="shield"></i></div>
+<div class="card-title">Anti-Carbonation Coating</div>
+<div class="card-text">Specialized coatings to halt the carbonation process in aging concrete, protecting rebar from corrosion and extending the building's service life by 20–30 years.</div>
+</div>
+<div class="card">
+<div class="card-icon"><i data-lucide="pencil-ruler"></i></div>
+<div class="card-title">Structural Engineering Design</div>
+<div class="card-text">Forensic structural analysis, load assessment, and retrofitting design by our post-graduate engineers. Includes issuance of Form B Structural Stability Certificate under TN law.</div>
+</div>
+</div>
+</div>
+</div>
+<!-- PROCESS -->
+<div class="section sec-cream">
+<div class="container">
+<div class="grid-2" style="gap:60px;align-items:start">
+<div>
+<span class="section-tag">OUR PROCESS</span>
+<h2 class="section-title">From Diagnosis to Certification</h2>
+<div class="divider"></div>
+<div class="timeline">
+<div class="tl-item"><div class="tl-dot"></div><div class="tl-title">1. Visual Inspection &amp; Distress Survey</div><div class="tl-text">Our engineers conduct a comprehensive visual survey, mapping spalling, cracking, efflorescence, and rebar exposure across the structure.</div></div>
+<div class="tl-item"><div class="tl-dot"></div><div class="tl-title">2. NDT Testing &amp; Concrete Core Analysis</div><div class="tl-text">UPV, rebound hammer, and core testing are conducted using our owned equipment per IS 13311 and IS 516 standards.</div></div>
+<div class="tl-item"><div class="tl-dot"></div><div class="tl-title">3. Structural Assessment Report</div><div class="tl-text">Detailed engineering report outlining concrete strength, rebar condition, and structural adequacy — with photographic evidence.</div></div>
+<div class="tl-item"><div class="tl-dot"></div><div class="tl-title">4. Repair Specification &amp; BOQ</div><div class="tl-text">A complete repair methodology, material specifications, and transparent bill of quantities — before a single rupee is committed.</div></div>
+<div class="tl-item"><div class="tl-dot"></div><div class="tl-title">5. Supervised Repair Execution</div><div class="tl-text">All repair work executed by trained applicators under the direct supervision of our structural engineers.</div></div>
+<div class="tl-item"><div class="tl-dot"></div><div class="tl-title">6. Form B Certification</div><div class="tl-text">Post-repair, we issue the Structural Stability Certificate (Form B) under the Tamil Nadu Public Buildings Act — legally certifying the building's restored integrity.</div></div>
+</div>
+</div>
+<div>
+<span class="section-tag">WHO WE SERVE</span>
+<h2 class="section-title">Both Residential &amp; Commercial</h2>
+<div class="divider"></div>
+<div style="display:flex;flex-direction:column;gap:16px">
+<div class="card">
+<div class="card-title" style="display:flex;align-items:center;gap:8px"><i data-lucide="home" style="width:18px;height:18px;color:var(--gold);flex-shrink:0"></i> Residential (B2C)</div>
+<div class="card-text">Old houses with concrete spalling, water seepage, cracked beams or columns. Especially critical for buildings aged 15+ years in coastal Chennai environments where salt-induced corrosion is prevalent.</div>
+</div>
+<div class="card">
+<div class="card-title"> Commercial &amp; Industrial (B2B)</div>
+<div class="card-text">Factories, warehouses, office buildings, and public structures requiring periodic structural audits, maintenance certifications, or retrofitting for additional loads and seismic compliance.</div>
+</div>
+<div class="card">
+<div class="card-title"> Historical &amp; Government Buildings</div>
+<div class="card-text">Specialized restoration methodology for heritage structures requiring sensitivity to original materials while achieving modern structural performance standards.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- STRUCTURAL RUNNING IMAGE SHOWCASE (placed above related-services) -->
+<section class="sr-showcase-section" aria-label="Structural Repair showcase">
+	<style>
+		.sr-showcase-section{padding:72px 0 60px;background:var(--white);overflow:hidden;position:relative}
+		.sr-showcase-header{text-align:center;margin-bottom:28px;padding:0 24px}
+		.sr-showcase-header .section-tag{display:block;margin-bottom:10px}
+		.sr-showcase-header h2{font-family:var(--font-display);font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:900;color:var(--primary);margin:0 0 12px}
+		.sr-showcase-header p{color:var(--text-light);font-size:.95rem;max-width:720px;margin:0 auto;line-height:1.7}
+
+		.sr-slider-outer{position:relative;width:100%;overflow:hidden}
+		.sr-slider-outer::before,.sr-slider-outer::after{content:'';position:absolute;top:0;bottom:0;width:120px;z-index:10;pointer-events:none}
+		.sr-slider-outer::before{left:0;background:linear-gradient(to right,#ffffff 0%,rgba(255,255,255,0) 100%)}
+		.sr-slider-outer::after{right:0;background:linear-gradient(to left,#ffffff 0%,rgba(255,255,255,0) 100%)}
+
+		.sr-slider-track{display:flex;width:max-content;will-change:transform;transform:translateZ(0);animation:sr-marquee 55s linear infinite}
+		.sr-slider-outer:hover .sr-slider-track{animation-play-state:paused}
+
+		.sr-slide-item{flex-shrink:0;width:280px;height:280px;margin-right:0;overflow:hidden;display:block;position:relative}
+		.sr-slide-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s cubic-bezier(.25,.8,.25,1);transform:translateZ(0);will-change:transform}
+		.sr-slider-outer:hover .sr-slide-item:hover img{transform:scale(1.07)}
+		.sr-slide-item::after{content:'';position:absolute;top:0;right:0;width:2px;height:100%;background:rgba(255,255,255,0.18);pointer-events:none;z-index:2}
+
+		@keyframes sr-marquee{0%{transform:translate3d(0,0,0)}100%{transform:translate3d(-50%,0,0)}}
+
+		@media (max-width:900px){.sr-slide-item{width:220px;height:220px}.sr-slider-outer::before,.sr-slider-outer::after{width:60px}}
+		@media (max-width:480px){.sr-showcase-section{padding:52px 0 44px}.sr-slide-item{width:160px;height:160px}.sr-slider-outer::before,.sr-slider-outer::after{width:40px}}
+		@media (prefers-reduced-motion:reduce){.sr-slider-track{animation:sr-marquee 55s linear infinite!important}}
+	</style>
+
+	<div class="sr-showcase-header">
+		<span class="section-tag">OUR WORK</span>
+		<h2>Structural Repair Showcase</h2>
+		<p>A curated gallery of structural repair, retrofitting and NDT projects — clinical, durable, and built to last.</p>
+	</div>
+
+	<div class="sr-slider-outer" id="sr-slider-outer">
+		<!-- Preload first three images for faster first-paint -->
+		<link rel="preload" as="image" href="../assets/images/structural-repair-running-images/Structural-repair-and-retro-fitting-1.webp">
+		<link rel="preload" as="image" href="../assets/images/structural-repair-running-images/Structural-repair-and-retro-fitting-2.webp">
+		<link rel="preload" as="image" href="../assets/images/structural-repair-running-images/Structural-repair-and-retro-fitting-3.webp">
+
+		<div class="sr-slider-track" id="sr-slider-track">
+			<!-- Group A: original images (will be generated from assets) -->
+			<!-- IMAGES: BEGIN -->
+			<div class="sr-slide-item"><img src="../assets/images/structural-repair-running-images/Structural-repair-and-retro-fitting-1.webp" alt="Structural repair 1" loading="lazy" decoding="async" width="280" height="280"></div>
+			<div class="sr-slide-item"><img src="../assets/images/structural-repair-running-images/Structural-repair-and-retro-fitting-2.webp" alt="Structural repair 2" loading="lazy" decoding="async" width="280" height="280"></div>
+			<div class="sr-slide-item"><img src="../assets/images/structural-repair-running-images/Structural-repair-and-retro-fitting-3.webp" alt="Structural repair 3" loading="lazy" decoding="async" width="280" height="280"></div>
+			<div class="sr-slide-item"><img src="../assets/images/structural-repair-running-images/Structural-repair-and-retro-fitting-4.webp" alt="Structural repair 4" loading="lazy" decoding="async" width="280" height="280"></div>
+			<div class="sr-slide-item"><img src="../assets/images/structural-repair-running-images/Structural-repair-and-retro-fitting-5.webp" alt="Structural repair 5" loading="lazy" decoding="async" width="280" height="280"></div>
+			<div class="sr-slide-item"><img src="../assets/images/structural-repair-running-images/Structural-repair-and-retro-fitting-6.webp" alt="Structural repair 6" loading="lazy" decoding="async" width="280" height="280"></div>
+			<div class="sr-slide-item"><img src="../assets/images/structural-repair-running-images/Structural-repair-and-retro-fitting-7.webp" alt="Structural repair 7" loading="lazy" decoding="async" width="280" height="280"></div>
+			<div class="sr-slide-item"><img src="../assets/images/structural-repair-running-images/Structural-repair-and-retro-fitting-8.webp" alt="Structural repair 8" loading="lazy" decoding="async" width="280" height="280"></div>
+			<div class="sr-slide-item"><img src="../assets/images/structural-repair-running-images/Structural-repair-and-retro-fitting-9.webp" alt="Structural repair 9" loading="lazy" decoding="async" width="280" height="280"></div>
+			<div class="sr-slide-item"><img src="../assets/images/structural-repair-running-images/Structural-repair-and-retro-fitting-10.webp" alt="Structural repair 10" loading="lazy" decoding="async" width="280" height="280"></div>
+			<div class="sr-slide-item"><img src="../assets/images/structural-repair-running-images/Structural-repair-and-retro-fitting-11.webp" alt="Structural repair 11" loading="lazy" decoding="async" width="280" height="280"></div>
+			<div class="sr-slide-item"><img src="../assets/images/structural-repair-running-images/Structural-repair-and-retro-fitting-12.webp" alt="Structural repair 12" loading="lazy" decoding="async" width="280" height="280"></div>
+			<div class="sr-slide-item"><img src="../assets/images/structural-repair-running-images/Structural-repair-and-retro-fitting-13.webp" alt="Structural repair 13" loading="lazy" decoding="async" width="280" height="280"></div>
+			<div class="sr-slide-item"><img src="../assets/images/structural-repair-running-images/Structural-repair-and-retro-fitting-14.webp" alt="Structural repair 14" loading="lazy" decoding="async" width="280" height="280"></div>
+			<div class="sr-slide-item"><img src="../assets/images/structural-repair-running-images/Structural-repair-and-retro-fitting-15.webp" alt="Structural repair 15" loading="lazy" decoding="async" width="280" height="280"></div>
+			<div class="sr-slide-item"><img src="../assets/images/structural-repair-running-images/Structural-repair-and-retro-fitting-16.webp" alt="Structural repair 16" loading="lazy" decoding="async" width="280" height="280"></div>
+			<div class="sr-slide-item"><img src="../assets/images/structural-repair-running-images/Structural-repair-and-retro-fitting-17.webp" alt="Structural repair 17" loading="lazy" decoding="async" width="280" height="280"></div>
+			<div class="sr-slide-item"><img src="../assets/images/structural-repair-running-images/Structural-repair-and-retro-fitting-18.webp" alt="Structural repair 18" loading="lazy" decoding="async" width="280" height="280"></div>
+			<div class="sr-slide-item"><img src="../assets/images/structural-repair-running-images/Structural-repair-and-retro-fitting-19.webp" alt="Structural repair 19" loading="lazy" decoding="async" width="280" height="280"></div>
+			<div class="sr-slide-item"><img src="../assets/images/structural-repair-running-images/Structural-repair-and-retro-fitting-20.webp" alt="Structural repair 20" loading="lazy" decoding="async" width="280" height="280"></div>
+			<div class="sr-slide-item"><img src="../assets/images/structural-repair-running-images/Structural-repair-and-retro-fitting-21.webp" alt="Structural repair 21" loading="lazy" decoding="async" width="280" height="280"></div>
+			<div class="sr-slide-item"><img src="../assets/images/structural-repair-running-images/Structural-repair-and-retro-fitting-22.webp" alt="Structural repair 22" loading="lazy" decoding="async" width="280" height="280"></div>
+			<div class="sr-slide-item"><img src="../assets/images/structural-repair-running-images/Structural-repair-and-retro-fitting-23.webp" alt="Structural repair 23" loading="lazy" decoding="async" width="280" height="280"></div>
+			<div class="sr-slide-item"><img src="../assets/images/structural-repair-running-images/Structural-repair-and-retro-fitting-24.webp" alt="Structural repair 24" loading="lazy" decoding="async" width="280" height="280"></div>
+			<!-- IMAGES: END -->
+
+			<!-- Group B: duplicate (hidden from assistive tech) -->
+			<div aria-hidden="true" class="sr-slide-item"><img src="../assets/images/structural-repair-running-images/Structural-repair-and-retro-fitting-1.webp" alt="" loading="lazy" decoding="async" width="280" height="280"></div>
+			<div aria-hidden="true" class="sr-slide-item"><img src="../assets/images/structural-repair-running-images/Structural-repair-and-retro-fitting-2.webp" alt="" loading="lazy" decoding="async" width="280" height="280"></div>
+			<div aria-hidden="true" class="sr-slide-item"><img src="../assets/images/structural-repair-running-images/Structural-repair-and-retro-fitting-3.webp" alt="" loading="lazy" decoding="async" width="280" height="280"></div>
+			<div aria-hidden="true" class="sr-slide-item"><img src="../assets/images/structural-repair-running-images/Structural-repair-and-retro-fitting-4.webp" alt="" loading="lazy" decoding="async" width="280" height="280"></div>
+			<div aria-hidden="true" class="sr-slide-item"><img src="../assets/images/structural-repair-running-images/Structural-repair-and-retro-fitting-5.webp" alt="" loading="lazy" decoding="async" width="280" height="280"></div>
+			<div aria-hidden="true" class="sr-slide-item"><img src="../assets/images/structural-repair-running-images/Structural-repair-and-retro-fitting-6.webp" alt="" loading="lazy" decoding="async" width="280" height="280"></div>
+			<div aria-hidden="true" class="sr-slide-item"><img src="../assets/images/structural-repair-running-images/Structural-repair-and-retro-fitting-7.webp" alt="" loading="lazy" decoding="async" width="280" height="280"></div>
+			<div aria-hidden="true" class="sr-slide-item"><img src="../assets/images/structural-repair-running-images/Structural-repair-and-retro-fitting-8.webp" alt="" loading="lazy" decoding="async" width="280" height="280"></div>
+			<div aria-hidden="true" class="sr-slide-item"><img src="../assets/images/structural-repair-running-images/Structural-repair-and-retro-fitting-9.webp" alt="" loading="lazy" decoding="async" width="280" height="280"></div>
+			<div aria-hidden="true" class="sr-slide-item"><img src="../assets/images/structural-repair-running-images/Structural-repair-and-retro-fitting-10.webp" alt="" loading="lazy" decoding="async" width="280" height="280"></div>
+			<div aria-hidden="true" class="sr-slide-item"><img src="../assets/images/structural-repair-running-images/Structural-repair-and-retro-fitting-11.webp" alt="" loading="lazy" decoding="async" width="280" height="280"></div>
+			<div aria-hidden="true" class="sr-slide-item"><img src="../assets/images/structural-repair-running-images/Structural-repair-and-retro-fitting-12.webp" alt="" loading="lazy" decoding="async" width="280" height="280"></div>
+			<div aria-hidden="true" class="sr-slide-item"><img src="../assets/images/structural-repair-running-images/Structural-repair-and-retro-fitting-13.webp" alt="" loading="lazy" decoding="async" width="280" height="280"></div>
+			<div aria-hidden="true" class="sr-slide-item"><img src="../assets/images/structural-repair-running-images/Structural-repair-and-retro-fitting-14.webp" alt="" loading="lazy" decoding="async" width="280" height="280"></div>
+			<div aria-hidden="true" class="sr-slide-item"><img src="../assets/images/structural-repair-running-images/Structural-repair-and-retro-fitting-15.webp" alt="" loading="lazy" decoding="async" width="280" height="280"></div>
+			<div aria-hidden="true" class="sr-slide-item"><img src="../assets/images/structural-repair-running-images/Structural-repair-and-retro-fitting-16.webp" alt="" loading="lazy" decoding="async" width="280" height="280"></div>
+			<div aria-hidden="true" class="sr-slide-item"><img src="../assets/images/structural-repair-running-images/Structural-repair-and-retro-fitting-17.webp" alt="" loading="lazy" decoding="async" width="280" height="280"></div>
+			<div aria-hidden="true" class="sr-slide-item"><img src="../assets/images/structural-repair-running-images/Structural-repair-and-retro-fitting-18.webp" alt="" loading="lazy" decoding="async" width="280" height="280"></div>
+			<div aria-hidden="true" class="sr-slide-item"><img src="../assets/images/structural-repair-running-images/Structural-repair-and-retro-fitting-19.webp" alt="" loading="lazy" decoding="async" width="280" height="280"></div>
+			<div aria-hidden="true" class="sr-slide-item"><img src="../assets/images/structural-repair-running-images/Structural-repair-and-retro-fitting-20.webp" alt="" loading="lazy" decoding="async" width="280" height="280"></div>
+			<div aria-hidden="true" class="sr-slide-item"><img src="../assets/images/structural-repair-running-images/Structural-repair-and-retro-fitting-21.webp" alt="" loading="lazy" decoding="async" width="280" height="280"></div>
+			<div aria-hidden="true" class="sr-slide-item"><img src="../assets/images/structural-repair-running-images/Structural-repair-and-retro-fitting-22.webp" alt="" loading="lazy" decoding="async" width="280" height="280"></div>
+			<div aria-hidden="true" class="sr-slide-item"><img src="../assets/images/structural-repair-running-images/Structural-repair-and-retro-fitting-23.webp" alt="" loading="lazy" decoding="async" width="280" height="280"></div>
+			<div aria-hidden="true" class="sr-slide-item"><img src="../assets/images/structural-repair-running-images/Structural-repair-and-retro-fitting-24.webp" alt="" loading="lazy" decoding="async" width="280" height="280"></div>
+		</div>
+	</div>
+
+	<script>
+	/* Reuse home-construction approach: compute pixel-perfect duration based on track width */
+	(function(){
+		var track = document.getElementById('sr-slider-track');
+		if(!track) return;
+		var pxPerSec = 80; /* premium moderate speed */
+		function setDuration(){
+			var halfW = track.scrollWidth/2 || 1;
+			var dur = Math.max(12, Math.round(halfW / pxPerSec));
+			track.style.animationDuration = dur + 's';
+		}
+		setDuration();
+		window.addEventListener('resize', setDuration, {passive:true});
+	})();
+	</script>
+</section>
+
+<section aria-labelledby="rs-heading" class="related-services">
+<div class="container">
+<div class="rs-heading">
+<h2 id="rs-heading">Explore Our Other Services</h2>
+<p>Complete construction solutions under one roof — engineering-led, transparent, and trusted.</p>
+</div>
+<div class="rs-grid">
+<div class="rs-card">
+<div class="rs-icon"><i data-lucide="home" style="width:36px;height:36px"></i></div>
+<h3>Home Construction</h3>
+<p>Engineering-led residential builds with ISI-certified materials and transparent pricing packages.</p>
+<a class="rs-btn" href="./home-construction.html">Explore →</a>
+</div>
+<div class="rs-card">
+<div class="rs-icon"><i data-lucide="layers" style="width:36px;height:36px"></i></div>
+<h3>Interior Fitouts</h3>
+<p>Bespoke 2 BHK &amp; 3 BHK interior packages — 3D planning to in-house manufacturing execution.</p>
+<a class="rs-btn" href="./interior-fitouts.html">Explore →</a>
+</div>
+<div class="rs-card">
+<div class="rs-icon"><i data-lucide="wrench" style="width:36px;height:36px"></i></div>
+<h3>Structural Repair &amp; Retrofitting</h3>
+<p>Advanced NDT diagnostics, carbon FRP wrapping, and lifespan extension for aging structures.</p>
+<a class="rs-btn" href="./structural-repair.html">Explore →</a>
+</div>
+<div class="rs-card">
+<div class="rs-icon"><i data-lucide="building" style="width:36px;height:36px"></i></div>
+<h3>Commercial &amp; Industrial</h3>
+<p>Fast-track PEB construction for SIPCOT industries, logistics hubs, and factory owners.</p>
+<a class="rs-btn" href="./commercial-and-industrial.html">Explore →</a>
+</div>
+</div>
+</div>
+</section>
+<div class="cta-bar">
+<div class="container">
+<h2>Is Your Structure Due for an Audit?</h2>
+<p>Buildings aged 10+ years should undergo periodic NDT assessment. Our team provides rapid, non-invasive diagnostics with certified reports.</p>
+<div class="cta-btns">
+<button class="btn-primary" onclick="openModal()">Book a Structural Audit</button>
+<a class="btn-secondary" href="https://wa.me/918098889984" target="_blank"><i data-lucide="camera" style="width:16px;height:16px"></i> Share Photos for Assessment</a>
+</div>
+</div>
+</div>
+</main>
+<footer id="site-footer">
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div class="footer-brand">
+
+<div class="logo-link">
+
+<div class="logo-icon">
+<img src="/assets/images/Morning-Star-Infra-Projects-Footer-Logo.webp"
+alt="Morning Star Infra Projects logo">
+</div>
+
+<div class="logo-text">
+
+<span class="logo-main">
+MORNING STAR
+</span>
+
+<span class="logo-sub">
+INFRA PROJECTS
+</span>
+
+</div>
+
+</div>
+
+<p>
+Our capabilities span the full spectrum of civil engineering—a perfect blend of structural science and aesthetic precision. Whether we are diagnosing the health of aging buildings with advanced NDT equipment, erecting rapid commercial infrastructure, or executing bespoke turnkey interiors, our projects are guided by post-graduate engineering expertise.
+</p>
+
+</div>
+
+
+<div class="footer-quick">
+
+<div class="footer-head">
+Quick Links
+</div>
+
+<ul class="footer-links">
+
+<li><a href="/">Home</a></li>
+
+<li><a href="/story/">Our Story</a></li>
+
+<li><a href="/certifications/">Certifications</a></li>
+
+	<!-- Blog removed -->
+
+<li><a href="#quote" onclick="openModal();return false;">Get Quote</a></li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<div class="footer-head">
+Our Divisions
+</div>
+
+<ul class="footer-links">
+ 
+<li>
+<a href="pages/home-construction.html">
+Home Construction
+</a>
+</li>
+
+<li>
+<a href="pages/commercial-and-industrial.html">
+Commercial & Industrial
+</a>
+</li>
+
+<li>
+<a href="pages/interior-fitouts.html">
+Interior Fitouts
+</a>
+</li>
+
+<li>
+<a href="pages/structural-repair.html">
+Structural Repair
+</a>
+</li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<div class="footer-head">
+Contact Us
+</div>
+
+<div class="contact-item">
+
+<span class="contact-icon">
+  <i data-lucide="phone"></i>
+</span>
+
+<span>
+  +91-8098889984
+</span>
+
+</div>
+
+<div class="contact-item">
+
+<span class="contact-icon">
+  <i data-lucide="mail"></i>
+</span>
+
+<span>
+  morningstarinfra@gmail.com
+</span>
+
+</div>
+
+<div class="contact-item">
+
+<span class="contact-icon">
+  <i data-lucide="map-pin"></i>
+</span>
+
+<a href="#">
+  Chennai, Tamil Nadu
+</a>
+
+</div>
+
+<div class="footer-social">
+  <a aria-label="Instagram" href="https://www.instagram.com/morningstarinfra/" rel="noopener noreferrer" target="_blank">
+    <svg aria-hidden="true" class="lucide" fill="none" focusable="false" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+      <rect height="20" rx="5" width="20" x="2" y="2"></rect>
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+    </svg>
+  </a>
+  <a aria-label="LinkedIn" href="https://www.linkedin.com/company/morningstarinfra/" rel="noopener noreferrer" target="_blank">
+    <svg aria-hidden="true" class="lucide" fill="none" focusable="false" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+      <rect height="20" rx="2" width="20" x="2" y="2"></rect>
+      <circle cx="8" cy="8" r="1"></circle>
+      <line x1="8" x2="8" y1="11" y2="17"></line>
+      <rect height="6" width="4" x="12" y="11"></rect>
+    </svg>
+  </a>
+</div>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<div class="footer-copy">
+© 2026 Morning Star Infra Projects
+</div>
+
+<div class="footer-copy">
+Registered Structural Engineers
+</div>
+
+</div>
+
+</div>
+
+</footer>
+<!-- FLOATING BUTTONS -->
+<a aria-label="WhatsApp" class="fab fab-wa" href="https://wa.me/918098889984?text=Hello%20Morning%20Star%20Infra%20Projects" id="fab-wa" target="_blank">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+</a>
+<a aria-label="Call" class="fab fab-call" href="tel:+918098889984" id="fab-call">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"></path></svg>
+</a>
+<div aria-label="Request a Quote" aria-modal="true" class="modal-overlay" id="quote-modal" role="dialog">
+<div class="modal-box">
+<button aria-label="Close" class="modal-close" id="modal-close"></button>
+<h2 class="modal-title">Get a Free Quote</h2>
+<p class="modal-sub">Our engineering team will respond within 24 hours.</p>
+<form class="quote-form" id="quote-form" novalidate="">
+<div class="form-row">
+<input id="qf-name" placeholder="Your Full Name" required="" type="text"/>
+<input id="qf-phone" placeholder="Phone / WhatsApp" required="" type="tel"/>
+</div>
+<input id="qf-email" placeholder="Email Address" type="email"/>
+<select id="qf-service">
+<option value="">Select Service Required</option>
+<option>Home Construction</option>
+<option>Interior Fitouts</option>
+<option>Structural Repair &amp; Retrofitting</option>
+<option>Commercial / Industrial Construction</option>
+<option>Other / Multiple Services</option>
+</select>
+<textarea id="qf-msg" placeholder="Brief description of your project (location, size, timeline)" rows="3"></textarea>
+<button class="btn-primary btn-full" type="submit">Submit Request →</button>
+</form>
+</div>
+</div>
+<script defer="" src="../assets/js/main.min.js"></script>
+<script defer="" src="../assets/js/navigation.js"></script>
+<script defer="" src="../assets/js/animations.js"></script>
+<script defer="" src="https://unpkg.com/lucide@latest"></script>
+</body>
+</html>

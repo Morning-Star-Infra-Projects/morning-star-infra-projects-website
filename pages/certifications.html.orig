@@ -165,17 +165,17 @@
 </div>
 <div class="grid-3">
 <div class="card" style="text-align:center">
-<div class="rs-icon" style="margin:0 auto 16px"><i data-lucide="shield-check" style="width:36px;height:36px"></i></div>
+<div class="card-icon" style="margin:0 auto 16px"><i data-lucide="file-badge" style="width:36px;height:36px"></i></div>
 <div class="card-title">Form B Authority</div>
 <div class="card-text">Licensed to issue Structural Stability Certificates (Form B) under the Tamil Nadu Public Buildings (Regulation of Construction) Act — mandatory for all commercial and public buildings.</div>
 </div>
 <div class="card" style="text-align:center">
-<div class="rs-icon" style="margin:0 auto 16px"><i data-lucide="hard-hat" style="width:36px;height:36px"></i></div>
+<div class="card-icon" style="margin:0 auto 16px"><i data-lucide="hard-hat" style="width:36px;height:36px"></i></div>
 <div class="card-title">Registered Structural Engineers</div>
 <div class="card-text">All structural designs, assessments, and certifications are signed and sealed by registered structural engineers with post-graduate qualifications recognized by Tamil Nadu authorities.</div>
 </div>
 <div class="card" style="text-align:center">
-<div class="rs-icon" style="margin:0 auto 16px"><i data-lucide="clipboard-check" style="width:36px;height:36px"></i></div>
+<div class="card-icon" style="margin:0 auto 16px"><i data-lucide="flame" style="width:36px;height:36px"></i></div>
 <div class="card-title">Form C Coordination</div>
 <div class="card-text">Authorized to assist and coordinate Form C (Fire Safety Certificate) applications with Tamil Nadu Fire &amp; Rescue Services for industrial and commercial buildings.</div>
 </div>

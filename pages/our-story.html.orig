@@ -14,24 +14,24 @@
 <link href="https://www.morningstarinfra.com/assets/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
 <link href="../favicon/site.webmanifest" rel="manifest"/>
 <!-- removed unused preconnects to reduce critical request chains -->
-<title>Certifications &amp; Credentials | Morning Star Infra Projects</title>
-<meta content="Accreditations, certifications and compliance documents for Morning Star Infra Projects, Chennai." name="description"/>
+<title>About Morning Star Infra Projects | Our Story</title>
+<meta content="Our mission, history and engineering credentials — delivering safe, beautiful, and transparent construction in Chennai." name="description"/>
 <meta content="#0a1f44" name="theme-color"/>
 <meta content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" name="robots"/>
-<link href="https://www.morningstarinfra.com/certifications/" rel="canonical"/>
+<link href="https://www.morningstarinfra.com/story/" rel="canonical"/>
 <meta content="website" property="og:type"/>
-<meta content="https://www.morningstarinfra.com/certifications/" property="og:url"/>
-<meta content="Certifications &amp; Credentials | Morning Star Infra Projects" property="og:title"/>
-<meta content="Accreditations, certifications and compliance documents for Morning Star Infra Projects, Chennai." property="og:description"/>
+<meta content="https://www.morningstarinfra.com/story/" property="og:url"/>
+<meta content="About Morning Star Infra Projects | Our Story" property="og:title"/>
+<meta content="Our mission, history and engineering credentials — delivering safe, beautiful, and transparent construction in Chennai." property="og:description"/>
 <meta content="https://www.morningstarinfra.com/assets/images/hero/hero_brand.webp" property="og:image"/>
 <meta content="Morning Star Infra Projects construction services in Chennai" property="og:image:alt"/>
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
 <meta content="Morning Star Infra Projects" property="og:site_name"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="https://www.morningstarinfra.com/certifications/" name="twitter:url"/>
-<meta content="Certifications &amp; Credentials | Morning Star Infra Projects" name="twitter:title"/>
-<meta content="Accreditations, certifications and compliance documents for Morning Star Infra Projects, Chennai." name="twitter:description"/>
+<meta content="https://www.morningstarinfra.com/story/" name="twitter:url"/>
+<meta content="About Morning Star Infra Projects | Our Story" name="twitter:title"/>
+<meta content="Our mission, history and engineering credentials — delivering safe, beautiful, and transparent construction in Chennai." name="twitter:description"/>
 <meta content="https://www.morningstarinfra.com/assets/images/hero/hero_brand.webp" name="twitter:image"/>
 <link as="image" fetchpriority="high" href="../assets/images/hero-Morning-Star-Infra-Projects-Home.webp" imagesizes="100vw" imagesrcset="../assets/images/hero_brand-400.webp 400w, ../assets/images/hero-Morning-Star-Infra-Projects-Home.webp 800w, ../assets/images/hero_brand.webp 1600w" rel="preload"/>
 <link as="style" href="../assets/css/main.min.css" rel="preload"/>
@@ -53,9 +53,9 @@
 <!-- Styles extracted to assets/css/ -->
 <!-- Mobile: show division tabs as 2x2 grid for easier tapping -->
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.morningstarinfra.com/"},{"@type":"ListItem","position":2,"name":"Certifications","item":"https://www.morningstarinfra.com/pages/certifications.html"}]}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.morningstarinfra.com/"},{"@type":"ListItem","position":2,"name":"Our Story","item":"https://www.morningstarinfra.com/pages/our-story.html"}]}
 </script>
-  <link rel="canonical" href="https://www.morningstarinfra.com/pages/certifications.html">
+  <link rel="canonical" href="https://www.morningstarinfra.com/pages/our-story.html">
   <meta name="description" content="Premium construction and engineering services in Chennai. Morning Star Infra Projects.">
 </head>
 <body>
@@ -143,63 +143,99 @@
 	<div class="container">
 		<ol class="breadcrumb-list">
 			<li><a href="../index.html">Home</a></li>
-			<li aria-current="page">Certifications</li>
+			<li aria-current="page">Our Story</li>
 		</ol>
 	</div>
 </nav>
-<!-- CERT HERO -->
+<!-- STORY HERO -->
 <div class="hero-collage" style="grid-template-columns:1fr;min-height:auto">
 <div class="hero-collage-left" style="min-height:auto;justify-content:center;text-align:center;padding:48px 32px">
 <div class="hero-collage-left-inner" style="margin:0">
-<h1 class="hero-title" style="font-size:clamp(2.4rem,5.6vw,4.5rem);font-weight:800;line-height:1.05">Engineering Authority<br/><span>You Can Verify</span></h1>
-<p class="hero-sub" style="font-size:1.08rem;margin:18px auto 0;max-width:820px">Our certifications, registrations, and BIS code compliance are not decorative — they are our license to operate at the highest levels of structural safety.</p>
+<h1 class="hero-title" style="font-size:clamp(2.8rem,6vw,5rem);font-weight:900;line-height:1.04">Built on <span>Engineering</span>,<br/>Sustained by <span>Trust</span></h1>
 </div>
 </div>
 </div>
 <div class="section" style="background:var(--white)">
 <div class="container">
-<div style="text-align:center;margin-bottom:48px">
-<span class="section-tag" style="font-size:14px;font-weight:700">OUR CREDENTIALS</span>
-<h2 class="section-title" style="font-size:clamp(2rem,4.5vw,3.5rem);font-weight:900">Certifications &amp; Registrations</h2>
-<div class="divider" style="margin:12px auto 16px"></div>
-</div>
-<div class="grid-3">
-<div class="card" style="text-align:center">
-<div class="rs-icon" style="margin:0 auto 16px"><i data-lucide="shield-check" style="width:36px;height:36px"></i></div>
-<div class="card-title">Form B Authority</div>
-<div class="card-text">Licensed to issue Structural Stability Certificates (Form B) under the Tamil Nadu Public Buildings (Regulation of Construction) Act — mandatory for all commercial and public buildings.</div>
-</div>
-<div class="card" style="text-align:center">
-<div class="rs-icon" style="margin:0 auto 16px"><i data-lucide="hard-hat" style="width:36px;height:36px"></i></div>
-<div class="card-title">Registered Structural Engineers</div>
-<div class="card-text">All structural designs, assessments, and certifications are signed and sealed by registered structural engineers with post-graduate qualifications recognized by Tamil Nadu authorities.</div>
-</div>
-<div class="card" style="text-align:center">
-<div class="rs-icon" style="margin:0 auto 16px"><i data-lucide="clipboard-check" style="width:36px;height:36px"></i></div>
-<div class="card-title">Form C Coordination</div>
-<div class="card-text">Authorized to assist and coordinate Form C (Fire Safety Certificate) applications with Tamil Nadu Fire &amp; Rescue Services for industrial and commercial buildings.</div>
-</div>
-</div>
-</div>
-</div>
-<div class="section sec-cream">
-<div class="container">
-<span class="section-tag">BIS CODE COMPLIANCE</span>
-<h2 class="section-title">Bureau of Indian Standards</h2>
+<div class="grid-2" style="gap:60px;align-items:center;grid-template-columns:1fr">
+<div>
+<span class="section-tag" style="font-size:14px;font-weight:700">WHO WE ARE</span>
+<h2 class="section-title" style="font-size:clamp(2rem,4.5vw,3.5rem);font-weight:900">Morning Star Infra Projects</h2>
 <div class="divider"></div>
-<div class="grid-2" style="gap:32px">
-<div>
-<div style="display:flex;flex-direction:column;gap:12px">
-<div class="card"><div class="card-title">IS 13311 Part 1 — Ultrasonic Pulse Velocity</div><div class="card-text">Method of non-destructive testing of concrete. Morning Star's NDT equipment is calibrated and operated strictly per IS 13311 Part 1 for pulse velocity measurement to assess concrete quality and uniformity.</div></div>
-<div class="card"><div class="card-title">IS 13311 Part 2 — Rebound Hammer</div><div class="card-text">Assessment of concrete surface hardness and estimation of compressive strength per IS 13311 Part 2. Used alongside UPV for comprehensive concrete condition profiling.</div></div>
-<div class="card"><div class="card-title">IS 516 — Concrete Core Testing</div><div class="card-text">Standard methods of test for strength of concrete. Core samples extracted from existing structures are tested per IS 516 to establish actual in-situ concrete strength.</div></div>
+<!-- Our Heritage -->
+<div class="section" style="margin-top:18px;padding:18px 0">
+<div class="container" style="display:flex;align-items:center;justify-content:center;min-height:160px">
+<div style="text-align:center;max-width:900px;width:100%">
+<h3 class="card-title" style="font-size:1.5rem;font-weight:900;margin-bottom:12px">Our Heritage</h3>
+<p class="lead" style="margin:0 auto 12px;text-align:justify;text-justify:inter-word">Morning Star Company was established in 1957 by Mr. Dharmaraj as an asafoetida manufacturing enterprise. Through the strategic leadership of the family's successive generation Mr. D. Thenraj B.com, the company scaled into a dynamic agro-products conglomerate, managing everything from sourcing and processing to the global distribution of agricultural goods.</p>
 </div>
 </div>
-<div>
-<div style="display:flex;flex-direction:column;gap:12px">
-<div class="card"><div class="card-title">IS 456 — Plain &amp; Reinforced Concrete</div><div class="card-text">All new construction and repair work conforms to IS 456:2000 — the primary Indian code for plain and reinforced concrete design, including mix design, durability, and cover specifications.</div></div>
-<div class="card"><div class="card-title">IS 800 — Steel Structures</div><div class="card-text">All PEB and structural steel designs follow IS 800:2007 — the general construction in steel code — for member design, connections, and fabrication standards.</div></div>
-<div class="card"><div class="card-title">IS 1893 — Seismic Design</div><div class="card-text">All structural designs consider seismic zone requirements per IS 1893 — essential for Chennai's Zone II/III classification — ensuring earthquake-resistant construction.</div></div>
+</div>
+<!-- A New Chapter (exact FOCUS ON grey block) -->
+<div class="section sec-cream" style="margin-top:18px;padding:18px 0">
+<div class="container" style="display:flex;align-items:center;justify-content:center;min-height:220px">
+<div style="text-align:center;max-width:900px;width:100%">
+<h3 class="card-title" style="font-size:1.5rem;font-weight:900;margin-bottom:12px">A New Chapter</h3>
+<p class="lead" style="margin:0 auto 12px;text-align:justify;text-justify:inter-word">Building upon a decades-old foundation of trust, third-generation entrepreneur Mr. Kasi Ram Kumar (M.Tech, MBA) integrated the group's core values with his passion for infrastructure. This led to the inception of Morning Star Infra Projects—a subsidiary specializing in turnkey building services for:</p>
+<ul class="highlight-list" style="margin-top:12px">
+<li>
+<div class="service-item">
+<div class="service-icon"><i data-lucide="home" style="width:20px;height:20px;flex-shrink:0"></i></div>
+<div class="service-body"><h4>Residential Communities</h4></div>
+</div>
+</li>
+<li>
+<div class="service-item">
+<div class="service-icon"><i data-lucide="school" style="width:20px;height:20px;flex-shrink:0"></i></div>
+<div class="service-body"><h4>Institutional Facilities</h4></div>
+</div>
+</li>
+<li>
+<div class="service-item">
+<div class="service-icon"><i data-lucide="building-2" style="width:20px;height:20px;flex-shrink:0"></i></div>
+<div class="service-body"><h4>Commercial Hubs</h4></div>
+</div>
+</li>
+<li>
+<div class="service-item">
+<div class="service-icon"><i data-lucide="bell" style="width:20px;height:20px;flex-shrink:0"></i></div>
+<div class="service-body"><h4>Hospitality Industries</h4></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- PREMIUM HIGHLIGHTS (replaces Why Choose Us) -->
+<div class="section" id="premium-highlights" style="background:var(--white);padding:80px 0">
+<div class="container container-wide" style="max-width:1400px;margin:0 auto;--ms-navy:#0a1f44;--ms-gold:#f7bd10;">
+<span class="section-tag" style="font-size:1.1rem;font-weight:800;color:var(--ms-navy)">PREMIUM HIGHLIGHTS</span>
+<h2 class="section-title" style="margin-top:8px;font-size:clamp(1.6rem,3.2vw,2.2rem);font-weight:900;color:var(--ms-navy)">Premium Engineering Benefits</h2>
+<div class="divider" style="margin:14px 0 28px"></div>
+<div class="premium-grid">
+<article aria-labelledby="prem-1" class="premium-card reveal">
+<div aria-hidden="true" class="premium-icon"><svg fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 7h16M4 12h16M4 17h10" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path></svg></div>
+<div class="premium-head">
+<h3 class="premium-heading" id="prem-1">Bespoke Solutions</h3>
+</div>
+<p class="premium-sub">Custom end-to-end solutions designed for your market and budget.</p>
+</article>
+<article aria-labelledby="prem-2" class="premium-card reveal">
+<div aria-hidden="true" class="premium-icon"><svg fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 6L9 17l-5-5" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg></div>
+<div class="premium-head">
+<h3 class="premium-heading" id="prem-2">Uncompromising Integrity</h3>
+</div>
+<p class="premium-sub">No shortcuts — quality, timelines and transparent billing.</p>
+</article>
+<article aria-labelledby="prem-3" class="premium-card reveal">
+<div aria-hidden="true" class="premium-icon"><svg fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9" stroke="#ffffff" stroke-width="1.6"></circle><path d="M8 12h8M12 8v8" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path></svg></div>
+<div class="premium-head">
+<h3 class="premium-heading" id="prem-3">Client-First Approach</h3>
+</div>
+<p class="premium-sub">Transparent communication and long-term partnerships.</p>
+</article>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -241,11 +277,11 @@
 </section>
 <div class="cta-bar">
 <div class="container">
-<h2>Work with Engineers You Can Trust</h2>
-<p>Every certificate we issue is backed by qualified engineers and verifiable test data.</p>
+<h2>Let's Build Something Great Together</h2>
+<p>Tell us about your project and we'll connect you with the right engineering team.</p>
 <div class="cta-btns">
-<button class="btn-primary" onclick="openModal()">Request a Certified Structural Assessment</button>
-<a class="btn-secondary" href="tel:+918098889984"><i data-lucide="phone" style="width:16px;height:16px"></i> Speak to Our Engineers</a>
+<button class="btn-primary" onclick="openModal()">Start a Conversation</button>
+<a class="btn-secondary" href="https://wa.me/918098889984" target="_blank"><i data-lucide="message-circle" style="width:16px;height:16px"></i> WhatsApp Our Team</a>
 </div>
 </div>
 </div>

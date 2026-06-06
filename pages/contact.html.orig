@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Morning Star Infra Projects</title>
+  <meta name="description" content="Get in touch with Morning Star Infra Projects for home construction, interiors, and structural services in Chennai.">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <style>body{font-family:DM Sans, sans-serif;padding:36px;max-width:900px;margin:0 auto}</style>
+</head>
+<body>
+  <header id="site-header">
+  <div class="hdr-inner">
+
+    <div class="hdr-left hdr-brand">
+      <a href="/" class="logo-link">
+
+        <div class="logo-icon">
+          <img src="/assets/images/Morning-Star-Infra-Projects-Header-Logo.jpeg" alt="Morning Star Infra Projects logo">
+        </div>
+
+        <div class="logo-text">
+          <span class="logo-main">MORNING STAR</span>
+          <span class="logo-sub">INFRA PROJECTS</span>
+        </div>
+
+      </a>
+    </div>
+
+    <nav class="hdr-nav">
+
+      <a class="nav-link" href="/" data-page="home">Home</a>
+
+      <a class="nav-link" href="/pages/our-story.html" data-page="story">Our Story</a>
+
+      <a class="nav-link" href="/pages/our-team.html" data-page="team">Our Team</a>
+
+      <div class="nav-dropdown">
+        <span class="nav-link nav-drop-trigger">Divisions ▾</span>
+        <div class="nav-drop-menu">
+          <a class="drop-link" href="/pages/home-construction.html">Home Construction</a>
+          <a class="drop-link" href="/pages/commercial-and-industrial.html">Commercial &amp; Industrial</a>
+          <a class="drop-link" href="/pages/interior-fitouts.html">Interior Fitouts</a>
+          <a class="drop-link" href="/pages/structural-repair.html">Structural Repair</a>
+        </div>
+      </div>
+
+      <a class="nav-link" href="/pages/certifications.html" data-page="certifications">Certifications</a>
+
+      <a class="nav-link" href="/blog/blog.html" data-page="blog">Blog</a>
+
+      <a class="nav-cta" href="#quote" onclick="openModal();return false;">
+        Get Quote
+      </a>
+
+    </nav>
+
+    <button id="hamburger" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+
+  <div id="mobile-menu" class="mobile-menu">
+
+    <a class="mob-link" href="/" data-page="home">Home</a>
+
+    <a class="mob-link" href="/pages/our-story.html" data-page="story">Our Story</a>
+
+    <a class="mob-link" href="/pages/our-team.html" data-page="team">Our Team</a>
+
+    <div class="mob-divider" style="padding:8px 16px 4px;color:var(--text);font-weight:700">Divisions</div>
+    <a class="mob-link" href="/pages/home-construction.html">Home Construction</a>
+    <a class="mob-link" href="/pages/commercial-and-industrial.html">Commercial &amp; Industrial</a>
+    <a class="mob-link" href="/pages/interior-fitouts.html">Interior Fitouts</a>
+    <a class="mob-link" href="/pages/structural-repair.html">Structural Repair</a>
+
+    <a class="mob-link" href="/pages/certifications.html" data-page="certifications">Certifications</a>
+
+    <a class="mob-link" href="/blog/blog.html" data-page="blog">Blog</a>
+
+    <a class="mob-cta" href="#quote" onclick="openModal();return false;">
+      Get Quote
+    </a>
+
+  </div>
+
+</header>
+  <main>
+    <h1>Contact Morning Star Infra Projects</h1>
+    <p>For enquiries, call: <a href="tel:+919876543210">+91 98765 43210</a> or email: <a href="mailto:info@morningstarinfra.in">info@morningstarinfra.in</a></p>
+    <section style="margin-top:24px;padding:18px;border-radius:10px;background:linear-gradient(90deg,var(--primary),var(--navy));color:white">
+      <h2 style="margin:0 0 8px">Request a Free Quote</h2>
+      <p style="margin:0">Tell us briefly about your project and we'll get back within 24 hours.</p>
+    </section>
+  </main>
+  <footer id="site-footer">
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div class="footer-brand">
+
+<div class="logo-link">
+
+<div class="logo-icon">
+<img src="/assets/images/Morning-Star-Infra-Projects-Footer-Logo.webp"
+alt="Morning Star Infra Projects logo">
+</div>
+
+<div class="logo-text">
+
+<span class="logo-main">
+MORNING STAR
+</span>
+
+<span class="logo-sub">
+INFRA PROJECTS
+</span>
+
+</div>
+
+</div>
+
+<p>
+Our capabilities span the full spectrum of civil engineering—a perfect blend of structural science and aesthetic precision. Whether we are diagnosing the health of aging buildings with advanced NDT equipment, erecting rapid commercial infrastructure, or executing bespoke turnkey interiors, our projects are guided by post-graduate engineering expertise.
+</p>
+
+</div>
+
+
+<div class="footer-quick">
+
+<div class="footer-head">
+Quick Links
+</div>
+
+<ul class="footer-links">
+
+<li><a href="/">Home</a></li>
+
+<li><a href="/story/">Our Story</a></li>
+
+<li><a href="/certifications/">Certifications</a></li>
+
+<li><a href="/blog/">Blog</a></li>
+
+<li><a href="#quote" onclick="openModal();return false;">Get Quote</a></li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<div class="footer-head">
+Our Divisions
+</div>
+
+<ul class="footer-links">
+ 
+<li>
+<a href="pages/home-construction.html">
+Home Construction
+</a>
+</li>
+
+<li>
+<a href="pages/commercial-and-industrial.html">
+Commercial & Industrial
+</a>
+</li>
+
+<li>
+<a href="pages/interior-fitouts.html">
+Interior Fitouts
+</a>
+</li>
+
+<li>
+<a href="pages/structural-repair.html">
+Structural Repair
+</a>
+</li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<div class="footer-head">
+Contact Us
+</div>
+
+<div class="contact-item">
+
+<span class="contact-icon">
+  <i data-lucide="phone"></i>
+</span>
+
+<span>
+  +91-8098889984
+</span>
+
+</div>
+
+<div class="contact-item">
+
+<span class="contact-icon">
+  <i data-lucide="mail"></i>
+</span>
+
+<span>
+  morningstarinfra@gmail.com
+</span>
+
+</div>
+
+<div class="contact-item">
+
+<span class="contact-icon">
+  <i data-lucide="map-pin"></i>
+</span>
+
+<a href="#">
+  Chennai, Tamil Nadu
+</a>
+
+</div>
+
+<div class="footer-social">
+  <a aria-label="Instagram" href="https://www.instagram.com/morningstarinfra/" rel="noopener noreferrer" target="_blank">
+    <svg aria-hidden="true" class="lucide" fill="none" focusable="false" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+      <rect height="20" rx="5" width="20" x="2" y="2"></rect>
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+    </svg>
+  </a>
+  <a aria-label="LinkedIn" href="https://www.linkedin.com/company/morningstarinfra/" rel="noopener noreferrer" target="_blank">
+    <svg aria-hidden="true" class="lucide" fill="none" focusable="false" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+      <rect height="20" rx="2" width="20" x="2" y="2"></rect>
+      <circle cx="8" cy="8" r="1"></circle>
+      <line x1="8" x2="8" y1="11" y2="17"></line>
+      <rect height="6" width="4" x="12" y="11"></rect>
+    </svg>
+  </a>
+</div>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<div class="footer-copy">
+© 2026 Morning Star Infra Projects
+</div>
+
+<div class="footer-copy">
+Registered Structural Engineers
+</div>
+
+</div>
+
+</div>
+
+</footer>
+</body>
+</html>

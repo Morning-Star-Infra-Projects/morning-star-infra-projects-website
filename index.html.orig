@@ -1,0 +1,834 @@
+﻿<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport">
+<!-- Favicons -->
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#ffffff">
+<title>Morning Star Infra Projects | Home Construction, Structural Repair &amp; Interior Services Chennai</title>
+<meta content="Premium civil engineering and construction firm in Chennai. Home Construction, Interiors, Structural Repair, Industrial PEB — transparent pricing, engineering-led builds." name="description"/>
+<meta name="google-site-verification" content="67GUUgzf2sxbxh-EyYnnNcGRvXvEAMlDRMNI3q6cyVA" />
+<meta content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" name="robots"/>
+<link href="https://www.morningstarinfra.com/" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="https://www.morningstarinfra.com/" property="og:url"/>
+<meta content="Morning Star Infra Projects | Home Construction &amp; Interior Services Chennai" property="og:title"/>
+<meta content="Premium civil engineering and construction firm in Chennai. Home Construction, Interiors, Structural Repair, Industrial PEB." property="og:description"/>
+<meta content="https://www.morningstarinfra.com/assets/images/hero-Morning-Star-Infra-Projects-Home.webp" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="Morning Star Infra Projects" property="og:site_name"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Morning Star Infra Projects | Home Construction &amp; Interior Services Chennai" name="twitter:title"/>
+<meta content="Premium civil engineering and construction firm in Chennai." name="twitter:description"/>
+<meta content="https://www.morningstarinfra.com/assets/images/hero-Morning-Star-Infra-Projects-Home.webp" name="twitter:image"/>
+<meta content="IN-TN" name="geo.region"/>
+<meta content="Chennai" name="geo.placename"/>
+<!-- Performance: preconnect CDN, preload hero + CSS -->
+<link crossorigin="" href="https://unpkg.com" rel="preconnect"/>
+<link href="https://unpkg.com" rel="dns-prefetch"/>
+<!-- Preconnect to Google Maps domains to speed up map loading -->
+<link crossorigin="" href="https://www.google.com" rel="preconnect"/>
+<link crossorigin="" href="https://maps.google.com" rel="preconnect"/>
+<link crossorigin="" href="https://maps.gstatic.com" rel="preconnect"/>
+<link as="image" fetchpriority="high" href="./assets/images/hero-Morning-Star-Infra-Projects-Home.webp" imagesizes="100vw" imagesrcset="./assets/images/hero-Morning-Star-Infra-Projects-Home.webp 1600w" rel="preload"/>
+<link as="style" href="./assets/css/main.min.css" rel="preload"/>
+<link href="./assets/css/main.min.css" rel="stylesheet"/>
+<link as="style" href="./assets/css/components.css" onload="this.rel='stylesheet'" rel="preload"/>
+<noscript><link href="./assets/css/components.css" rel="stylesheet"/></noscript>
+<link as="style" href="./assets/css/pages.css" onload="this.rel='stylesheet'" rel="preload"/>
+<noscript><link href="./assets/css/pages.css" rel="stylesheet"/></noscript>
+<!-- Prefetch inner pages for faster navigation -->
+<link href="./pages/home-construction.html" rel="prefetch"/>
+<link href="./pages/interior-fitouts.html" rel="prefetch"/>
+<link href="./pages/structural-repair.html" rel="prefetch"/>
+<link href="./pages/commercial-and-industrial.html" rel="prefetch"/>
+<script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.morningstarinfra.com/#website","url":"https://www.morningstarinfra.com/","name":"Morning Star Infra Projects"},{"@type":"LocalBusiness","@id":"https://www.morningstarinfra.com/#org","name":"Morning Star Infra Projects","url":"https://www.morningstarinfra.com/","telephone":"+91-8098889984","address":{"@type":"PostalAddress","addressLocality":"Chennai","addressRegion":"Tamil Nadu","addressCountry":"IN"},"geo":{"@type":"GeoCoordinates","latitude":13.0827,"longitude":80.2707},"priceRange":"₹₹"}]}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {
+      "@type":"ListItem",
+      "position":1,
+      "name":"Home",
+      "item":"https://www.morningstarinfra.com/"
+    }
+  ]
+}
+</script>
+<style>
+@media (max-width:768px){
+  html,body{overflow-x:hidden;-webkit-overflow-scrolling:touch}
+
+  .div-tabs.divisions-grid{display:grid!important;grid-template-columns:repeat(2,1fr);grid-auto-rows:1fr;gap:10px;align-items:center;justify-items:center;width:100%;max-width:520px;margin:12px auto 0;padding:0 12px;box-sizing:border-box;overflow:hidden;touch-action:pan-y}
+
+  .div-tabs.divisions-grid .div-tab{position:relative;display:block;width:100%;aspect-ratio:9/16;border-radius:12px;overflow:hidden;box-shadow:0 8px 20px rgba(10,31,68,0.08);transition:transform .28s cubic-bezier(.2,.8,.2,1),box-shadow .28s;text-decoration:none;background:var(--white);box-sizing:border-box;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+
+  .div-tabs.divisions-grid .div-tab-media,.div-tabs.divisions-grid .div-tab-media img,picture img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;display:block;pointer-events:none}
+
+  .div-tabs.divisions-grid .div-tab-content{position:absolute;left:10px;right:10px;bottom:10px;z-index:2;color:#fff;display:flex;flex-direction:column;gap:6px;align-items:flex-start;text-shadow:0 2px 6px rgba(0,0,0,.45);padding:8px;background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.35) 60%,rgba(0,0,0,.5) 100%);border-radius:8px;backdrop-filter:blur(2px)}
+
+  .div-tabs.divisions-grid .div-tab-title{font-size:.95rem;line-height:1.05;font-weight:800;margin:0}
+  .div-tabs.divisions-grid .div-tab-desc{font-size:.75rem;line-height:1.1;opacity:.95;max-height:2.8em;overflow:hidden}
+  .div-tabs.divisions-grid .div-tab-cta{font-size:.8rem;font-weight:700;background:rgba(255,255,255,0.06);padding:6px 8px;border-radius:6px;align-self:flex-start}
+
+  .div-tabs.divisions-grid .div-tab:active,.div-tabs.divisions-grid .div-tab:focus{transform:scale(1.02);box-shadow:0 14px 30px rgba(10,31,68,0.12)}
+
+  @media (max-width:420px){
+    .div-tabs.divisions-grid{gap:8px;padding:0 8px;max-width:380px}
+    .div-tabs.divisions-grid .div-tab-title{font-size:.92rem}
+    .div-tabs.divisions-grid .div-tab-desc{font-size:.72rem}
+    .div-tabs.divisions-grid .div-tab-cta{font-size:.78rem;padding:5px 7px}
+  }
+}
+</style>
+</head>
+<body>
+<!-- Top contact strip removed per request -->
+<!-- HEADER -->
+  <link rel="canonical" href="https://www.morningstarinfra.com/">
+  <meta name="description" content="Premium construction and engineering services in Chennai. Morning Star Infra Projects.">
+
+  <style>
+  /* Merge logo + text left alignment */
+  #site-header .hdr-left.hdr-brand{display:flex;align-items:center;gap:14px}
+  #site-header .logo-link{display:flex;align-items:center;gap:12px;text-decoration:none}
+  #site-header .logo-text{text-align:left;line-height:1}
+  /* Logo lockup: keep main and subtitle perfectly aligned by width and tracking.
+     We compute the exact subtitle letter-spacing at runtime so both header and
+     footer lockups behave identically and remain responsive. */
+  /* Logo lockup: prefer tracking (letter-spacing) + small controlled word-spacing
+     over justification. Make the lockup width follow the main title so the
+     subtitle starts/ends directly under the main wordmark. */
+  #site-header .logo-text, #site-footer .logo-text{
+    display:inline-flex;flex-direction:column;align-items:flex-start;/* size to content */
+    width:max-content;
+  }
+  #site-header .logo-text .logo-main, #site-footer .logo-text .logo-main,
+  #site-header .logo-text .logo-sub, #site-footer .logo-text .logo-sub{display:inline-block;white-space:nowrap}
+  #site-header .logo-text .logo-sub, #site-footer .logo-text .logo-sub{
+    /* Treat subtitle as a single inline text element and force our
+       tracking/width to override component rules and runtime measurement. */
+    overflow:visible;
+    margin-top:4px;
+    width:100% !important; /* ensure subtitle spans the same visual width */
+    letter-spacing:0.65em !important; /* increased per final alignment attempt */
+    word-spacing:0.16em !important;   /* small extra gap between words */
+    -webkit-font-smoothing:antialiased;
+    box-sizing:border-box;
+    display:inline-block !important;
+  }
+  /* Slightly reduced tracking on small screens for legibility and tighter fit
+     so the subtitle width aligns under the main wordmark on mobile. */
+  @media (max-width:720px){
+    #site-header .logo-text .logo-sub, #site-footer .logo-text .logo-sub{
+      /* Tighten tracking on mobile so subtitle fits exactly under MORNING STAR */
+      letter-spacing:0.30em !important;
+      word-spacing:0.08em !important;
+    }
+  }
+  #site-header .logo-icon img{height:56px;max-height:64px;width:auto;display:block}
+  @media (max-width:720px){#site-header .logo-icon img{height:44px}}
+  /* Footer: left-align brand logo and description */
+  :root{--footer-brand-w:420px}
+  #site-footer .footer-brand{display:block;text-align:left;max-width:var(--footer-brand-w);margin-left:0;padding-left:0}
+  #site-footer .footer-brand .logo-link{display:flex;align-items:center;gap:12px;text-decoration:none}
+  /* slightly reduce footer logo size to balance with text */
+  #site-footer .footer-brand .logo-icon img{height:52px;max-height:56px;width:auto;display:block}
+  #site-footer .footer-brand .logo-text{line-height:1;text-align:left}
+  /* match paragraph width to the brand block and justify both sides */
+  #site-footer .footer-brand p{margin-top:12px;text-align:justify;color:var(--white);max-width:100%;font-size:15px;line-height:1.5}
+  @media (max-width:720px){#site-footer .footer-brand .logo-icon img{height:44px}}
+  </style>
+
+  <style>
+  /* Mobile / responsive fixes to prevent layout shifts and improve touch targets */
+  @media (max-width:768px){
+    .hero-content{
+      padding:24px 20px !important;
+      margin-top:0 !important;
+    }
+
+    .hero-btns{display:flex;flex-direction:column;gap:10px;width:100%}
+    .hero-btns a, .hero-btns button{width:100%;text-align:center}
+
+    #site-footer .footer-brand p{font-size:14px;line-height:1.8;text-align:left}
+
+    #site-footer .footer-grid{grid-template-columns:1fr;gap:24px}
+
+    :root{--footer-brand-w:100%}
+
+    .footer-social a{width:40px;height:40px;display:inline-flex;align-items:center;justify-content:center}
+
+    .fab{width:52px;height:52px;bottom:20px}
+    .fab-call{bottom:80px}
+
+    .call-tab{width:90%;max-width:320px;left:50%;transform:translateX(-50%)}
+
+    /* Make contact text wrap and align for multi-line items */
+    #site-footer .contact-item{word-break:break-word;align-items:flex-start}
+    #site-footer .contact-item .contact-icon{margin-top:4px}
+
+    /* Compact Quick Links and Our Divisions on mobile only; keep Contact Us unchanged */
+    /* Target .footer-quick and the third column (Our Divisions) specifically */
+    #site-footer .footer-quick .footer-links,
+    #site-footer .footer-grid > div:nth-child(3) .footer-links {
+      gap:4px !important;
+    }
+
+    #site-footer .footer-quick .footer-links li,
+    #site-footer .footer-grid > div:nth-child(3) .footer-links li{
+      margin:0 !important;
+      padding:0 !important;
+    }
+
+    #site-footer .footer-quick .footer-links a,
+    #site-footer .footer-grid > div:nth-child(3) .footer-links a{
+      display:block;
+      padding:4px 0 !important;
+      line-height:1.3 !important;
+    }
+
+    /* Reduce the column-level gap only for the two link columns */
+    #site-footer .footer-quick,
+    #site-footer .footer-grid > div:nth-child(3){
+      gap:6px !important;
+    }
+  }
+
+  @media (max-width:480px){
+    .logo-sub{letter-spacing:0.15em !important}
+    .div-tab{aspect-ratio:3/4}
+  }
+  </style>
+
+  <style>
+  /* Footer description: align left & right edges to the company name block on desktop.
+     We use CSS vars written by the logo measurement script to set max-width and offset. */
+  #site-footer .footer-brand p{margin-top:12px;color:var(--white);font-size:15px;line-height:1.5}
+
+  @media (min-width:1000px){
+    #site-footer .footer-brand p{
+      text-align:justify;
+      text-align-last:left;
+      text-indent:2em;
+      /* width and left offset controlled by CSS vars: make paragraph fill the
+         available brand column width while preserving the current start offset */
+      /* width and left offset controlled by CSS vars: make paragraph fill the
+        available brand column width while preserving the current start offset */
+      max-width:calc(var(--footer-brand-w,420px) - var(--logo-paragraph-offset,0px));
+      /* explicitly set width so right edge aligns with company-name block */
+      width:calc(var(--footer-brand-w,420px) - var(--logo-paragraph-offset,0px));
+      /* paragraph start aligned to logo-icon left edge (set by JS) */
+      margin-left:calc(var(--logo-paragraph-offset,0px) - 30px);
+      box-sizing:border-box;
+    }
+  }
+  </style>
+
+  <style>
+  /* Footer grid: make columns evenly spaced and responsive */
+  /* Use the visual "sweet spot" so all footer columns share the same rhythm */
+  #site-footer{--footer-item-gap:10px}
+  #site-footer .container{padding-top:42px;padding-bottom:42px}
+  #site-footer .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:36px;align-items:start}
+  /* give each column a small horizontal padding so gaps appear uniform
+     and ensure consistent vertical rhythm between heading and items */
+  #site-footer .footer-grid > div{padding:0 8px;min-width:0;display:flex;flex-direction:column;gap:var(--footer-item-gap)}
+  /* normalize heading and list spacing across columns */
+  #site-footer .footer-head{margin:0 0 var(--footer-item-gap) 0;font-weight:700}
+  #site-footer .footer-links{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:var(--footer-item-gap)}
+  /* match list spacing to Contact Us item spacing */
+  #site-footer .footer-links li{margin:0}
+
+  /* Desktop-only: slightly increase grid gap on wide screens but keep item gap */
+  @media (min-width:1000px){
+    #site-footer .footer-grid{gap:44px}
+    /* lists already use gap; keep li margins at 0 to avoid double spacing */
+    #site-footer .footer-links li{margin:0}
+  }
+  /* Contact items: match vertical spacing and alignment used by lists */
+  #site-footer .contact-item{
+    display:flex;
+    align-items:center;
+    gap:12px; /* icon-to-text spacing */
+    margin:0 0 10px 0 !important; /* make rows match list spacing */
+    padding:0 !important;
+    line-height:1.4;
+    color:var(--white)
+  }
+  /* Social icons: position closer to the location item and match rhythm */
+  #site-footer .footer-social{margin-top:10px !important;display:flex;gap:12px;align-items:center}
+    /* Force-reset common overrides so Contact Us uses the same compact rhythm
+      as the link lists. Use high-specificity and !important to prevent external
+      styles from re-introducing large margins or padding. */
+    #site-footer .contact-item,
+    #site-footer .footer-links li,
+    #site-footer .footer-social,
+    #site-footer .contact-item span,
+    #site-footer .contact-item a {
+     margin: 0 !important;
+     padding: 0 !important;
+    }
+
+    /* Ensure the column-level gap controls vertical spacing and cannot be
+      overridden by other selectors. */
+    #site-footer .footer-grid > div{gap:var(--footer-item-gap) !important}
+
+    /* Make social links align consistently with contact rows */
+    #site-footer .footer-social a{display:inline-flex;align-items:center;justify-content:center}
+  #site-footer .contact-item .contact-icon{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px}
+  /* ensure brand column spacing is visually balanced with others */
+  #site-footer .footer-brand{padding-right:6px}
+  /* make the first footer-bottom copy occupy same width as brand block */
+  #site-footer .footer-bottom{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:18px}
+  #site-footer .footer-bottom .footer-copy:first-child{max-width:var(--footer-brand-w);flex:0 0 auto}
+  #site-footer .footer-bottom .footer-copy:last-child{flex:1 1 auto;text-align:right}
+  @media (min-width:1100px){#site-footer .footer-grid{gap:44px}}
+  @media (max-width:720px){
+    :root{--footer-brand-w:100%}
+    #site-footer .footer-bottom .footer-copy:last-child{width:100%;text-align:left;margin-top:8px}
+  }
+  </style>
+
+</head>
+<body>
+<!-- Top contact strip removed per request -->
+<!-- HEADER -->
+<header id="site-header">
+  <div class="hdr-inner">
+
+    <div class="hdr-left hdr-brand">
+      <a href="/" class="logo-link">
+
+        <div class="logo-icon">
+          <img src="/assets/images/Morning-Star-Infra-Projects-Header-Logo.jpeg" alt="Morning Star Infra Projects logo">
+        </div>
+
+        <div class="logo-text">
+          <span class="logo-main">MORNING STAR</span>
+          <span class="logo-sub">INFRA PROJECTS</span>
+        </div>
+
+      </a>
+    </div>
+
+    <nav class="hdr-nav">
+
+      <a class="nav-link" href="/" data-page="home">Home</a>
+
+      <a class="nav-link" href="/pages/our-story.html" data-page="story">Our Story</a>
+
+      <a class="nav-link" href="/pages/our-team.html" data-page="team">Our Team</a>
+
+      <div class="nav-dropdown">
+        <span class="nav-link nav-drop-trigger">Divisions ▾</span>
+        <div class="nav-drop-menu">
+          <a class="drop-link" href="/pages/home-construction.html">Home Construction</a>
+          <a class="drop-link" href="/pages/commercial-and-industrial.html">Commercial &amp; Industrial</a>
+          <a class="drop-link" href="/pages/interior-fitouts.html">Interior Fitouts</a>
+          <a class="drop-link" href="/pages/structural-repair.html">Structural Repair</a>
+        </div>
+      </div>
+
+      <a class="nav-link" href="/pages/certifications.html" data-page="certifications">Certifications</a>
+
+      <a class="nav-link nav-blog" href="/blog/blog.html" data-page="blog">Blog</a>
+
+      <a class="nav-cta" href="#quote" onclick="openModal();return false;">
+        Get Quote
+      </a>
+
+    </nav>
+
+    <button id="hamburger" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+
+  <div id="mobile-menu" class="mobile-menu">
+
+    <a class="mob-link" href="/" data-page="home">Home</a>
+
+    <a class="mob-link" href="/pages/our-story.html" data-page="story">Our Story</a>
+
+    <a class="mob-link" href="/pages/our-team.html" data-page="team">Our Team</a>
+
+    <div class="mob-divider" style="padding:8px 16px 4px;color:var(--text);font-weight:700">Divisions</div>
+    <a class="mob-link" href="/pages/home-construction.html">Home Construction</a>
+    <a class="mob-link" href="/pages/commercial-and-industrial.html">Commercial &amp; Industrial</a>
+    <a class="mob-link" href="/pages/interior-fitouts.html">Interior Fitouts</a>
+    <a class="mob-link" href="/pages/structural-repair.html">Structural Repair</a>
+
+    <a class="mob-link" href="/pages/certifications.html" data-page="certifications">Certifications</a>
+    <a class="mob-link" href="/blog/blog.html" data-page="blog">Blog</a>
+
+    <a class="mob-cta" href="#quote" onclick="openModal();return false;">
+      Get Quote
+    </a>
+
+  </div>
+
+</header>
+<main>
+<script>
+  (function(){
+    function updateHeaderHeight(){
+      var header = document.getElementById('site-header');
+      if(!header) return;
+      var h = Math.ceil(header.getBoundingClientRect().height);
+      document.documentElement.style.setProperty('--hdr-h', h + 'px');
+    }
+    window.addEventListener('load', updateHeaderHeight);
+    window.addEventListener('resize', updateHeaderHeight);
+    // observe header for content changes (mobile menu open/close, logo changes)
+    var hdr = document.getElementById('site-header');
+    if(hdr && window.MutationObserver){
+      var obs = new MutationObserver(function(){ updateHeaderHeight(); });
+      obs.observe(hdr, { childList: true, subtree: true, attributes: true });
+    }
+  })();
+</script>
+<!-- HERO -->
+<div class="hero" style="background-color:var(--primary-d)">
+<picture class="hero-media" style="position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none">
+<source srcset="./assets/images/hero-Morning-Star-Infra-Projects-Home.webp 1600w" type="image/webp"/>
+<img alt="Morning Star Infra Projects — Home" decoding="sync" fetchpriority="high" height="1024" loading="eager" sizes="100vw" src="./assets/images/hero-Morning-Star-Infra-Projects-Home.webp" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:bottom center;display:block" width="1600"/>
+</picture>
+<div class="hero-content" style="align-items:flex-start;padding:48px 60px;max-width:720px;margin-top:24px">
+<h1 class="hero-title">A Complete Ecosystem of<br/><span>Structural Excellence</span></h1>
+<p class="hero-sub" style="font-size:.95rem;margin:16px 0 18px">Because we understand that every structure holds a unique purpose, we have engineered a comprehensively integrated portfolio of construction and design services. Our mission is to provide a seamless, single-point solution that bridges the gap between architectural vision and structural reality.</p>
+<div class="hero-btns">
+<a class="btn-secondary" href="pages/our-story.html">Our Story</a>
+<a class="btn-secondary" href="pages/our-team.html">Our Team</a>
+<a class="btn-secondary" href="pages/certifications.html">Certifications</a>
+</div>
+</div>
+</div>
+<!-- FOCUS ON -->
+<div class="section sec-cream">
+<div class="container" style="display:flex;align-items:center;justify-content:center;min-height:260px">
+<div style="text-align:center;max-width:900px;width:100%">
+<span class="section-tag" style="display:block;margin-bottom:16px;font-size:18px;letter-spacing:.26em;color:var(--primary)">FOCUS ON</span>
+<h2 class="section-title" style="font-size:clamp(2.2rem,4.8vw,4rem);margin:0 auto;color:var(--navy);font-weight:900">Our 4 Divisions</h2>
+<div class="divider" style="margin:18px auto 0"></div>
+<p class="section-sub" style="margin:18px auto 0;max-width:920px;color:var(--text);line-height:1.8">We offer this extensive range of services with one uncompromising guarantee: radical financial transparency. By eliminating hidden costs and fragmented contracting, we ensure every space is crafted safely, beautifully, and exactly to your vision.</p>
+</div>
+</div>
+</div>
+<!-- DIVISION CAROUSEL -->
+<div class="section" style="background:var(--white);padding-top:48px">
+<div class="container">
+<div class="div-tabs-wrapper">
+<div aria-atomic="true" aria-live="polite" id="divisions-announce" role="status" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"></div>
+<!-- id="division-track" must match window.D.divisionTrack in main.min.js -->
+<div aria-roledescription="carousel" class="div-tabs divisions-grid" id="division-track" role="region">
+<!-- 01: Home Construction -->
+<a aria-label="Home Construction — engineering-led residential builds with transparent pricing" class="div-tab" href="pages/home-construction.html" id="tab-residential">
+<picture class="div-tab-media" style="position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none">
+<source srcset="./assets/images/Home-Construction.webp" type="image/webp"/>
+<img alt="Home Construction Chennai" decoding="async" height="900" loading="lazy" src="./assets/images/Home-Construction.webp" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block" width="1600"/>
+</picture>
+<div class="div-tab-content">
+<div class="div-tab-title">Home Construction</div>
+<div class="div-tab-desc">Tax-compliant, engineering-led residential builds with 4 transparent pricing packages.</div>
+<span class="div-tab-cta">Explore →</span>
+</div>
+</a>
+<!-- 02: Commercial & Industrial (moved up) -->
+<a aria-label="Commercial and Industrial — PEB construction for SIPCOT industries and logistics" class="div-tab" href="pages/commercial-and-industrial.html" id="tab-industrial">
+<picture class="div-tab-media" style="position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none">
+<source sizes="(max-width:720px) 240px, 33vw" srcset="./assets/images/commercial-industrial.webp 800w, ./assets/images/commercial-industrial.webp 1200w" type="image/webp"/>
+<img alt="Commercial Industrial Construction Chennai" decoding="async" height="900" loading="lazy" src="./assets/images/commercial-industrial.webp" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block" width="1600"/>
+</picture>
+<div class="div-tab-content">
+<div class="div-tab-title">Commercial &amp; Industrial</div>
+<div class="div-tab-desc">Fast-track PEB construction for SIPCOT industries, logistics &amp; factory owners.</div>
+<span class="div-tab-cta">Explore →</span>
+</div>
+</a>
+<!-- 03: Interior Fitouts -->
+<a aria-label="Interior Fitouts — bespoke interiors from 3D design to in-house manufacturing" class="div-tab" href="pages/interior-fitouts.html" id="tab-interiors">
+<picture class="div-tab-media" style="position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none">
+<source sizes="(max-width:720px) 240px, 33vw" srcset="./assets/images/hero-interiors-and-fitouts.webp 800w, ./assets/images/hero-interiors-and-fitouts.webp 1200w" type="image/webp"/>
+<img alt="Interior Fitouts Chennai" decoding="async" height="900" loading="lazy" src="./assets/images/hero-interiors-and-fitouts.webp" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block" width="1600"/>
+</picture>
+<div class="div-tab-content">
+<div class="div-tab-title">Interior Fitouts</div>
+<div class="div-tab-desc">End-to-end bespoke interiors from 3D design to in-house manufacturing execution.</div>
+<span class="div-tab-cta">Explore →</span>
+</div>
+</a>
+<!-- 04: Structural Repair -->
+<a aria-label="Structural Repair — NDT diagnostics, carbon FRP wrapping and lifespan extension" class="div-tab" href="pages/structural-repair.html" id="tab-structural">
+<picture class="div-tab-media" style="position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none">
+<source sizes="(max-width:720px) 240px, 33vw" srcset="./assets/images/structural-repair-retrofitting.webp 800w, ./assets/images/structural-repair-retrofitting.webp 1200w" type="image/webp"/>
+<img alt="Structural Repair Chennai" decoding="async" height="900" loading="lazy" src="./assets/images/structural-repair-retrofitting.webp" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block" width="1600"/>
+</picture>
+<div class="div-tab-content">
+<div class="div-tab-title">Structural Repair &amp; Retrofitting</div>
+<div class="div-tab-desc">Advanced NDT diagnostics, carbon FRP wrapping, and lifespan extension for aging structures.</div>
+<span class="div-tab-cta">Explore →</span>
+</div>
+</a>
+</div><!-- /division-track -->
+</div><!-- /div-tabs-wrapper -->
+<!-- Progress bar IDs must match window.D in main.min.js -->
+<div id="division-progress-track" style="margin-top:28px;background:rgba(10,31,68,.15);height:3px;border-radius:999px;position:relative;overflow:hidden;width:100%;cursor:pointer">
+<div aria-hidden="true" id="division-fill" style="position:absolute;left:0;top:0;height:100%;background:var(--primary);border-radius:999px;width:0%;transition:width .12s linear;pointer-events:none"></div>
+</div>
+</div>
+</div>
+<!-- Showcase gallery removed -->
+<!-- CTA BAR -->
+<div class="cta-bar">
+<div class="container">
+<h2>Ready to Begin Your Project?</h2>
+<p>Our engineering team will assess your requirements and provide a detailed, transparent quote within 24 hours.</p>
+<div class="cta-btns">
+<button class="btn-primary" onclick="openModal()">Request a Free Quote</button>
+<a class="btn-secondary" href="https://wa.me/918098889984" target="_blank"><i data-lucide="message-circle" style="width:16px;height:16px"></i> WhatsApp Us</a>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating call tab -->
+<a aria-label="Call Morning Star Infra Projects" class="call-tab" href="tel:+918098889984" id="call-tab">
+<span class="call-title">Call us Today</span>
+<span class="call-number">+91-8098889984</span>
+</a>
+<!-- MAP SECTION (compact, interactive) -->
+<style>
+/* Make the Google Map edge-to-edge and responsive */
+.map-section{padding:0;margin:0;width:100%}
+.map-wrap{width:100%;max-width:none;padding:0;margin:0}
+.map-wrap iframe{width:100%;height:500px;border:0;display:block;border-radius:0;box-shadow:none}
+@media (max-width:768px){
+  .map-wrap iframe{height:350px}
+}
+</style>
+<section aria-label="Our Location on Google Maps" class="map-section">
+<div class="map-wrap">
+<iframe allowfullscreen="" data-src="https://www.google.com/maps?q=5/13%20Sadasivam%20Street%20Gopalapuram%20Chennai-86&amp;output=embed" id="site-map-iframe" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="about:blank" title="Morning Star Infra Projects location on Google Maps"></iframe>
+</div>
+</section>
+<footer id="site-footer">
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div class="footer-brand">
+
+<div class="logo-link">
+
+<div class="logo-icon">
+<img src="/assets/images/Morning-Star-Infra-Projects-Footer-Logo.webp"
+alt="Morning Star Infra Projects logo">
+</div>
+
+<div class="logo-text">
+
+<span class="logo-main">
+MORNING STAR
+</span>
+
+<span class="logo-sub">
+INFRA PROJECTS
+</span>
+
+</div>
+
+</div>
+
+<p>
+Our capabilities span the full spectrum of civil engineering—a perfect blend of structural science and aesthetic precision. Whether we are diagnosing the health of aging buildings with advanced NDT equipment, erecting rapid commercial infrastructure, or executing bespoke turnkey interiors, our projects are guided by post-graduate engineering expertise.
+</p>
+
+</div>
+
+
+<div class="footer-quick">
+
+<div class="footer-head">
+Quick Links
+</div>
+
+<ul class="footer-links">
+
+<li><a href="/">Home</a></li>
+
+<li><a href="/story/">Our Story</a></li>
+
+<li><a href="/certifications/">Certifications</a></li>
+
+<li><a href="/blog/">Blog</a></li>
+
+<li><a href="#quote" onclick="openModal();return false;">Get Quote</a></li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<div class="footer-head">
+Our Divisions
+</div>
+
+<ul class="footer-links">
+ 
+<li>
+<a href="pages/home-construction.html">
+Home Construction
+</a>
+</li>
+
+<li>
+<a href="pages/commercial-and-industrial.html">
+Commercial & Industrial
+</a>
+</li>
+
+<li>
+<a href="pages/interior-fitouts.html">
+Interior Fitouts
+</a>
+</li>
+
+<li>
+<a href="pages/structural-repair.html">
+Structural Repair
+</a>
+</li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<div class="footer-head">
+Contact Us
+</div>
+
+<div class="contact-item">
+
+<span class="contact-icon">
+  <i data-lucide="phone"></i>
+</span>
+
+<span>
+  +91-8098889984
+</span>
+
+</div>
+
+<div class="contact-item">
+
+<span class="contact-icon">
+  <i data-lucide="mail"></i>
+</span>
+
+<span>
+  morningstarinfra@gmail.com
+</span>
+
+</div>
+
+<div class="contact-item">
+
+<span class="contact-icon">
+  <i data-lucide="map-pin"></i>
+</span>
+
+<a href="#">
+  Chennai, Tamil Nadu
+</a>
+
+</div>
+
+<div class="footer-social">
+  <a aria-label="Instagram" href="https://www.instagram.com/morningstarinfra/" rel="noopener noreferrer" target="_blank">
+    <svg aria-hidden="true" class="lucide" fill="none" focusable="false" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+      <rect height="20" rx="5" width="20" x="2" y="2"></rect>
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+    </svg>
+  </a>
+  <a aria-label="LinkedIn" href="https://www.linkedin.com/company/morningstarinfra/" rel="noopener noreferrer" target="_blank">
+    <svg aria-hidden="true" class="lucide" fill="none" focusable="false" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+      <rect height="20" rx="2" width="20" x="2" y="2"></rect>
+      <circle cx="8" cy="8" r="1"></circle>
+      <line x1="8" x2="8" y1="11" y2="17"></line>
+      <rect height="6" width="4" x="12" y="11"></rect>
+    </svg>
+  </a>
+</div>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<div class="footer-copy">
+© 2026 Morning Star Infra Projects
+</div>
+
+<div class="footer-copy">
+Registered Structural Engineers
+</div>
+
+</div>
+
+</div>
+
+</footer>
+<!-- FABs -->
+<a aria-label="WhatsApp" class="fab fab-wa" href="https://wa.me/918098889984?text=Hello%20Morning%20Star%20Infra%20Projects" id="fab-wa" target="_blank">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+</a>
+<a aria-label="Call" class="fab fab-call" href="tel:+918098889984" id="fab-call">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"></path></svg>
+</a>
+<!-- QUOTE MODAL -->
+<div aria-label="Request a Quote" aria-modal="true" class="modal-overlay" id="quote-modal" role="dialog">
+<div class="modal-box">
+<button aria-label="Close" class="modal-close" id="modal-close"></button>
+<h2 class="modal-title">Get a Free Quote</h2>
+<p class="modal-sub">Our engineering team will respond within 24 hours.</p>
+<form class="quote-form" id="quote-form" novalidate="">
+<div class="form-row">
+<input id="qf-name" placeholder="Your Full Name" required="" type="text"/>
+<input id="qf-phone" placeholder="Phone / WhatsApp" required="" type="tel"/>
+</div>
+<input id="qf-email" placeholder="Email Address" type="email"/>
+<select id="qf-service">
+<option value="">Select Service Required</option>
+<option>Home Construction</option>
+<option>Interior Fitouts</option>
+<option>Structural Repair &amp; Retrofitting</option>
+<option>Commercial / Industrial Construction</option>
+<option>Other / Multiple Services</option>
+</select>
+<textarea id="qf-msg" placeholder="Brief description of your project (location, size, timeline)" rows="3"></textarea>
+<button class="btn-primary btn-full" type="submit">Submit Request →</button>
+</form>
+</div>
+</div>
+<script>
+  (function(){
+    var iframe = document.getElementById('site-map-iframe');
+    if(!iframe) return;
+    var loadMap = function(){
+      var src = iframe.getAttribute('data-src');
+      if(src && (iframe.src === '' || iframe.src === 'about:blank')) iframe.src = src;
+    };
+
+    // Prefer IntersectionObserver to load the map only when it's near the viewport.
+    if('IntersectionObserver' in window){
+      var io = new IntersectionObserver(function(entries, obs){
+        entries.forEach(function(entry){
+          if(entry.isIntersecting){ loadMap(); obs.disconnect(); }
+        });
+      }, {rootMargin: '400px'});
+      io.observe(iframe);
+    } else {
+      // Fallback: short delayed load
+      if(document.readyState === 'complete' || document.readyState === 'interactive'){
+        setTimeout(loadMap, 500);
+      } else {
+        window.addEventListener('DOMContentLoaded', function(){ setTimeout(loadMap, 500); }, {once:true});
+      }
+      setTimeout(function(){ if(iframe.src==='about:blank') loadMap(); }, 3000);
+    }
+  })();
+  </script>
+  <script>
+  (function(){
+    function updateLogoLockups(){
+      document.querySelectorAll('.logo-text').forEach(function(container){
+        var main = container.querySelector('.logo-main');
+        var sub = container.querySelector('.logo-sub');
+        if(!main || !sub) return;
+
+        // Reset to natural width for accurate measurement
+        sub.style.letterSpacing = '0px';
+        sub.style.width = 'auto';
+
+        // Force reflow and measure
+        var mainRect = main.getBoundingClientRect();
+        var mainW = Math.round(mainRect.width);
+        var subNaturalW = Math.round(sub.getBoundingClientRect().width);
+
+        // Compute gaps between glyphs. Use characters including spaces so words distribute
+        var text = sub.textContent || '';
+        var gaps = Math.max(text.length - 1, 1);
+
+        // desired total extra spacing to reach main width
+        var neededTotal = mainW - subNaturalW;
+        var perGap = neededTotal / gaps;
+
+        // Clamp to reasonable values to avoid extreme tracking
+        var clamped = Math.max(Math.min(perGap, 20), -6);
+
+        // Write main width for layout uses (footer paragraph alignment),
+        // but do not force subtitle width or inline letter-spacing so
+        // CSS-driven tracking (0.58em) can determine final spacing.
+        container.style.setProperty('--logo-main-w', mainW + 'px');
+
+        // For footer paragraph alignment: write vars to the nearest .footer-brand ancestor
+        var footerBrand = container.closest('.footer-brand');
+        if(footerBrand){
+          // compute offset of logo-text relative to footer-brand (left edge alignment)
+          var parentRect = footerBrand.getBoundingClientRect();
+          var offset = Math.round(mainRect.left - parentRect.left);
+          footerBrand.style.setProperty('--footer-logo-w', mainW + 'px');
+          footerBrand.style.setProperty('--logo-text-offset', offset + 'px');
+          // Additionally compute the logo-icon left edge so the paragraph can start
+          // directly under the logo symbol (not the company name).
+          var logoIcon = footerBrand.querySelector('.logo-icon');
+          if(logoIcon){
+            var iconRect = logoIcon.getBoundingClientRect();
+            var iconOffset = Math.round(iconRect.left - parentRect.left);
+            footerBrand.style.setProperty('--logo-paragraph-offset', iconOffset + 'px');
+          }
+        }
+      });
+    }
+
+    // Update on load and resize; also when fonts or DOM change
+    window.addEventListener('load', updateLogoLockups);
+    window.addEventListener('resize', function(){ requestAnimationFrame(updateLogoLockups); });
+    if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', updateLogoLockups);
+    else updateLogoLockups();
+
+    // Observe brand blocks for content or font changes
+    var obs = new MutationObserver(function(){ updateLogoLockups(); });
+    document.querySelectorAll('.logo-text').forEach(function(node){ obs.observe(node, { childList:true, subtree:true, characterData:true }); });
+  })();
+  </script>
+<script defer="" src="./assets/js/main.min.js"></script>
+<script defer="" src="./assets/js/navigation.js"></script>
+<script defer="" src="./assets/js/animations.js"></script>
+<script defer="" src="./assets/js/divisions-fix.js"></script>
+<script defer="" src="https://unpkg.com/lucide@latest"></script>
+</body>
+</html>

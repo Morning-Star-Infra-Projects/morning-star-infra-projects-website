@@ -1,0 +1,662 @@
+﻿<!DOCTYPE html>
+
+<html lang="en-IN">
+<head>
+<!-- Styles moved to css/style.min.css -->
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport">
+<!-- Favicon (Google Search friendly) -->
+<link href="https://www.morningstarinfra.com/assets/favicon/favicon.ico" rel="icon" sizes="any"/>
+<link href="https://www.morningstarinfra.com/assets/favicon/favicon.ico" rel="shortcut icon"/>
+<link href="https://www.morningstarinfra.com/assets/favicon/favicon-48x48.png" rel="icon" sizes="48x48" type="image/png"/>
+<link href="https://www.morningstarinfra.com/assets/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="https://www.morningstarinfra.com/assets/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="https://www.morningstarinfra.com/assets/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="../favicon/site.webmanifest" rel="manifest"/>
+<!-- removed unused preconnects to reduce critical request chains -->
+<title>Interior Fitouts Chennai | Morning Star Infra Projects</title>
+<meta content="Turnkey interior design and fitout services in Chennai — modular kitchens, wardrobes, false ceilings and full home interiors." name="description"/>
+<meta content="#0a1f44" name="theme-color"/>
+<meta content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" name="robots"/>
+<link href="https://www.morningstarinfra.com/interiors/" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="https://www.morningstarinfra.com/interiors/" property="og:url"/>
+<meta content="Interior Fitouts Chennai | Morning Star Infra Projects" property="og:title"/>
+<meta content="Turnkey interior design and fitout services in Chennai — modular kitchens, wardrobes, false ceilings and full home interiors." property="og:description"/>
+<meta content="https://www.morningstarinfra.com/assets/images/hero-interiors-and-fitouts.webp" property="og:image"/>
+<meta content="Morning Star Infra Projects construction services in Chennai" property="og:image:alt"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="Morning Star Infra Projects" property="og:site_name"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://www.morningstarinfra.com/interiors/" name="twitter:url"/>
+<meta content="Interior Fitouts Chennai | Morning Star Infra Projects" name="twitter:title"/>
+<meta content="Turnkey interior design and fitout services in Chennai — modular kitchens, wardrobes, false ceilings and full home interiors." name="twitter:description"/>
+<meta content="https://www.morningstarinfra.com/assets/images/hero-interiors-and-fitouts.webp" name="twitter:image"/>
+<link as="image" fetchpriority="high" href="../assets/images/hero-interiors-and-fitouts.webp" imagesizes="100vw" imagesrcset="../assets/images/hero-interiors-and-fitouts.webp 1600w" rel="preload"/>
+<link as="style" href="../assets/css/main.min.css" rel="preload"/>
+<link href="../assets/css/main.min.css" rel="stylesheet"/>
+<link as="style" href="../assets/css/components.css" onload="this.rel='stylesheet'" rel="preload"/>
+<noscript><link href="../assets/css/components.css" rel="stylesheet"/></noscript>
+<link as="style" href="../assets/css/pages.css" onload="this.rel='stylesheet'" rel="preload"/>
+<noscript><link href="../assets/css/pages.css" rel="stylesheet"/></noscript>
+<!-- Font preload / preconnect (uncomment when adding custom fonts) -->
+<!--
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+-->
+<meta content="IN-TN" name="geo.region"/>
+<meta content="Chennai" name="geo.placename"/>
+<!-- Inline CSS removed and moved to external styles -->
+<!-- styles/critical.css replaced -->
+<!-- styles/main.css replaced -->
+<!-- style.css replaced -->
+<!-- Styles extracted to assets/css/ -->
+<!-- Mobile: show division tabs as 2x2 grid for easier tapping -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.morningstarinfra.com/"},{"@type":"ListItem","position":2,"name":"Interior Fitouts","item":"https://www.morningstarinfra.com/pages/interior-fitouts.html"}]}
+</script>
+  <link rel="canonical" href="https://www.morningstarinfra.com/pages/interior-fitouts.html">
+  <meta name="description" content="Premium construction and engineering services in Chennai. Morning Star Infra Projects.">
+</head>
+<body>
+<header id="site-header">
+  <div class="hdr-inner">
+
+    <div class="hdr-left hdr-brand">
+      <a href="/" class="logo-link">
+
+        <div class="logo-icon">
+          <img src="/assets/images/Morning-Star-Infra-Projects-Header-Logo.jpeg" alt="Morning Star Infra Projects logo">
+        </div>
+
+        <div class="logo-text">
+          <span class="logo-main">MORNING STAR</span>
+          <span class="logo-sub">INFRA PROJECTS</span>
+        </div>
+
+      </a>
+    </div>
+
+    <nav class="hdr-nav">
+
+      <a class="nav-link" href="/" data-page="home">Home</a>
+
+      <a class="nav-link" href="/pages/our-story.html" data-page="story">Our Story</a>
+
+      <a class="nav-link" href="/pages/our-team.html" data-page="team">Our Team</a>
+
+      <div class="nav-dropdown">
+        <span class="nav-link nav-drop-trigger">Divisions ▾</span>
+        <div class="nav-drop-menu">
+          <a class="drop-link" href="/pages/home-construction.html">Home Construction</a>
+          <a class="drop-link" href="/pages/commercial-and-industrial.html">Commercial &amp; Industrial</a>
+          <a class="drop-link" href="/pages/interior-fitouts.html">Interior Fitouts</a>
+          <a class="drop-link" href="/pages/structural-repair.html">Structural Repair</a>
+        </div>
+      </div>
+
+      <a class="nav-link" href="/pages/certifications.html" data-page="certifications">Certifications</a>
+
+      <a class="nav-link" href="/blog/blog.html" data-page="blog">Blog</a>
+
+      <a class="nav-cta" href="#quote" onclick="openModal();return false;">
+        Get Quote
+      </a>
+
+    </nav>
+
+    <button id="hamburger" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+
+  <div id="mobile-menu" class="mobile-menu">
+
+    <a class="mob-link" href="/" data-page="home">Home</a>
+
+    <a class="mob-link" href="/pages/our-story.html" data-page="story">Our Story</a>
+
+    <a class="mob-link" href="/pages/our-team.html" data-page="team">Our Team</a>
+
+    <div class="mob-divider" style="padding:8px 16px 4px;color:var(--text);font-weight:700">Divisions</div>
+    <a class="mob-link" href="/pages/home-construction.html">Home Construction</a>
+    <a class="mob-link" href="/pages/commercial-and-industrial.html">Commercial &amp; Industrial</a>
+    <a class="mob-link" href="/pages/interior-fitouts.html">Interior Fitouts</a>
+    <a class="mob-link" href="/pages/structural-repair.html">Structural Repair</a>
+
+    <a class="mob-link" href="/pages/certifications.html" data-page="certifications">Certifications</a>
+
+    <a class="mob-link" href="/blog/blog.html" data-page="blog">Blog</a>
+
+    <a class="mob-cta" href="#quote" onclick="openModal();return false;">
+      Get Quote
+    </a>
+
+  </div>
+
+</header>
+<main style="padding-top:var(--hdr-h)">
+<nav aria-label="Breadcrumb" class="breadcrumb">
+	<div class="container">
+		<ol class="breadcrumb-list">
+			<li><a href="../index.html">Home</a></li>
+			<li aria-current="page">Interior Fitouts</li>
+		</ol>
+	</div>
+</nav>
+<!-- INTERIORS HERO -->
+<div class="hero">
+<picture aria-hidden="false" class="hero-media" style="position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none">
+<source srcset="../assets/images/hero-interiors-and-fitouts.webp" type="image/webp"/>
+<img alt="Morning Star Infra Projects - interiors" decoding="async" height="900" loading="lazy" src="../assets/images/hero-interiors-and-fitouts.webp" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block" width="1600"/>
+</picture>
+<div class="hero-content">
+<h1 class="hero-title">End-to-End Bespoke Interiors.<br/><span>3D Design to Execution.</span></h1>
+<p class="hero-sub">From concept to completion — in-house manufacturing, custom modular kitchens, wardrobes, false ceilings, and premium finishes. Open to all buildings, not just our constructions.</p>
+<div class="hero-btns">
+<button class="btn-primary" onclick="openModal()">Book Interior Package →</button>
+<a class="btn-secondary" href="https://wa.me/918098889984" target="_blank"><i data-lucide="message-circle" style="width:16px;height:16px"></i> WhatsApp for Pricing</a>
+</div>
+</div>
+</div>
+<!-- OFFER BANNER -->
+<div style="background:var(--gold);padding:18px 0">
+<div class="container" style="text-align:center">
+<strong style="color:var(--primary);font-size:1rem"> LIMITED OFFER: Book your interior package today and get premium cornice work or side false ceilings in your living area at an exclusively discounted rate!</strong>
+</div>
+</div>
+<!-- WARRANTY (left column restored, centered) -->
+<div class="section-sm" style="background:var(--white)">
+<div class="container">
+<div style="text-align:center;max-width:900px;margin:0 auto">
+<span class="section-tag" style="font-size:1.3rem;font-weight:800">OUR COMMITMENT</span>
+<h2 class="section-title" style="font-size:clamp(2rem,4.5vw,3.4rem);font-weight:900;margin-top:6px">Industry‑Leading Warranty</h2>
+<div class="divider" style="margin:12px auto 16px"></div>
+<p style="color:var(--text-light);line-height:1.7;margin-bottom:20px">Every interior fitout project by Morning Star comes with a comprehensive warranty covering all modular furniture, hardware, and finishes. Our in-house manufacturing ensures quality control from material selection to final installation.</p>
+</div>
+</div>
+</div>
+<!-- INTERIOR PACKAGES -->
+<!-- INTERIOR PACKAGES removed by request -->
+<!-- PREMIUM HIGHLIGHTS (inserted) -->
+<div class="section" id="premium-highlights" style="background:var(--white);padding:80px 0">
+<div class="container container-wide" style="max-width:1400px;margin:0 auto;--ms-navy:#0a1f44;--ms-gold:#f7bd10;">
+<span class="section-tag" style="font-size:1.1rem;font-weight:800;color:var(--ms-navy)">PREMIUM HIGHLIGHTS</span>
+<h2 class="section-title" style="margin-top:8px;font-size:clamp(1.6rem,3.2vw,2.2rem);font-weight:900;color:var(--ms-navy)">Premium Engineering Benefits</h2>
+<div class="divider" style="margin:14px 0 28px"></div>
+<div class="premium-grid">
+<article aria-labelledby="prem-1" class="premium-card reveal">
+<div aria-hidden="true" class="premium-icon"><svg fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h7" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path><path d="M16 3v5H8" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path></svg></div>
+<div class="premium-head">
+<h3 class="premium-heading" id="prem-1">Flexible Transparent Item Wise Pricing</h3>
+</div>
+<p class="premium-sub">Flexible, itemised pricing so you only pay for what you pick.</p>
+</article>
+<article aria-labelledby="prem-2" class="premium-card reveal">
+<div aria-hidden="true" class="premium-icon"><svg fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect height="16" rx="2" stroke="#ffffff" stroke-width="1.6" width="14" x="3" y="4"></rect><path d="M7 9h6" stroke="#ffffff" stroke-linecap="round" stroke-width="1.6"></path><path d="M9 13l2 2 4-4" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path></svg></div>
+<div class="premium-head">
+<h3 class="premium-heading" id="prem-2">Pay only for Approved Designs</h3>
+</div>
+<p class="premium-sub">Payments are only for designs approved by you — no surprise charges.</p>
+</article>
+<article aria-labelledby="prem-3" class="premium-card reveal">
+<div aria-hidden="true" class="premium-icon"><svg fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 1v4" stroke="#ffffff" stroke-linecap="round" stroke-width="1.6"></path><path d="M21 12h-4" stroke="#ffffff" stroke-linecap="round" stroke-width="1.6"></path><path d="M12 23v-4" stroke="#ffffff" stroke-linecap="round" stroke-width="1.6"></path><path d="M3 12h4" stroke="#ffffff" stroke-linecap="round" stroke-width="1.6"></path><circle cx="12" cy="12" r="3" stroke="#ffffff" stroke-width="1.6"></circle></svg></div>
+<div class="premium-head">
+<h3 class="premium-heading" id="prem-3">Trust, Timing, Transparency</h3>
+</div>
+<p class="premium-sub">We deliver on trust, punctual schedules, and transparent communication.</p>
+</article>
+</div>
+</div>
+</div>
+<!-- SERVICES BREAKDOWN -->
+<div class="section" style="background:var(--white)">
+<div class="container">
+<span class="section-tag" style="font-size:1.3rem;font-weight:800">WHAT WE COVER</span>
+<h2 class="section-title">Complete Interior Services</h2>
+<div class="divider"></div>
+<div class="team-badges-grid reveal">
+  <div class="team-badge">
+    <div class="team-badge-icon"><i data-lucide="sofa"></i></div>
+    <span class="team-badge-text">Modular Kitchen</span>
+  </div>
+  <div class="team-badge">
+    <div class="team-badge-icon"><i data-lucide="archive"></i></div>
+    <span class="team-badge-text">Wardrobes &amp; Storage</span>
+  </div>
+  <div class="team-badge">
+    <div class="team-badge-icon"><i data-lucide="lamp"></i></div>
+    <span class="team-badge-text">False Ceilings &amp; Lighting</span>
+  </div>
+  <div class="team-badge">
+    <div class="team-badge-icon"><i data-lucide="grid"></i></div>
+    <span class="team-badge-text">Wall Paneling &amp; Décor</span>
+  </div>
+  <div class="team-badge">
+    <div class="team-badge-icon"><i data-lucide="tv"></i></div>
+    <span class="team-badge-text">Living Area Fitouts</span>
+  </div>
+  <div class="team-badge">
+    <div class="team-badge-icon"><i data-lucide="droplet"></i></div>
+    <span class="team-badge-text">Bathroom Fitouts</span>
+  </div>
+  <div class="team-badge">
+    <div class="team-badge-icon"><i data-lucide="door-open"></i></div>
+    <span class="team-badge-text">Foyer &amp; Entrance</span>
+  </div>
+  <div class="team-badge">
+    <div class="team-badge-icon"><i data-lucide="brush"></i></div>
+    <span class="team-badge-text">Painting &amp; Finishes</span>
+  </div>
+</div>
+</div>
+<!-- RUNNING IMAGE SHOWCASE (Interior Fitouts) - matches Home Construction implementation -->
+<div class="section" style="background:var(--white);padding:48px 0 36px">
+<div class="container container-wide" style="max-width:1400px;margin:0 auto">
+  <style>
+    .hc-showcase-header{display:block;text-align:center;margin-bottom:18px}
+    .hc-showcase-header .section-tag{font-weight:800}
+    .hc-slider-outer{position:relative;width:100%;overflow:hidden}
+    .hc-slider-outer::before,.hc-slider-outer::after{content:'';position:absolute;top:0;bottom:0;width:120px;z-index:10;pointer-events:none}
+    .hc-slider-outer::before{left:0;background:linear-gradient(to right,#ffffff 0%,rgba(255,255,255,0) 100%)}
+    .hc-slider-outer::after{right:0;background:linear-gradient(to left,#ffffff 0%,rgba(255,255,255,0) 100%)}
+
+    .hc-slider-track{display:flex;width:max-content;will-change:transform;transform:translateZ(0);animation:hc-marquee 55s linear infinite}
+    .hc-slider-outer:hover .hc-slider-track{animation-play-state:paused}
+
+    .hc-slide-item{flex-shrink:0;width:280px;height:280px;margin-right:0;overflow:hidden;display:block;position:relative}
+    .hc-slide-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s cubic-bezier(.25,.8,.25,1);transform:translateZ(0);will-change:transform}
+    .hc-slider-outer:hover .hc-slide-item:hover img{transform:scale(1.07)}
+    .hc-slide-item::after{content:'';position:absolute;top:0;right:0;width:2px;height:100%;background:rgba(255,255,255,0.18);pointer-events:none;z-index:2}
+
+    @keyframes hc-marquee{0%{transform:translate3d(0,0,0)}100%{transform:translate3d(-50%,0,0)}}
+
+    @media (max-width:900px){.hc-slide-item{width:220px;height:220px}.hc-slider-outer::before,.hc-slider-outer::after{width:60px}}
+    @media (max-width:480px){.hc-showcase-header{padding:0 12px}.hc-slide-item{width:160px;height:160px}.hc-slider-outer::before,.hc-slider-outer::after{width:40px}}
+    @media (prefers-reduced-motion:reduce){.hc-slider-track{animation:hc-marquee 55s linear infinite!important}}
+  </style>
+
+  <div class="hc-showcase-header">
+    <span class="section-tag">OUR WORK</span>
+    <h2>Interior Fitouts Showcase</h2>
+    <p>A continuous gallery of interior fitouts — modular kitchens, wardrobes, and premium finishes.</p>
+  </div>
+
+  <div class="hc-slider-outer" id="hc-slider-outer">
+    <div class="hc-slider-track" id="hc-slider-track">
+      <!-- Group A -->
+      <div class="hc-slide-item">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-1.webp" alt="Interior fitout project 1" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-2.jpg" alt="Interior fitout project 2" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-3.jpg" alt="Interior fitout project 3" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-4.jpg" alt="Interior fitout project 4" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-5.jpg" alt="Interior fitout project 5" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-6.jpg" alt="Interior fitout project 6" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-7.jpg" alt="Interior fitout project 7" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-8.jpg" alt="Interior fitout project 8" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-9.jpg" alt="Interior fitout project 9" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-10.jpg" alt="Interior fitout project 10" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-11.jpg" alt="Interior fitout project 11" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-12.jpg" alt="Interior fitout project 12" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-13.jpg" alt="Interior fitout project 13" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-14.jpg" alt="Interior fitout project 14" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-15.jpg" alt="Interior fitout project 15" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-16.jpg" alt="Interior fitout project 16" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-17.jpg" alt="Interior fitout project 17" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <!-- Group B duplicate for seamless loop -->
+      <div class="hc-slide-item" aria-hidden="true">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-1.webp" alt="" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item" aria-hidden="true">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-2.jpg" alt="" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item" aria-hidden="true">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-3.jpg" alt="" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item" aria-hidden="true">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-4.jpg" alt="" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item" aria-hidden="true">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-5.jpg" alt="" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item" aria-hidden="true">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-6.jpg" alt="" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item" aria-hidden="true">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-7.jpg" alt="" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item" aria-hidden="true">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-8.jpg" alt="" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item" aria-hidden="true">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-9.jpg" alt="" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item" aria-hidden="true">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-10.jpg" alt="" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item" aria-hidden="true">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-11.jpg" alt="" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item" aria-hidden="true">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-12.jpg" alt="" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item" aria-hidden="true">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-13.jpg" alt="" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item" aria-hidden="true">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-14.jpg" alt="" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item" aria-hidden="true">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-15.jpg" alt="" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item" aria-hidden="true">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-16.jpg" alt="" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+      <div class="hc-slide-item" aria-hidden="true">
+        <img src="../assets/images/interior-fitouts-running-images/interior-fitouts-17.jpg" alt="" loading="lazy" decoding="async" width="280" height="280" />
+      </div>
+    </div>
+  </div>
+  <script>
+  /* Dynamically adjust animation speed based on actual track width for pixel-perfect loop */
+  (function () {
+    var track = document.getElementById('hc-slider-track');
+    if (!track) return;
+    /* Speed: ~80px per second feels premium — moderate, not too fast */
+    var pxPerSec = 80;
+    function setDuration() {
+      /* Half the full track width = one clone group = distance to shift */
+      var halfW = track.scrollWidth / 2;
+      var dur = Math.round(halfW / pxPerSec);
+      track.style.animationDuration = dur + 's';
+    }
+    setDuration();
+    window.addEventListener('resize', setDuration, { passive: true });
+  })();
+  </script>
+</div>
+</div>
+</div>
+<section aria-labelledby="rs-heading" class="related-services">
+<div class="container">
+<div class="rs-heading">
+<h2 id="rs-heading">Explore Our Other Services</h2>
+<p>Complete construction solutions under one roof — engineering-led, transparent, and trusted.</p>
+</div>
+<div class="rs-grid">
+<div class="rs-card">
+<div class="rs-icon"><i data-lucide="home" style="width:36px;height:36px"></i></div>
+<h3>Home Construction</h3>
+<p>Engineering-led residential builds with ISI-certified materials and transparent pricing packages.</p>
+<a class="rs-btn" href="./home-construction.html">Explore →</a>
+</div>
+<div class="rs-card">
+<div class="rs-icon"><i data-lucide="layers" style="width:36px;height:36px"></i></div>
+<h3>Interior Fitouts</h3>
+<p>Bespoke 2 BHK &amp; 3 BHK interior packages — 3D planning to in-house manufacturing execution.</p>
+<a class="rs-btn" href="./interior-fitouts.html">Explore →</a>
+</div>
+<div class="rs-card">
+<div class="rs-icon"><i data-lucide="wrench" style="width:36px;height:36px"></i></div>
+<h3>Structural Repair &amp; Retrofitting</h3>
+<p>Advanced NDT diagnostics, carbon FRP wrapping, and lifespan extension for aging structures.</p>
+<a class="rs-btn" href="./structural-repair.html">Explore →</a>
+</div>
+<div class="rs-card">
+<div class="rs-icon"><i data-lucide="building" style="width:36px;height:36px"></i></div>
+<h3>Commercial &amp; Industrial</h3>
+<p>Fast-track PEB construction for SIPCOT industries, logistics hubs, and factory owners.</p>
+<a class="rs-btn" href="./commercial-and-industrial.html">Explore →</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer id="site-footer">
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div class="footer-brand">
+
+<div class="logo-link">
+
+<div class="logo-icon">
+<img src="/assets/images/Morning-Star-Infra-Projects-Footer-Logo.webp"
+alt="Morning Star Infra Projects logo">
+</div>
+
+<div class="logo-text">
+
+<span class="logo-main">
+MORNING STAR
+</span>
+
+<span class="logo-sub">
+INFRA PROJECTS
+</span>
+
+</div>
+
+</div>
+
+<p>
+Our capabilities span the full spectrum of civil engineering—a perfect blend of structural science and aesthetic precision. Whether we are diagnosing the health of aging buildings with advanced NDT equipment, erecting rapid commercial infrastructure, or executing bespoke turnkey interiors, our projects are guided by post-graduate engineering expertise.
+</p>
+
+</div>
+
+
+<div class="footer-quick">
+
+<div class="footer-head">
+Quick Links
+</div>
+
+<ul class="footer-links">
+
+<li><a href="/">Home</a></li>
+
+<li><a href="/story/">Our Story</a></li>
+
+<li><a href="/certifications/">Certifications</a></li>
+
+<li><a href="/blog/">Blog</a></li>
+
+<li><a href="#quote" onclick="openModal();return false;">Get Quote</a></li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<div class="footer-head">
+Our Divisions
+</div>
+
+<ul class="footer-links">
+ 
+<li>
+<a href="pages/home-construction.html">
+Home Construction
+</a>
+</li>
+
+<li>
+<a href="pages/commercial-and-industrial.html">
+Commercial & Industrial
+</a>
+</li>
+
+<li>
+<a href="pages/interior-fitouts.html">
+Interior Fitouts
+</a>
+</li>
+
+<li>
+<a href="pages/structural-repair.html">
+Structural Repair
+</a>
+</li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<div class="footer-head">
+Contact Us
+</div>
+
+<div class="contact-item">
+
+<span class="contact-icon">
+  <i data-lucide="phone"></i>
+</span>
+
+<span>
+  +91-8098889984
+</span>
+
+</div>
+
+<div class="contact-item">
+
+<span class="contact-icon">
+  <i data-lucide="mail"></i>
+</span>
+
+<span>
+  morningstarinfra@gmail.com
+</span>
+
+</div>
+
+<div class="contact-item">
+
+<span class="contact-icon">
+  <i data-lucide="map-pin"></i>
+</span>
+
+<a href="#">
+  Chennai, Tamil Nadu
+</a>
+
+</div>
+
+<div class="footer-social">
+  <a aria-label="Instagram" href="https://www.instagram.com/morningstarinfra/" rel="noopener noreferrer" target="_blank">
+    <svg aria-hidden="true" class="lucide" fill="none" focusable="false" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+      <rect height="20" rx="5" width="20" x="2" y="2"></rect>
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+    </svg>
+  </a>
+  <a aria-label="LinkedIn" href="https://www.linkedin.com/company/morningstarinfra/" rel="noopener noreferrer" target="_blank">
+    <svg aria-hidden="true" class="lucide" fill="none" focusable="false" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+      <rect height="20" rx="2" width="20" x="2" y="2"></rect>
+      <circle cx="8" cy="8" r="1"></circle>
+      <line x1="8" x2="8" y1="11" y2="17"></line>
+      <rect height="6" width="4" x="12" y="11"></rect>
+    </svg>
+  </a>
+</div>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<div class="footer-copy">
+© 2026 Morning Star Infra Projects
+</div>
+
+<div class="footer-copy">
+Registered Structural Engineers
+</div>
+
+</div>
+
+</div>
+
+</footer>
+<!-- FLOATING BUTTONS -->
+<a aria-label="WhatsApp" class="fab fab-wa" href="https://wa.me/918098889984?text=Hello%20Morning%20Star%20Infra%20Projects" id="fab-wa" target="_blank">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+</a>
+<a aria-label="Call" class="fab fab-call" href="tel:+918098889984" id="fab-call">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"></path></svg>
+</a>
+<div aria-label="Request a Quote" aria-modal="true" class="modal-overlay" id="quote-modal" role="dialog">
+<div class="modal-box">
+<button aria-label="Close" class="modal-close" id="modal-close"></button>
+<h2 class="modal-title">Get a Free Quote</h2>
+<p class="modal-sub">Our engineering team will respond within 24 hours.</p>
+<form class="quote-form" id="quote-form" novalidate="">
+<div class="form-row">
+<input id="qf-name" placeholder="Your Full Name" required="" type="text"/>
+<input id="qf-phone" placeholder="Phone / WhatsApp" required="" type="tel"/>
+</div>
+<input id="qf-email" placeholder="Email Address" type="email"/>
+<select id="qf-service">
+<option value="">Select Service Required</option>
+<option>Home Construction</option>
+<option>Interior Fitouts</option>
+<option>Structural Repair &amp; Retrofitting</option>
+<option>Commercial / Industrial Construction</option>
+<option>Other / Multiple Services</option>
+</select>
+<textarea id="qf-msg" placeholder="Brief description of your project (location, size, timeline)" rows="3"></textarea>
+<button class="btn-primary btn-full" type="submit">Submit Request →</button>
+</form>
+</div>
+</div>
+<script defer="" src="../assets/js/main.min.js"></script>
+<script defer="" src="../assets/js/navigation.js"></script>
+<script defer="" src="../assets/js/animations.js"></script>
+<script defer="" src="https://unpkg.com/lucide@latest"></script>
+</body>
+</html>
