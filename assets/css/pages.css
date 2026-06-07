@@ -2608,9 +2608,12 @@ main[style] {
 /* Floating call tab: ensure it clears the bottom CTA bar and footer */
 @media (max-width: 768px) {
   .call-tab {
-    min-width: 200px !important;
-    max-width: 88% !important;
+    min-width: unset !important;
+    max-width: none !important;
     font-size: 0.9rem !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
   }
 }
 
@@ -2672,10 +2675,13 @@ main[style] {
 
 /* Fix hero-collage title override for our-story page */
 @media (max-width: 600px) {
-  .hero-collage-left .hero-title[style] {
-    font-size: clamp(1.8rem, 6vw, 3rem) !important;
+  .call-tab {
+    min-width: unset !important;
+    padding: 8px 12px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
   }
-}
 
 @media (max-width: 480px) {
   .hero-collage-left .hero-title[style] {
