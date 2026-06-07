@@ -756,7 +756,7 @@
 
   .div-tabs.divisions-grid .div-tab-desc{ font-size:1rem !important; line-height:1.4 !important; margin-bottom:14px !important; }
 
-  .div-tabs.divisions-grid .div-tab-cta{ padding:12px 16px !important; font-size:1rem !important; background:var(--gold) !important; color:var(--primary) !important; border-radius:9px; pointer-events:auto !important; font-weight:700 !important }
+  .div-tabs.divisions-grid .div-tab-cta{ padding:12px 16px !important; font-size:1rem !important; background:var(--gold) !important; background-color:var(--gold) !important; color:var(--primary) !important; opacity:1 !important; border-radius:9px; pointer-events:auto !important; font-weight:700 !important }
 
   /* Ensure images preserve cover and placement; content overlays remain intact */
   .div-tabs.divisions-grid .div-tab-media img{ width:100% !important; height:100% !important; object-fit:cover !important; object-position:center bottom !important; }
