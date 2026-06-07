@@ -118,6 +118,11 @@
       letter-spacing:0.30em !important;
       word-spacing:0.08em !important;
     }
+    /* Use a monospace stack for subtitle to ensure even character widths for precise alignment */
+    #site-header .logo-text .logo-sub, #site-footer .logo-text .logo-sub{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', 'Courier New', monospace !important;
+      font-variant-ligatures: none !important;
+    }
   }
   #site-header .logo-icon img{height:56px;max-height:64px;width:auto;display:block}
   @media (max-width:720px){#site-header .logo-icon img{height:44px}}
@@ -797,11 +802,16 @@ Registered Structural Engineers
         var perGap = neededTotal / gaps;
 
         // Clamp to reasonable values to avoid extreme tracking
-        var clamped = Math.max(Math.min(perGap, 20), -6);
+        var clamped = Math.max(Math.min(perGap, 30), -6);
 
-        // Write main width for layout uses (footer paragraph alignment),
-        // but do not force subtitle width or inline letter-spacing so
-        // CSS-driven tracking (0.58em) can determine final spacing.
+        // Apply computed tracking so subtitle characters distribute evenly
+        // and match the visual width of the main wordmark.
+        sub.style.letterSpacing = clamped + 'px';
+        // Force subtitle to match main width so its first and last glyph
+        // align under the main wordmark precisely.
+        sub.style.width = mainW + 'px';
+
+        // Expose main width for other layout uses
         container.style.setProperty('--logo-main-w', mainW + 'px');
 
         // For footer paragraph alignment: write vars to the nearest .footer-brand ancestor
