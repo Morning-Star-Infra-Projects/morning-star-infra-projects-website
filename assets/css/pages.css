@@ -618,6 +618,38 @@
 /* Mobile-only: convert division carousel to 2x2 grid (exactly mobile screens) */
 @media (max-width: 720px) {
 
+  /* Replace horizontal carousel with 2x2 grid for divisions */
+  .div-tabs.divisions-grid{
+    display:grid !important;
+    grid-template-columns:repeat(2,1fr) !important;
+    gap:12px !important;
+    overflow:visible !important;
+    scroll-snap-type:none !important;
+    -webkit-overflow-scrolling:unset !important;
+    padding:12px 8px !important;
+    touch-action:auto !important;
+  }
+
+  .div-tabs.divisions-grid .div-tab{
+    flex:none !important;
+    width:100% !important;
+    min-width:0 !important;
+    aspect-ratio:9/16 !important;
+    display:block !important;
+    box-sizing:border-box;
+  }
+
+  .div-tab-media img{ object-fit:cover; object-position:center bottom; }
+  .div-tab-title{ font-size: clamp(1rem, 2.8vw, 1.25rem); }
+  .div-tab-desc { font-size: clamp(0.72rem, 2vw, 0.85rem); }
+  .div-tab-cta { font-size: 0.75rem; padding:8px 14px; }
+  .div-tab-content{ padding:16px !important; align-items:flex-start; }
+  .div-tab-desc{ margin-bottom:12px; }
+  .div-tab{ text-decoration:none; }
+  .div-tab *{ -webkit-tap-highlight-color: rgba(0,0,0,0.08); }
+  html,body{ overflow-x:hidden; }
+
+
 /* Compact info block: Commercial & Industrial summary */
 .ci-info-block {
   display: flex;
