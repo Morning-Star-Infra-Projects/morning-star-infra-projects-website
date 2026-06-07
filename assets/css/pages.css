@@ -527,6 +527,13 @@
   justify-content: flex-end
 }
 
+/* Make inner content non-interactive so the anchor handles clicks */
+.div-tab-content,
+.div-tab-title,
+.div-tab-desc {
+  pointer-events: none;
+}
+
 .div-tab-num {
   font-family: var(--font-mono);
   font-size: 11px;
@@ -552,22 +559,30 @@
   margin-bottom: 20px
 }
 
-.div-tab-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: var(--gold);
-  color: var(--primary);
-  font-size: 12px;
-  font-weight: 700;
-  padding: 10px 18px;
-  border-radius: 6px;
-  transition: var(--trans);
-  pointer-events: auto
+.div-tab-cta{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  background:var(--gold);
+  color:var(--primary);
+  font-size:12px;
+  font-weight:700;
+  padding:10px 18px;
+  border-radius:6px;
+  transition:var(--trans);
+  pointer-events:none;
 }
 
 .div-tab:hover .div-tab-cta {
   background: var(--white)
+}
+
+/* Ensure overlays/media do not intercept pointer events */
+.div-tab::before,
+.div-tab::after,
+.div-tab-bg,
+.div-tab-media{
+  pointer-events:none !important;
 }
 
 .div-tab:focus {

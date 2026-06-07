@@ -419,18 +419,26 @@
 <style>
   /* Force horizontal, no-wrap carousel behavior and override any grid rules */
   .div-tabs.divisions-grid{display:flex !important;flex-wrap:nowrap !important;gap:16px;overflow-x:auto;overflow-y:hidden;padding:12px 8px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;scroll-behavior:smooth;touch-action:pan-x;-webkit-user-select:none}
+
+  /* Desktop grid: show all cards without horizontal scroll */
+  @media (min-width:1024px){
+    .div-tabs.divisions-grid{display:grid !important;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px !important;overflow-x:visible !important;scroll-snap-type:none !important;touch-action:auto !important;padding:16px 0}
+    .div-tabs.divisions-grid .div-tab{flex:initial !important;min-width:0 !important;width:100%}
+  }
   .div-tabs.divisions-grid::-webkit-scrollbar{height:8px}
   .div-tabs.divisions-grid::-webkit-scrollbar-thumb{background:rgba(10,31,68,0.12);border-radius:999px}
-  .div-tabs.divisions-grid .div-tab{display:block;box-sizing:border-box;cursor:pointer;touch-action:manipulation;aspect-ratio:9/16;flex:0 0 clamp(220px,22vw,320px);min-width:160px;scroll-snap-align:start;border-radius:12px;overflow:hidden;box-shadow:0 8px 20px rgba(10,31,68,0.08);background:var(--white)}
+  .div-tabs.divisions-grid .div-tab{display:block;box-sizing:border-box;position:relative;cursor:pointer;touch-action:manipulation;aspect-ratio:9/16;flex:0 0 clamp(220px,22vw,320px);min-width:160px;scroll-snap-align:start;border-radius:12px;overflow:hidden;box-shadow:0 8px 20px rgba(10,31,68,0.08);background:var(--white)}
   .div-tabs.divisions-grid .div-tab-media,.div-tabs.divisions-grid .div-tab-media img,picture img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
   /* Ensure overlay and content accept pointer events so clicks register on the anchor */
   .div-tabs.divisions-grid .div-tab-content{pointer-events:auto}
+  .div-tabs.divisions-grid .div-tab:focus{outline:3px solid rgba(255,255,255,0.12);outline-offset:3px}
+  .div-tabs.divisions-grid .div-tab:focus,.div-tabs.divisions-grid .div-tab:hover{cursor:pointer}
   .div-tabs.divisions-grid .div-tab-content{position:absolute;left:10px;right:10px;bottom:10px;z-index:2;color:#fff;display:flex;flex-direction:column;gap:6px;align-items:flex-start;text-shadow:0 2px 6px rgba(0,0,0,.45);padding:8px;background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.35) 60%,rgba(0,0,0,.5) 100%);border-radius:8px}
   @media (min-width:1000px){ .div-tabs.divisions-grid{gap:24px;padding:16px 0} }
 </style>
 <div aria-roledescription="carousel" class="div-tabs divisions-grid" id="division-track" role="region">
 <!-- 01: Home Construction -->
-<a aria-label="Home Construction — engineering-led residential builds with transparent pricing" class="div-tab" href="/pages/home-construction.html" id="tab-residential">
+<a aria-label="Home Construction — engineering-led residential builds with transparent pricing" class="div-tab" href="./pages/home-construction.html" id="tab-residential">
 <picture class="div-tab-media" style="position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none">
 <source srcset="./assets/images/Home-Construction.webp" type="image/webp"/>
 <img alt="Home Construction Chennai" decoding="async" height="900" loading="lazy" src="./assets/images/Home-Construction.webp" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block" width="1600"/>
@@ -442,7 +450,7 @@
 </div>
 </a>
 <!-- 02: Commercial & Industrial (moved up) -->
-<a aria-label="Commercial and Industrial — PEB construction for SIPCOT industries and logistics" class="div-tab" href="/pages/commercial-and-industrial.html" id="tab-industrial">
+<a aria-label="Commercial and Industrial — PEB construction for SIPCOT industries and logistics" class="div-tab" href="./pages/commercial-and-industrial.html" id="tab-industrial">
 <picture class="div-tab-media" style="position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none">
 <source sizes="(max-width:720px) 240px, 33vw" srcset="./assets/images/commercial-industrial.webp 800w, ./assets/images/commercial-industrial.webp 1200w" type="image/webp"/>
 <img alt="Commercial Industrial Construction Chennai" decoding="async" height="900" loading="lazy" src="./assets/images/commercial-industrial.webp" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block" width="1600"/>
@@ -454,7 +462,7 @@
 </div>
 </a>
 <!-- 03: Interior Fitouts -->
-<a aria-label="Interior Fitouts — bespoke interiors from 3D design to in-house manufacturing" class="div-tab" href="/pages/interior-fitouts.html" id="tab-interiors">
+<a aria-label="Interior Fitouts — bespoke interiors from 3D design to in-house manufacturing" class="div-tab" href="./pages/interior-fitouts.html" id="tab-interiors">
 <picture class="div-tab-media" style="position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none">
 <source sizes="(max-width:720px) 240px, 33vw" srcset="./assets/images/hero-interiors-and-fitouts.webp 800w, ./assets/images/hero-interiors-and-fitouts.webp 1200w" type="image/webp"/>
 <img alt="Interior Fitouts Chennai" decoding="async" height="900" loading="lazy" src="./assets/images/hero-interiors-and-fitouts.webp" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block" width="1600"/>
@@ -466,7 +474,7 @@
 </div>
 </a>
 <!-- 04: Structural Repair -->
-<a aria-label="Structural Repair — NDT diagnostics, carbon FRP wrapping and lifespan extension" class="div-tab" href="/pages/structural-repair.html" id="tab-structural">
+<a aria-label="Structural Repair — NDT diagnostics, carbon FRP wrapping and lifespan extension" class="div-tab" href="./pages/structural-repair.html" id="tab-structural">
 <picture class="div-tab-media" style="position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none">
 <source sizes="(max-width:720px) 240px, 33vw" srcset="./assets/images/structural-repair-retrofitting.webp 800w, ./assets/images/structural-repair-retrofitting.webp 1200w" type="image/webp"/>
 <img alt="Structural Repair Chennai" decoding="async" height="900" loading="lazy" src="./assets/images/structural-repair-retrofitting.webp" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block" width="1600"/>

@@ -1,5 +1,5 @@
-const STATIC_CACHE = "morning-static-v7";
-const DYNAMIC_CACHE = "morning-dynamic-v7";
+const STATIC_CACHE = "morning-static-v8";
+const DYNAMIC_CACHE = "morning-dynamic-v8";
 
 const STATIC_ASSETS = [
   "/",
