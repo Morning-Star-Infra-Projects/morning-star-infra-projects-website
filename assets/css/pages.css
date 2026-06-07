@@ -717,34 +717,45 @@
    to avoid changing any desktop/tablet rules above. */
 @media (max-width:768px){
 
+  /* expose overflow so the horizontal carousel can scroll on small screens */
+  .div-tabs-wrapper{ overflow: visible !important; }
+
+
+  /* Use a horizontal carousel on mobile: show ~2 full cards + partial 3rd */
   .div-tabs.divisions-grid{
-    display:grid !important;
-    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
-    gap:10px !important;
-    overflow:visible !important;
-    scroll-snap-type:none !important;
-    padding:0 !important;
-    touch-action:auto !important;
+    display:flex !important;
+    flex-wrap:nowrap !important;
+    gap:12px !important;
+    overflow-x:auto !important;
+    overflow-y:hidden !important;
+    scroll-snap-type:x mandatory !important;
+    padding:12px 12px 18px !important;
+    -webkit-overflow-scrolling:touch !important;
+    touch-action:pan-x !important;
   }
 
+  /* Reduce card width so two cards fit and a partial third peeks in */
   .div-tabs.divisions-grid .div-tab{
-    flex:none !important;
-    width:100% !important;
-    aspect-ratio:0.72 !important;
-    min-height:240px !important;
-    border-radius:12px !important;
+    flex: 0 0 36% !important;
+    min-width: 36% !important;
+    max-width: 36% !important;
+    aspect-ratio: 9/16 !important;
+    min-height: 260px !important;
+    border-radius: 16px !important;
     display:block !important;
     box-sizing:border-box !important;
-    overflow:visible !important;
+    overflow:hidden !important;
+    scroll-snap-align:start !important;
   }
 
-  .div-tabs.divisions-grid .div-tab-content{ padding:14px !important; }
+  .div-tabs.divisions-grid .div-tab-content{ padding:16px !important; }
 
-  .div-tabs.divisions-grid .div-tab-title{ font-size:0.95rem !important; margin-bottom:8px !important; line-height:1.25 !important; }
+  /* Larger, more readable text on mobile cards */
+  .div-tabs.divisions-grid .div-tab-title{ font-size:1.15rem !important; margin-bottom:6px !important; line-height:1.2 !important; font-weight:800 !important }
 
-  .div-tabs.divisions-grid .div-tab-desc{ font-size:0.68rem !important; line-height:1.4 !important; margin-bottom:10px !important; }
+  .div-tabs.divisions-grid .div-tab-desc{ font-size:0.95rem !important; line-height:1.35 !important; margin-bottom:12px !important; }
 
-  .div-tabs.divisions-grid .div-tab-cta{ padding:7px 10px !important; font-size:0.65rem !important; }
+  .div-tabs.divisions-grid .div-tab-cta{ padding:10px 14px !important; font-size:0.95rem !important; background:rgba(255,255,255,0.08); border-radius:8px; }
 
   /* Ensure images preserve cover and placement; content overlays remain intact */
   .div-tabs.divisions-grid .div-tab-media img{ width:100% !important; height:100% !important; object-fit:cover !important; object-position:center bottom !important; }
