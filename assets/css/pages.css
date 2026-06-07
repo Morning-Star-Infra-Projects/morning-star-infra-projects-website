@@ -712,60 +712,41 @@
   .ci-info-desc { font-size: .9rem; }
 }
 
-/* === Mobile-only overrides (APPEND ONLY) ===
-   Purpose: strictly override division carousel to scaled 2x2 grid on mobile
-   Rules: desktop/tablet styles above remain unchanged. */
+/* Mobile division overrides: replace earlier mobile fragments and ensure
+   scaled desktop-like cards on small screens. Kept minimal and appended
+   to avoid changing any desktop/tablet rules above. */
 @media (max-width:768px){
 
-  /* Disable carousel behavior and force 2x2 grid */
   .div-tabs.divisions-grid{
     display:grid !important;
     grid-template-columns:repeat(2,minmax(0,1fr)) !important;
-    gap:12px !important;
+    gap:10px !important;
     overflow:visible !important;
-    overflow-x:visible !important;
     scroll-snap-type:none !important;
     padding:0 !important;
     touch-action:auto !important;
   }
 
-  /* Disable slider sizing; let height be content-driven but give a minimum */
   .div-tabs.divisions-grid .div-tab{
     flex:none !important;
     width:100% !important;
-    min-width:0 !important;
-    aspect-ratio:auto !important;
-    height:320px !important;
+    aspect-ratio:0.72 !important;
+    min-height:240px !important;
+    border-radius:12px !important;
     display:block !important;
     box-sizing:border-box !important;
     overflow:visible !important;
   }
 
-  /* Keep image/content proportions similar to desktop */
-  .div-tabs.divisions-grid .div-tab-media{
-    position:relative !important;
-    height:60% !important;
-  }
+  .div-tabs.divisions-grid .div-tab-content{ padding:14px !important; }
 
-  .div-tabs.divisions-grid .div-tab-content{
-    position:relative !important;
-    height:40% !important;
-    padding:12px !important;
-    display:flex !important;
-    flex-direction:column !important;
-    justify-content:center !important;
-    gap:8px !important;
-  }
+  .div-tabs.divisions-grid .div-tab-title{ font-size:0.95rem !important; margin-bottom:8px !important; line-height:1.25 !important; }
 
-  /* Ensure inner elements don't intercept clicks; anchor retains interactivity */
-  .div-tabs.divisions-grid .div-tab *{ pointer-events:none !important; }
-  .div-tabs.divisions-grid .div-tab, .div-tabs.divisions-grid .div-tab a{ pointer-events:auto !important; }
+  .div-tabs.divisions-grid .div-tab-desc{ font-size:0.68rem !important; line-height:1.4 !important; margin-bottom:10px !important; }
 
-  /* Prevent drag/scroll behavior on mobile cards */
-  .div-tabs.divisions-grid{ -ms-overflow-style: none !important; scrollbar-width: none !important; }
-  .div-tabs.divisions-grid{ overscroll-behavior-x: none !important; }
+  .div-tabs.divisions-grid .div-tab-cta{ padding:7px 10px !important; font-size:0.65rem !important; }
 
-  /* Safeguard: ensure images keep cover behavior and not distort */
+  /* Ensure images preserve cover and placement; content overlays remain intact */
   .div-tabs.divisions-grid .div-tab-media img{ width:100% !important; height:100% !important; object-fit:cover !important; object-position:center bottom !important; }
 
   /* Prevent horizontal page scroll */
