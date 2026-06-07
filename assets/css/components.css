@@ -203,11 +203,22 @@ main, .page { padding-top: var(--hdr-h, 76px); }
     align-items: center !important;
     gap: 8px !important;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) !important;
     padding: 8px 12px !important;
     box-sizing: border-box !important;
   }
   .call-tab .call-number { font-size: 0.95rem !important; }
+}
+
+@media (max-width: 768px) {
+  .call-tab {
+    width: auto !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+  }
 }
 
 
