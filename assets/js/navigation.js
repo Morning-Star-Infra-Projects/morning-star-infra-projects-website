@@ -142,6 +142,26 @@
     }
     highlightActiveLinks();
 
+    // Sync dropdown trigger aria-expanded with hover/focus state for accessibility
+    function syncDropdownAria(){
+      document.querySelectorAll('.nav-dropdown').forEach(function(dropdown){
+        var trigger = dropdown.querySelector('.nav-drop-trigger');
+        if(!trigger) return;
+
+        var setExpanded = function(value){
+          trigger.setAttribute('aria-expanded', value ? 'true' : 'false');
+        };
+
+        dropdown.addEventListener('mouseenter', function(){ setExpanded(true); });
+        dropdown.addEventListener('mouseleave', function(){ setExpanded(false); });
+        dropdown.addEventListener('focusin', function(){ setExpanded(true); });
+        dropdown.addEventListener('focusout', function(e){
+          if(!dropdown.contains(e.relatedTarget)) setExpanded(false);
+        });
+      });
+    }
+    syncDropdownAria();
+
     // Dynamic header height: set CSS variable --hdr-h
     function updateHeaderHeight(){
       var hdr = document.getElementById('site-header');
