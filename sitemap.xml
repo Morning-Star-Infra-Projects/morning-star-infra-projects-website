@@ -53,8 +53,6 @@
     <priority>0.70</priority>
   </url>
 
-  <!-- Blog -->
-  <url>
-  </url>
+  <!-- Blog (no separate blog index included) -->
 
 </urlset>

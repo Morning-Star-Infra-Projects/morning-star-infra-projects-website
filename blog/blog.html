@@ -10,6 +10,147 @@
   <link href="../assets/css/components.css" rel="stylesheet" />
   <link href="../assets/css/pages.css" rel="stylesheet" />
   <link href="../assets/css/blog.page.css" rel="stylesheet" />
+  <!-- Inline logo & footer lockup styles copied from homepage to ensure identical alignment -->
+  <style>
+    /* Merge logo + text left alignment */
+    #site-header .hdr-left.hdr-brand{display:flex;align-items:center;gap:14px}
+    #site-header .logo-link{display:flex;align-items:center;gap:12px;text-decoration:none}
+    #site-header .logo-text{text-align:left;line-height:1}
+    /* Logo lockup: keep main and subtitle perfectly aligned by width and tracking.
+       We compute the exact subtitle letter-spacing at runtime so both header and
+       footer lockups behave identically and remain responsive. */
+    /* Logo lockup: prefer tracking (letter-spacing) + small controlled word-spacing
+       over justification. Make the lockup width follow the main title so the
+       subtitle starts/ends directly under the main wordmark. */
+    #site-header .logo-text, #site-footer .logo-text{
+      display:inline-flex;flex-direction:column;align-items:flex-start;/* size to content */
+      width:max-content;
+    }
+    #site-header .logo-text .logo-main, #site-footer .logo-text .logo-main,
+    #site-header .logo-text .logo-sub, #site-footer .logo-text .logo-sub{display:inline-block;white-space:nowrap}
+    #site-header .logo-text .logo-sub, #site-footer .logo-text .logo-sub{
+      /* Treat subtitle as a single inline text element and force our
+         tracking/width to override component rules and runtime measurement. */
+      overflow:visible;
+      margin-top:4px;
+      width:100% !important; /* ensure subtitle spans the same visual width */
+      letter-spacing:0.65em !important; /* increased per final alignment attempt */
+      word-spacing:0.16em !important;   /* small extra gap between words */
+      -webkit-font-smoothing:antialiased;
+      box-sizing:border-box;
+      display:inline-block !important;
+    }
+    /* Slightly reduced tracking on small screens for legibility and tighter fit
+       so the subtitle width aligns under the main wordmark on mobile. */
+    @media (max-width:720px){
+      #site-header .logo-text .logo-sub, #site-footer .logo-text .logo-sub{
+        /* Tighten tracking on mobile so subtitle fits exactly under MORNING STAR */
+        letter-spacing:0.30em !important;
+        word-spacing:0.08em !important;
+      }
+      /* Use a monospace stack for subtitle to ensure even character widths for precise alignment */
+      #site-header .logo-text .logo-sub, #site-footer .logo-text .logo-sub{
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', 'Courier New', monospace !important;
+        font-variant-ligatures: none !important;
+      }
+    }
+    #site-header .logo-icon img{height:56px;max-height:64px;width:auto;display:block}
+    @media (max-width:720px){#site-header .logo-icon img{height:44px}}
+    /* Footer: left-align brand logo and description */
+    :root{--footer-brand-w:420px}
+    #site-footer .footer-brand{display:block;text-align:left;max-width:var(--footer-brand-w);margin-left:0;padding-left:0}
+    #site-footer .footer-brand .logo-link{display:flex;align-items:center;gap:12px;text-decoration:none}
+    /* slightly reduce footer logo size to balance with text */
+    #site-footer .footer-brand .logo-icon img{height:52px;max-height:56px;width:auto;display:block}
+    #site-footer .footer-brand .logo-text{line-height:1;text-align:left}
+    /* match paragraph width to the brand block and justify both sides */
+    #site-footer .footer-brand p{margin-top:12px;text-align:justify;color:var(--white);max-width:100%;font-size:15px;line-height:1.5}
+    @media (max-width:720px){#site-footer .footer-brand .logo-icon img{height:44px}}
+  </style>
+
+  <style>
+  /* Mobile / responsive fixes to prevent layout shifts and improve touch targets */
+  @media (max-width:768px){
+    .hero-content{
+      padding:24px 20px !important;
+      margin-top:0 !important;
+    }
+
+    .hero-btns{display:flex;flex-direction:column;gap:10px;width:100%}
+    .hero-btns a, .hero-btns button{width:100%;text-align:center}
+
+    #site-footer .footer-brand p{font-size:14px;line-height:1.8;text-align:left}
+
+    #site-footer .footer-grid{grid-template-columns:1fr;gap:24px}
+
+    :root{--footer-brand-w:100%}
+
+    .footer-social a{width:40px;height:40px;display:inline-flex;align-items:center;justify-content:center}
+
+    .fab{width:52px;height:52px;bottom:20px}
+    .fab-call{bottom:80px}
+
+    .call-tab{width:90%;max-width:320px;left:50%;transform:translateX(-50%)}
+
+    /* Make contact text wrap and align for multi-line items */
+    #site-footer .contact-item{word-break:break-word;align-items:flex-start}
+    #site-footer .contact-item .contact-icon{margin-top:4px}
+
+    /* Compact Quick Links and Our Divisions on mobile only; keep Contact Us unchanged */
+    /* Target .footer-quick and the third column (Our Divisions) specifically */
+    #site-footer .footer-quick .footer-links,
+    #site-footer .footer-grid > div:nth-child(3) .footer-links {
+      gap:4px !important;
+    }
+
+    #site-footer .footer-quick .footer-links li,
+    #site-footer .footer-grid > div:nth-child(3) .footer-links li{
+      margin:0 !important;
+      padding:0 !important;
+    }
+
+    #site-footer .footer-quick .footer-links a,
+    #site-footer .footer-grid > div:nth-child(3) .footer-links a{
+      display:block;
+      padding:4px 0 !important;
+      line-height:1.3 !important;
+    }
+
+    /* Reduce the column-level gap only for the two link columns */
+    #site-footer .footer-quick,
+    #site-footer .footer-grid > div:nth-child(3){
+      gap:6px !important;
+    }
+  }
+
+  @media (max-width:480px){
+    .logo-sub{letter-spacing:0.15em !important}
+  }
+  </style>
+
+  <style>
+  /* Footer description: align left & right edges to the company name block on desktop.
+     We use CSS vars written by the logo measurement script to set max-width and offset. */
+  #site-footer .footer-brand p{margin-top:12px;color:var(--white);font-size:15px;line-height:1.5}
+
+  @media (min-width:1000px){
+    #site-footer .footer-brand p{
+      text-align:justify;
+      text-align-last:left;
+      text-indent:2em;
+      /* width and left offset controlled by CSS vars: make paragraph fill the
+         available brand column width while preserving the current start offset */
+      /* width and left offset controlled by CSS vars: make paragraph fill the
+        available brand column width while preserving the current start offset */
+      max-width:calc(var(--footer-brand-w,420px) - var(--logo-paragraph-offset,0px));
+      /* explicitly set width so right edge aligns with company-name block */
+      width:calc(var(--footer-brand-w,420px) - var(--logo-paragraph-offset,0px));
+      /* paragraph start aligned to logo-icon left edge (set by JS) */
+      margin-left:calc(var(--logo-paragraph-offset,0px) - 30px);
+      box-sizing:border-box;
+    }
+  }
+  </style>
 </head>
 <body>
 <!-- include header component -->
@@ -51,9 +192,9 @@
   </div>
 </header>
 
-<main class="container" id="blog-index" style="padding-top:calc(var(--hdr-h) + 28px)">
+<main class="container" id="blog-index">
   <h1>Morning Star Blog — Construction Guides & Case Studies</h1>
-  <p>Practical advice, case studies and industry insights from Morning Star Infra Projects.</p>
+  <p class="lead">Practical advice, case studies and industry insights from Morning Star Infra Projects.</p>
 
   <section>
     <h2>Explore Our Services</h2>
@@ -442,12 +583,12 @@ Registered Structural Engineers
 </footer>
 <!-- footer: end -->
 </body>
+<script defer src="../assets/js/logo-lockup.js"></script>
 <script defer src="../assets/js/main.min.js"></script>
 <script defer src="../assets/js/navigation.js"></script>
 <script defer src="../assets/js/animations.js"></script>
 <script defer src="../assets/js/divisions-fix.js"></script>
 <script defer src="https://unpkg.com/lucide@latest"></script>
-</html>
 </html>
 
 

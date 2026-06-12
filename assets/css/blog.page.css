@@ -1,6 +1,6 @@
 /* blog.page.css - minimal, site-consistent styles for blog index and FAQ */
 :root{--blog-gap:24px}
-#blog-index{max-width:1200px;margin:0 auto;padding:24px}
+#blog-index{max-width:1200px;margin:0 auto;padding:0}
 #blog-index h1{font-family:var(--font-display);font-size:2rem;margin-bottom:8px}
 #blog-index .lead{font-size:1rem;color:var(--text);margin-bottom:12px}
 .blog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:var(--blog-gap);margin-top:20px}

@@ -1908,7 +1908,6 @@ body.menu-open {
 /* Ensure main content respects header height variable */
 main, .page { padding-top: var(--hdr-h, 84px); }
 
-<<<<<<< HEAD
 /* ==========================
   HEADER
 ========================== */
@@ -1931,6 +1930,10 @@ main, .page { padding-top: var(--hdr-h, 84px); }
  --font-display:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
  --font-mono:monospace;
 }
+
+/* Footer spacing - conservative safe-area handling */
+#site-footer { padding-bottom: calc(32px + env(safe-area-inset-bottom, 0px)); background: var(--white); }
+#site-footer .footer-bottom { display:flex; justify-content:space-between; align-items:center; gap:12px; padding-top:18px; padding-bottom:0; }
 
 #site-header{
 position:fixed;
