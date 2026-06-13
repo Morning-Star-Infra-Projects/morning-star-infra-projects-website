@@ -1,0 +1,154 @@
+# Apache/mod_rewrite configuration for Morning Star Infra Projects
+# Performance, SEO, and Security Optimizations
+
+# ============================================================================
+# MOD_REWRITE: Enable rewrite engine
+# ============================================================================
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # =========================================================================
+  # 301 PERMANENT REDIRECTS: Replace meta http-equiv="refresh"
+  # =========================================================================
+  # These redirects improve SEO by passing link authority (PageRank)
+  # and are much faster than client-side meta refresh redirects
+  
+  # Structural repair service redirect
+  RewriteRule ^structural/?$ /pages/structural-repair.html [R=301,L]
+  
+  # Residential/home construction redirect
+  RewriteRule ^residential/?$ /pages/home-construction.html [R=301,L]
+  
+  # Interior fitouts redirect
+  RewriteRule ^interiors/?$ /pages/interior-fitouts.html [R=301,L]
+  
+  # Industrial/commercial redirect
+  RewriteRule ^industrial/?$ /pages/commercial-and-industrial.html [R=301,L]
+  
+  # Blog redirect
+  RewriteRule ^pages/blog\.html$ /blog/blog.html [R=301,L]
+
+</IfModule>
+
+# ============================================================================
+# SECURITY HEADERS: Protect against common web vulnerabilities
+# ============================================================================
+
+# Content Security Policy - Strict but allows necessary external resources
+# Prevents XSS attacks, unsafe inline scripts, and unauthorized resource loading
+<IfModule mod_headers.c>
+  Header set Content-Security-Policy "default-src 'self'; script-src 'self' unpkg.com https://maps.googleapis.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: blob:; font-src 'self' data: https:; connect-src 'self' https:; frame-src 'self' https://www.google.com; object-src 'none'; base-uri 'self'; form-action 'self';"
+
+  # Prevent MIME-type sniffing (forces browser to respect declared Content-Type)
+  Header set X-Content-Type-Options "nosniff"
+
+  # Clickjacking protection (prevents site from being framed in iframes)
+  Header set X-Frame-Options "SAMEORIGIN"
+
+  # Referrer policy (controls how much referrer info is sent to external sites)
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+
+  # Enable HSTS (HTTP Strict Transport Security) - force HTTPS connections
+  # Note: Only enable after verifying SSL certificate works perfectly
+  # max-age: 1 year (31536000 seconds), includeSubDomains for all subdomains
+  Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+  # Permissions policy - restrict access to browser features
+  Header set Permissions-Policy "accelerometer=(), camera=(), geolocation=(self), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()"
+</IfModule>
+
+# ============================================================================
+# COMPRESSION: Reduce file sizes for faster transmission
+# ============================================================================
+
+# Enable gzip compression for text-based resources
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json application/xml+rss
+  
+  # Exclude images, video, archives
+  SetEnvIfNoCase Request_URI "\.(?:gif|jpg|jpeg|png|webp|gz|zip|exe|dmg|swf)$" no-gzip dont-vary
+  
+  # Compression level (1-9, where 9 is maximum compression)
+  DeflateCompressionLevel 6
+</IfModule>
+
+# ============================================================================
+# CACHING: Browser caching for static assets
+# ============================================================================
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  
+  # Images: 1 month
+  ExpiresByType image/gif "access plus 1 month"
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/webp "access plus 1 month"
+  
+  # CSS & JavaScript: 1 month (versioning handles cache busting)
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+  
+  # Fonts: 1 year (safe since they rarely change)
+  ExpiresByType font/ttf "access plus 1 year"
+  ExpiresByType font/otf "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  
+  # JSON files: 1 day
+  ExpiresByType application/json "access plus 1 day"
+  
+  # HTML: 1 hour (frequently changing content)
+  ExpiresByType text/html "access plus 1 hour"
+  
+  # Default: 1 week
+  ExpiresDefault "access plus 1 week"
+</IfModule>
+
+# ============================================================================
+# ETAG HANDLING: Reduce bandwidth by leveraging conditional requests
+# ============================================================================
+
+# Enable Apache's built-in ETag for efficient cache revalidation
+<IfModule mod_headers.c>
+  Header edit Cache-Control "s/max-age=([0-9]+)/$1, must-revalidate/"
+</IfModule>
+
+# ============================================================================
+# CHARSET & ENCODING: Explicit UTF-8 declaration
+# ============================================================================
+
+AddDefaultCharset utf-8
+
+# Ensure HTML files are served with UTF-8 encoding
+<FilesMatch "\.html?$">
+  AddCharset utf-8 .html
+</FilesMatch>
+
+# ============================================================================
+# PERFORMANCE: Disable unnecessary ETags
+# ============================================================================
+
+<IfModule mod_headers.c>
+  # Optional: disable ETags on static files (reduce header size)
+  # Uncomment if using separate CDN for static assets
+  # FileETag none
+</IfModule>
+
+# ============================================================================
+# OPTIMIZE: Disable directory listing
+# ============================================================================
+
+Options -Indexes
+
+# ============================================================================
+# NOTES FOR DEPLOYMENT
+# ============================================================================
+# 1. Upload this .htaccess file to your root directory (/public_html/)
+# 2. Verify that mod_rewrite, mod_deflate, mod_expires, and mod_headers are enabled on your host
+# 3. Test redirects: https://www.morningstarinfra.com/structural/ should redirect to /pages/structural-repair.html
+# 4. Test security headers using: https://securityheaders.com/?q=morningstarinfra.com
+# 5. Test SSL: https://www.ssllabs.com/ssltest/
+# ============================================================================
