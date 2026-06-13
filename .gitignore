@@ -29,6 +29,9 @@ __pycache__/
 .env
 .env.*
 
+# Generated image cache
+assets/images/optimized/optimized/
+
 # Build folders
 dist/
 build/
