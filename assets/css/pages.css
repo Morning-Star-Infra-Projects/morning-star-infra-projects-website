@@ -6,7 +6,8 @@
 /* HERO VARIANTS */
 .hero-bg {
   position: absolute;
-  top: 0;
+   background: var(--white);
+}
   left: 0;
   right: 0;
   bottom: 0;
@@ -15,6 +16,32 @@
   height: 100%;
   background: none
 }
+
+/* Page-specific safety overrides: ensure hero background and content layer correctly
+   This fixes pages that include full-bleed picture elements positioned absolute
+   (e.g., pages/commercial-and-industrial.html). These rules are intentionally
+   minimal and defensive so they don't change visual design on other pages. */
+.hero {
+  position: relative; /* ensure absolutely positioned media is contained */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero .hero-media,
+.hero picture[aria-hidden],
+.hero picture {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
 
 .hero-bg::after {
   content: '';
@@ -609,6 +636,7 @@
 }
 
 @media (max-width: 600px) {
+
   .construction-packages {
     grid-template-columns: 1fr;
     gap: 16px;
@@ -648,24 +676,25 @@
   .div-tab{ text-decoration:none; }
   .div-tab *{ -webkit-tap-highlight-color: rgba(0,0,0,0.08); }
   html,body{ overflow-x:hidden; }
-
+    html,body{ overflow-x:hidden; }
+  }
 
 /* Compact info block: Commercial & Industrial summary */
-.ci-info-block {
+.page-commercial-industrial .ci-info-block {
   display: flex;
   justify-content: center;
   padding: 80px 16px; /* generous vertical spacing: 60-90px */
   background: var(--white);
 }
 
-.ci-info-inner {
+.page-commercial-industrial .ci-info-inner {
   max-width: 750px; /* fit in 600-750px as requested */
   width: min(94%, 750px);
   margin: 0 auto;
   text-align: center;
 }
 
-.ci-info-accent {
+.page-commercial-industrial .ci-info-accent {
   width: 64px;
   height: 6px;
   background: var(--gold);
@@ -674,7 +703,7 @@
   opacity: .98;
 }
 
-.ci-info-title {
+.page-commercial-industrial .ci-info-title {
   font-family: var(--font-display, 'Inter', sans-serif);
   font-size: clamp(1.9rem, 2.6vw, 2.6rem); /* strong visual hierarchy */
   font-weight: 900;
@@ -683,14 +712,14 @@
   line-height: 1.04;
 }
 
-.ci-info-sub {
+.page-commercial-industrial .ci-info-sub {
   font-size: clamp(1.05rem, 1.5vw, 1.2rem);
   font-weight: 600;
   color: var(--primary-d);
   margin: 0 0 14px;
 }
 
-.ci-info-desc {
+.page-commercial-industrial .ci-info-desc {
   font-size: 1rem;
   color: rgba(10,31,68,0.72);
   max-width: 700px;
@@ -699,17 +728,17 @@
 }
 
 @media (max-width: 900px) {
-  .ci-info-block { padding: 56px 14px; }
-  .ci-info-title { font-size: clamp(1.4rem, 3vw, 2rem); }
-  .ci-info-sub { font-size: 1rem; }
+  .page-commercial-industrial .ci-info-block { padding: 56px 14px; }
+  .page-commercial-industrial .ci-info-title { font-size: clamp(1.4rem, 3vw, 2rem); }
+  .page-commercial-industrial .ci-info-sub { font-size: 1rem; }
 }
 
 @media (max-width: 480px) {
-  .ci-info-block { padding: 36px 12px; }
-  .ci-info-accent { width: 40px; height: 4px; }
-  .ci-info-title { font-size: 1.35rem; }
-  .ci-info-sub { font-size: .95rem; }
-  .ci-info-desc { font-size: .9rem; }
+  .page-commercial-industrial .ci-info-block { padding: 36px 12px; }
+  .page-commercial-industrial .ci-info-accent { width: 40px; height: 4px; }
+  .page-commercial-industrial .ci-info-title { font-size: 1.35rem; }
+  .page-commercial-industrial .ci-info-sub { font-size: .95rem; }
+  .page-commercial-industrial .ci-info-desc { font-size: .9rem; }
 }
 
 /* Mobile division overrides: replace earlier mobile fragments and ensure
@@ -767,14 +796,14 @@
 }
 
 /* Variants under the info block (muted, stacked options) */
-.ci-info-variants {
+.page-commercial-industrial .ci-info-variants {
   margin-top: 20px;
   display: grid;
   gap: 12px;
   justify-items: center;
 }
 
-.ci-variant {
+.page-commercial-industrial .ci-variant {
   max-width: 680px;
   width: 100%;
   text-align: center;
@@ -782,21 +811,21 @@
   padding-top: 12px;
 }
 
-.ci-variant-title {
+.page-commercial-industrial .ci-variant-title {
   font-size: .95rem;
   font-weight: 700;
   color: var(--navy);
   margin: 0 0 6px;
 }
 
-.ci-variant-text {
+.page-commercial-industrial .ci-variant-text {
   font-size: .95rem;
   color: rgba(10,31,68,0.72);
   margin: 0;
   line-height: 1.45;
 }
 
-.ci-variant-text.highlighted {
+.page-commercial-industrial .ci-variant-text.highlighted {
   font-weight: 700;
   font-size: 1rem;
   color: var(--navy);
@@ -807,51 +836,51 @@
 }
 
 @media (max-width: 680px) {
-  .ci-variant { padding-top: 10px; }
-  .ci-variant-title { font-size: .92rem; }
-  .ci-variant-text { font-size: .92rem; }
+  .page-commercial-industrial .ci-variant { padding-top: 10px; }
+  .page-commercial-industrial .ci-variant-title { font-size: .92rem; }
+  .page-commercial-industrial .ci-variant-text { font-size: .92rem; }
 }
 /* Desktop: ensure CI info block has its own layout and spacing */
 @media (min-width: 721px) {
-  .ci-info-block {
+  .page-commercial-industrial .ci-info-block {
     display: flex;
     justify-content: center;
     padding: 80px 24px;
     background: var(--white);
   }
 
-  .ci-info-inner {
+  .page-commercial-industrial .ci-info-inner {
     max-width: 900px;
     width: 100%;
     margin: 0 auto;
     text-align: center;
   }
 
-  .ci-info-accent {
+  .page-commercial-industrial .ci-info-accent {
     width: 84px;
     height: 8px;
     margin: 0 auto 20px;
     border-radius: 6px;
   }
 
-  .ci-info-title {
+  .page-commercial-industrial .ci-info-title {
     font-size: 2.6rem;
     line-height: 1.04;
     margin-bottom: 18px;
   }
 
-  .ci-info-sub {
+  .page-commercial-industrial .ci-info-sub {
     font-size: 1.15rem;
     margin-bottom: 12px;
   }
 
-  .ci-info-desc {
+  .page-commercial-industrial .ci-info-desc {
     font-size: 1.05rem;
     max-width: 840px;
     margin: 0 auto 10px;
   }
 
-  .ci-info-variants {
+  .page-commercial-industrial .ci-info-variants {
     margin-top: 24px;
     display: flex;
     gap: 16px;
@@ -859,7 +888,7 @@
     align-items: stretch;
   }
 
-  .ci-variant {
+  .page-commercial-industrial .ci-variant {
     max-width: 360px;
     width: 100%;
     text-align: center;
@@ -871,16 +900,16 @@
     background: rgba(247,189,16,0.02);
   }
 
-  .ci-variant-text {
+  .page-commercial-industrial .ci-variant-text {
     font-size: 1rem;
     line-height: 1.4;
   }
 
-  .ci-variant-text.highlighted {
+  .page-commercial-industrial .ci-variant-text.highlighted {
     padding: 12px 16px;
   }
 }
-  .div-tabs {
+  .page-commercial-industrial .div-tabs {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 14px !important;
@@ -890,7 +919,7 @@
     overflow: visible !important;
   }
 
-  .div-tabs .div-tab {
+  .page-commercial-industrial .div-tabs .div-tab {
     flex: none !important;
     width: 100% !important;
     aspect-ratio: 4/3 !important;
@@ -902,13 +931,13 @@
     transition: transform .25s ease, box-shadow .25s ease;
   }
 
-  .div-tab-media,
-  .div-tab-bg,
-  .div-tab::after {
+  .page-commercial-industrial .div-tab-media,
+  .page-commercial-industrial .div-tab-bg,
+  .page-commercial-industrial .div-tab::after {
     border-radius: 12px;
   }
 
-  .div-tab-media {
+  .page-commercial-industrial .div-tab-media {
     position: absolute;
     inset: 0;
     z-index: 0;
@@ -1981,12 +2010,6 @@ main[style] {
 }
 
 /* Blog styles removed; use dedicated blog.page.css for blog index and articles */
-  height: 420px;
-  max-height: 60vh;
-  position: relative;
-  overflow: hidden;
-  background: var(--bg)
-}
 
 .map-wrap {
   position: relative;
@@ -2683,6 +2706,8 @@ main[style] {
     gap: 8px !important;
   }
 
+}
+
 @media (max-width: 480px) {
   .hero-collage-left .hero-title[style] {
     font-size: clamp(1.4rem, 5.5vw, 2.2rem) !important;
@@ -2693,7 +2718,7 @@ main[style] {
    CI PRICING BANNER — Civil & PEB / RCC cost-per-sq-ft design
    ═══════════════════════════════════════════════════════════════════ */
 
-.ci-pricing-banner {
+.page-commercial-industrial .ci-pricing-banner {
   width: 100%;
   background: #fff;
   border-top: 4px solid #c8102e;
@@ -2703,21 +2728,21 @@ main[style] {
 }
 
 /* ── Each pricing row ─────────────────────────────────────────────── */
-.ci-row {
+.page-commercial-industrial .ci-row {
   position: relative;
   background: #f7f8fa;
 }
 
-.ci-row--peb {
+.page-commercial-industrial .ci-row--peb {
   background: #f0f2f6;
 }
 
-.ci-row--rcc {
+.page-commercial-industrial .ci-row--rcc {
   background: #fff;
 }
 
 /* "Civil & PEB" floating label top-right of row-1 */
-.ci-row-label {
+.page-commercial-industrial .ci-row-label {
   position: absolute;
   top: 0;
   right: 0;
@@ -2736,27 +2761,27 @@ main[style] {
 }
 
 /* Row inner: photo + price side-by-side */
-.ci-row-inner {
+.page-commercial-industrial .ci-row-inner {
   display: grid;
   grid-template-columns: 55% 45%;
   min-height: 240px;
 }
 
 /* Photo panel */
-.ci-photo-panel {
+.page-commercial-industrial .ci-photo-panel {
   position: relative;
   overflow: hidden;
   min-height: 220px;
 }
 
-.ci-photo-panel picture {
+.page-commercial-industrial .ci-photo-panel picture {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
 }
 
-.ci-photo-panel img {
+.page-commercial-industrial .ci-photo-panel img {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -2766,11 +2791,11 @@ main[style] {
   transition: transform .5s ease;
 }
 
-.ci-row:hover .ci-photo-panel img {
+.page-commercial-industrial .ci-row:hover .ci-photo-panel img {
   transform: scale(1.04);
 }
 
-.ci-photo-overlay {
+.page-commercial-industrial .ci-photo-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(90deg, rgba(0, 0, 0, .22) 0%, rgba(0, 0, 0, .04) 100%);
@@ -2779,7 +2804,7 @@ main[style] {
 }
 
 /* Price panel */
-.ci-price-panel {
+.page-commercial-industrial .ci-price-panel {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2789,12 +2814,12 @@ main[style] {
   background: #fff;
 }
 
-.ci-row--peb .ci-price-panel {
+.page-commercial-industrial .ci-row--peb .ci-price-panel {
   background: #f9f9f9;
 }
 
 /* Yellow price badge */
-.ci-price-badge {
+.page-commercial-industrial .ci-price-badge {
   background: #f7bd10;
   border-radius: 14px;
   padding: 16px 28px 12px;
@@ -2804,12 +2829,12 @@ main[style] {
   transition: transform .25s ease, box-shadow .25s ease;
 }
 
-.ci-row:hover .ci-price-badge {
+.page-commercial-industrial .ci-row:hover .ci-price-badge {
   transform: translateY(-4px);
   box-shadow: 0 12px 36px rgba(247, 189, 16, .6);
 }
 
-.ci-price-value {
+.page-commercial-industrial .ci-price-value {
   font-family: var(--font-display, 'Inter', sans-serif);
   font-size: 1.15rem;
   font-weight: 800;
@@ -2818,7 +2843,7 @@ main[style] {
   letter-spacing: -.01em;
 }
 
-.ci-price-value span {
+.page-commercial-industrial .ci-price-value span {
   font-size: 2.8rem;
   font-weight: 900;
   color: #0a1f44;
@@ -2827,28 +2852,28 @@ main[style] {
 }
 
 /* Meta info below badge */
-.ci-price-meta {
+.page-commercial-industrial .ci-price-meta {
   text-align: center;
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
 
-.ci-price-label {
+.page-commercial-industrial .ci-price-label {
   font-size: 1.05rem;
   font-weight: 800;
   color: #0a1f44;
   letter-spacing: .02em;
 }
 
-.ci-price-delivery {
+.page-commercial-industrial .ci-price-delivery {
   font-size: .84rem;
   font-weight: 700;
   color: #c8102e;
   letter-spacing: .01em;
 }
 
-.ci-price-note {
+.page-commercial-industrial .ci-price-note {
   font-size: .73rem;
   color: #777;
   font-style: italic;
@@ -2856,7 +2881,7 @@ main[style] {
 }
 
 /* ── Red category banner ─────────────────────────────────────────── */
-.ci-category-banner {
+.page-commercial-industrial .ci-category-banner {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2869,13 +2894,13 @@ main[style] {
   text-transform: uppercase;
 }
 
-.ci-category-banner--red {
+.page-commercial-industrial .ci-category-banner--red {
   background: #c8102e;
   color: #f7f0c0;
   text-shadow: 0 1px 3px rgba(0, 0, 0, .28);
 }
 
-.ci-sep {
+.page-commercial-industrial .ci-sep {
   color: rgba(247, 240, 192, .55);
   font-weight: 400;
   font-size: 1.1em;
@@ -2883,7 +2908,7 @@ main[style] {
 }
 
 /* ── ISO certification bar ───────────────────────────────────────── */
-.ci-iso-bar {
+.page-commercial-industrial .ci-iso-bar {
   background: #fff;
   border-top: 2px solid #c8102e;
   color: #0a1f44;
@@ -2897,33 +2922,33 @@ main[style] {
 
 /* ── Responsive ──────────────────────────────────────────────────── */
 @media (max-width: 900px) {
-  .ci-row-inner {
+  .page-commercial-industrial .ci-row-inner {
     grid-template-columns: 50% 50%;
     min-height: 200px;
   }
 
-  .ci-price-value span {
+  .page-commercial-industrial .ci-price-value span {
     font-size: 2.2rem;
   }
 
-  .ci-price-badge {
+  .page-commercial-industrial .ci-price-badge {
     min-width: 155px;
     padding: 12px 18px 10px;
   }
 }
 
 @media (max-width: 680px) {
-  .ci-row-inner {
+  .page-commercial-industrial .ci-row-inner {
     grid-template-columns: 1fr;
     min-height: auto;
   }
 
-  .ci-photo-panel {
+  .page-commercial-industrial .ci-photo-panel {
     min-height: 190px;
     height: 190px;
   }
 
-  .ci-price-panel {
+  .page-commercial-industrial .ci-price-panel {
     padding: 22px 16px;
     flex-direction: row;
     justify-content: center;
@@ -2931,41 +2956,41 @@ main[style] {
     flex-wrap: wrap;
   }
 
-  .ci-price-meta {
+  .page-commercial-industrial .ci-price-meta {
     text-align: left;
   }
 
-  .ci-category-banner {
+  .page-commercial-industrial .ci-category-banner {
     font-size: clamp(.88rem, 4vw, 1.15rem);
     gap: 6px;
     padding: 12px 16px;
   }
 
-  .ci-row-label {
+  .page-commercial-industrial .ci-row-label {
     font-size: .7rem;
     padding: 5px 12px 5px 10px;
   }
 
-  .ci-iso-bar {
+  .page-commercial-industrial .ci-iso-bar {
     font-size: .72rem;
   }
 }
 
 @media (max-width: 400px) {
-  .ci-price-value span {
+  .page-commercial-industrial .ci-price-value span {
     font-size: 1.85rem;
   }
 
-  .ci-price-label {
+  .page-commercial-industrial .ci-price-label {
     font-size: .9rem;
   }
 
-  .ci-price-panel {
+  .page-commercial-industrial .ci-price-panel {
     gap: 12px;
     padding: 16px 12px;
   }
 
-  .ci-category-banner {
+  .page-commercial-industrial .ci-category-banner {
     font-size: .82rem;
     gap: 4px;
     padding: 10px 12px;
@@ -3384,3 +3409,190 @@ html, body {
 * {
   min-width: 0; /* Prevents flex/grid children from overflowing */
 }
+
+/* Page-specific overrides for pages/commercial-and-industrial.html
+   Scoped via `.page-commercial-industrial` body class to avoid affecting
+   other pages. These tweaks adjust grid columns, image min-heights and
+   badge sizing for better alignment on desktop and mobile. */
+.page-commercial-industrial .ci-row-inner {
+  grid-template-columns: 55% 45%;
+}
+.page-commercial-industrial .ci-photo-panel {
+  min-height: 240px;
+}
+.page-commercial-industrial .ci-price-panel {
+  padding: 36px 24px;
+}
+.page-commercial-industrial .ci-price-badge {
+  min-width: 180px;
+}
+
+@media (max-width: 900px) {
+  .page-commercial-industrial .ci-row-inner { grid-template-columns: 50% 50%; }
+  .page-commercial-industrial .ci-photo-panel { min-height: 200px; }
+  .page-commercial-industrial .ci-price-badge { min-width: 155px; }
+}
+
+@media (max-width: 680px) {
+  .page-commercial-industrial .ci-row-inner { grid-template-columns: 1fr; }
+  .page-commercial-industrial .ci-photo-panel { min-height: 190px; height:190px; }
+  .page-commercial-industrial .ci-price-panel { padding: 22px 16px; flex-direction: row; justify-content: center; gap: 18px; }
+  .page-commercial-industrial .ci-price-badge { min-width: 140px; }
+}
+
+/* Additional desktop refinements for better visual balance on large screens */
+@media (min-width: 1100px) {
+  .page-commercial-industrial .ci-row-inner {
+    grid-template-columns: 58% 42%;
+    min-height: 320px;
+  }
+
+  .page-commercial-industrial .ci-photo-panel {
+    min-height: 340px;
+  }
+
+  .page-commercial-industrial .ci-price-panel {
+    padding: 48px 36px;
+    align-items: center;
+  }
+
+  .page-commercial-industrial .ci-price-badge {
+    min-width: 220px;
+  }
+
+  /* Move floating label slightly inward to avoid clipping on small-height rows */
+  .page-commercial-industrial .ci-row-label {
+    top: 12px;
+    right: 12px;
+  }
+
+  .page-commercial-industrial .ci-price-value span {
+    font-size: 3.2rem;
+  }
+
+  /* Slightly increase info block width on wide viewports */
+  .page-commercial-industrial .ci-info-inner { max-width: 1100px; }
+}
+
+/* ========== CI PRICING DESKTOP POLISH ========== */
+/* Center pricing content and limit width so rows don't span ultra-wide viewports */
+.page-commercial-industrial .ci-pricing-container {
+  /* Make CI pricing section span full viewport width (no centering cap) */
+  width: 100%;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important; /* remove inner gutters so section aligns edge-to-edge */
+  box-sizing: border-box;
+}
+
+/* Ensure both photo and price panels always match the row height */
+.page-commercial-industrial .ci-row-inner {
+  align-items: stretch; /* grid children stretch to same height */
+}
+.page-commercial-industrial .ci-photo-panel,
+.page-commercial-industrial .ci-price-panel {
+  align-self: stretch;
+  height: 100%;
+}
+
+/* Make price panel a full-height flex column so content centers neatly */
+.page-commercial-industrial .ci-price-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Integrate the floating label into the flow (less sticker-like on large screens) */
+.page-commercial-industrial .ci-row-label {
+  position: relative;
+  top: auto;
+  right: auto;
+  margin: 12px 12px 0 0;
+  border-bottom-left-radius: 6px;
+}
+
+/* Category banner: make it feel more substantial on desktop */
+.page-commercial-industrial .ci-category-banner {
+  padding: 20px 28px;
+  gap: 14px;
+  font-weight: 900;
+}
+
+/* Desktop badge and type scale-up for better visual hierarchy */
+@media (min-width: 1100px) {
+  .page-commercial-industrial .ci-price-badge {
+    padding: 22px 34px 18px;
+    min-width: 240px;
+  }
+  .page-commercial-industrial .ci-price-value { font-size: 1.2rem; }
+  .page-commercial-industrial .ci-price-value span { font-size: 3.8rem; }
+  .page-commercial-industrial .ci-price-meta { gap: 10px; }
+}
+
+/* Prevent full-bleed stretching by ensuring inner container keeps content centered */
+@media (min-width: 1400px) {
+  /* Ensure full-bleed on extra-large viewports as well */
+  .page-commercial-industrial .ci-pricing-container { width: 100%; max-width: none !important; padding: 0 !important; }
+}
+
+/* Defensive: ensure desktop always uses a 2-column grid for CI rows
+   This solves cascade/specificity problems where a later rule collapsed
+   the grid into a single column on some viewports. Using a scoped,
+   high-specificity selector and media query preserves mobile stacking. */
+@media (min-width: 900px) {
+  .page-commercial-industrial .ci-row-inner {
+    display: grid !important;
+    grid-template-columns: 65% 35% !important; /* increase visual weight of image */
+    align-items: stretch !important;
+    gap: 0 !important;
+    min-height: 320px;
+  }
+
+  .page-commercial-industrial .ci-photo-panel,
+  .page-commercial-industrial .ci-price-panel {
+    align-self: stretch !important;
+    height: auto !important;
+  }
+}
+
+/* ===== CI PRICING DESKTOP POLISH (scoped and safe) ===== */
+@media (min-width: 1100px) {
+  .page-commercial-industrial .ci-row-inner {
+    grid-template-columns: 65% 35% !important;
+    align-items: center; /* center image and pricing to reduce floating feel */
+    min-height: 300px;
+  }
+
+  .page-commercial-industrial .ci-price-panel {
+    padding: 24px 20px; /* reduce inner whitespace */
+    justify-content: center;
+    max-width: 520px; /* keep pricing content compact */
+    margin-left: auto; /* push pricing panel toward the right edge of its column */
+  }
+
+  .page-commercial-industrial .ci-price-badge {
+    min-width: 300px; /* increase badge prominence by ~15% */
+    padding: 24px 36px 18px;
+    box-shadow: 0 10px 40px rgba(247, 189, 16, .55);
+  }
+
+  .page-commercial-industrial .ci-price-value {
+    font-size: 1.12rem; /* slightly larger label */
+  }
+
+  .page-commercial-industrial .ci-price-value span {
+    font-size: 4.4rem; /* increase price size for emphasis */
+  }
+
+  .page-commercial-industrial .ci-price-meta { gap: 8px; }
+
+  /* Category banner polish */
+  .page-commercial-industrial .ci-category-banner {
+    font-size: 1.15rem;
+    letter-spacing: .08em;
+    padding: 22px 32px;
+    justify-content: center;
+  }
+}
+
+

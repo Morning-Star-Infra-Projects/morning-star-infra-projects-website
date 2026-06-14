@@ -53,6 +53,28 @@
     <priority>0.70</priority>
   </url>
 
-  <!-- Blog (no separate blog index included) -->
+  <!-- Additional Pages -->
+  <url>
+    <loc>https://www.morningstarinfra.com/pages/our-team.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- Blog (important content hub) -->
+  <url>
+    <loc>https://www.morningstarinfra.com/blog/blog.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Contact Page -->
+  <url>
+    <loc>https://www.morningstarinfra.com/pages/contact.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
 
 </urlset>
